@@ -1,0 +1,22 @@
+{
+  "name": "learn",
+  "version": "1.0.0",
+  "description": "学习如何写一个模板",
+  "scripts": {
+    "test": "mocha test/spec/test.js"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://"
+  },
+  "dependencies": {
+    "gulp-sass": "^2.0.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
