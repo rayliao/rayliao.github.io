@@ -1,3 +1,4 @@
 # rayliao.github.io
-## Products
-* [CSS3 Progress Bar Animation](http://rayliao.github.io/products/progress-bar-animation/index.html)
+## 简介
+
+这是我的个人技术博客，基于hexo，主题是apollo。
