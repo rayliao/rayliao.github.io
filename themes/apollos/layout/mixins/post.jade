@@ -2,6 +2,10 @@ mixin postInfo(item)
     .post-meta
         .post-time
             != full_date(item.date, 'll')
+            if item.tags && item.tags.length
+                - item.tags.each(function(tag) {
+                    a(class="post-tag", href=url_for(tag.path))= "#" + tag.name
+                - })
 
 mixin posts()
     ul.home.post-list
