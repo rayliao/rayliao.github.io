@@ -1,0 +1,36 @@
+@import "variables";
+
+@import "normalize";
+
+body {
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.sidebar {
+    margin-top: 30px;
+    padding-left: 20px;
+    width: 200px;
+    float: left;
+    text-align: right;
+    h1 {
+        color: #404040;
+    }
+    a {
+        display: block;
+        line-height: 25px;
+        color: #2c3e50;
+        font-size: 14px;
+        text-decoration: none;
+        &:hover {
+            color: #42b983;
+        }
+    }
+}
+
+.nav {
+    margin-top: 30px;
+}
+
+.content {
+    float: left;
+}

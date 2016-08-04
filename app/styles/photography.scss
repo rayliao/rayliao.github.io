@@ -1,0 +1,139 @@
+@import "variables";
+
+@import "normalize";
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Gotham, Arial, sans-serif;
+}
+
+a {
+	text-decoration: none;
+} 
+
+.main {
+	width: 995px;
+	margin: 0 auto;
+}
+
+.header {
+	padding: 100px 0;
+    h2 {
+    	margin: 0;
+		font-family: "Adobe Hebrew", "Tahoma", serif;
+	    font-size: 18px;
+	    font-style: italic;
+	    font-weight: normal;
+	    float: left;
+	    height: 100px;
+	    line-height: 100px;
+	    padding-left: 147px;
+    	a {
+    		color: #16161f;
+    	}
+    }
+    .line {
+	    font-style: normal;
+	    font-family: "Segoe UI Light", sans-serif;
+	    font-size: 80px;
+	    font-weight: 100;
+	    float: left;
+	    height: 80px;
+	    line-height: 80px;
+	    padding: 0 25px;
+	    color: #333;
+    }
+    .right {
+    	float: left;
+    	padding-top: 30px;
+    	font-family: "papyrus", sans-serif;
+    	h1 {
+    		margin: 0;
+    		font-size: 12px;
+    		font-weight: normal;
+    		a {
+    			color: #16161f;
+    		}
+    	}
+    }
+    .nav {
+		a {
+			color: #656575;
+		}
+		span {
+			padding: 0 10px;
+		}
+    }
+}
+
+.entry {
+	position: relative;
+	padding-bottom: 120px;
+}
+
+.info {
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin-top: 100px;
+	font-style: italic;
+	h3 {
+		margin: 8px 0;
+		font-size: 28px;
+		font-weight: normal;
+	}
+	p {
+		font-size: 12px;
+	}
+}
+
+.info-black {
+	color: #000;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.info-white {
+	color: #fff;
+	.info-clip {
+		margin-left: 195px;
+	}
+	.info-inr {
+		margin-left: -195px;
+	}
+}
+
+.info-clip {
+	overflow: hidden;
+}
+
+.pic {
+	position: relative;
+	margin-left: 195px;
+	img {
+		max-width: 800px;
+	}
+}
+
+.rev {
+	.pic {
+		margin-left: 0;
+		margin-right: 195px;
+		text-align: right;
+	}
+	.info {
+		right: 0;
+		left: inherit;
+		text-align: right;
+	}
+	.info-clip {
+		margin-left: inherit;
+		margin-right: 195px;
+	}
+	.info-inr {
+		margin-left: inherit;
+		margin-right: -195px;
+	}
+}
+

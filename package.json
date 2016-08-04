@@ -1,24 +1,42 @@
 {
-  "name": "rayliao.github.io",
-  "version": "0.0.1",
-  "private": true,
-  "hexo": {
-    "version": "3.2.0"
+  "name": "rayliao",
+  "version": "1.0.0",
+  "description": "my website",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rayliao/rayliao.git"
+  },
+  "author": "rayliao",
+  "license": "ISC",
+  "scripts": {
+    "start": "node server.js",
+    "build": "webpack -w"
+  },
+  "bugs": {
+    "url": "https://github.com/rayliao/rayliao/issues"
+  },
+  "homepage": "https://github.com/rayliao/rayliao#readme",
+  "devDependencies": {
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-1": "^6.5.0",
+    "connect": "^3.4.1",
+    "connect-livereload": "^0.5.4",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^2.3.1",
+    "gulp-util": "^3.0.7",
+    "opn": "^4.0.1",
+    "react-hot-loader": "^1.3.0",
+    "serve-static": "^1.10.2",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "hexo": "^3.1.0",
-    "hexo-browsersync": "^0.2.0",
-    "hexo-deployer-git": "0.0.4",
-    "hexo-generator-archive": "^0.1.2",
-    "hexo-generator-category": "^0.1.2",
-    "hexo-generator-feed": "^1.0.3",
-    "hexo-generator-index": "^0.1.2",
-    "hexo-generator-sitemap": "^1.0.1",
-    "hexo-generator-tag": "^0.1.1",
-    "hexo-renderer-ejs": "^0.1.0",
-    "hexo-renderer-jade": "^0.1.0",
-    "hexo-renderer-marked": "^0.2.4",
-    "hexo-renderer-stylus": "^0.3.0",
-    "hexo-server": "^0.1.2"
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
   }
 }

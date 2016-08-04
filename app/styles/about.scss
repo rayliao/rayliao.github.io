@@ -1,0 +1,41 @@
+@import "variables";
+
+@import "normalize";
+
+@import "fullpage";
+
+html, body {
+    background-color: #232323;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    height: 50px;
+    line-height: 50px;
+    display: block;
+    width: 100%;
+    z-index: 9;
+    text-align: center;
+    a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+.section {
+    background-color: #232323;
+    color: #fff;
+    text-align: center;
+    h3 {
+        text-align: center;
+        color: #b5e853;
+    }
+}
+
+.douban {
+    table {
+        margin: 0 auto;
+    }
+}
