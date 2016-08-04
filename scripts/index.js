@@ -1,1 +1,0 @@
-"use strict";!function(){var e=new Letters(document.querySelector(".deco"),{size:1e3,weight:5,color:"#2B2B2B",duration:2,fade:0,easing:d3_ease.easeExpOut});e.hideInstantly(),setTimeout(function(){e.show()},200)}();
