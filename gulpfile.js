@@ -84,6 +84,9 @@ gulp.task('build', function(){
     const htmlmin = require('gulp-htmlmin');
     const uglify = require('gulp-uglify');
 
+    gulp.src('app/*')
+    .pipe(gulp.dest('dist/'));
+
     gulp.src('app/img/**')
     .pipe(gulp.dest('dist/img/'));
 
