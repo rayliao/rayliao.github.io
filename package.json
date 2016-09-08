@@ -9,8 +9,9 @@
   "author": "rayliao",
   "license": "ISC",
   "scripts": {
-    "start": "node server.js",
-    "build": "webpack -w"
+    "start": "gulp watch",
+    "build": "gulp build",
+    "release": "sh release.sh"
   },
   "bugs": {
     "url": "https://github.com/rayliao/rayliao/issues"

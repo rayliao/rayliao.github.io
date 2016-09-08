@@ -87,19 +87,19 @@ gulp.task('build', function(){
     gulp.src('app/*')
     .pipe(gulp.dest('dist/'));
 
-    gulp.src('app/img/**')
-    .pipe(gulp.dest('dist/img/'));
+    gulp.src('app/images/**')
+    .pipe(gulp.dest('dist/images/'));
 
     gulp.src('app/fonts/**')
     .pipe(gulp.dest('dist/fonts/'));
 
-    gulp.src('app/css/*.css')
+    gulp.src('app/styles/*.css')
     .pipe(csso())
-    .pipe(gulp.dest('dist/css/'));
+    .pipe(gulp.dest('dist/styles/'));
 
-    gulp.src('app/js/**')
+    gulp.src('app/scripts/**')
     .pipe(uglify())
-    .pipe(gulp.dest('dist/js'));
+    .pipe(gulp.dest('dist/scripts'));
 
     gulp.src('app/**/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
