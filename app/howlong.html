@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>RayLiao-HowLong</title>
+    <script src="scripts/lib/jquery.min.js"></script>
+    <script>
+        $(function(){
+            var now = new Date();
+            var birth = new Date('1989-10-02');
+            $('#age').text(parseInt((now - birth)/86400000));
+        });
+    </script>
+</head>
+<body>
+    <h1>我来到这个世界多久了？</h1>
+    <div><span id="age"></span>天</div>
+</body>
+</html>
