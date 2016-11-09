@@ -26,15 +26,15 @@ gulp.task('serve', function () {
 });
 
 gulp.task('styles', function() {
-    const sass = require('gulp-sass');
+    var sass = require('gulp-sass');
 
-    gulp.src('app/css/*.scss')
+    gulp.src('app/styles/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest('app/css'));
+        .pipe(gulp.dest('app/styles'));
 });
 
 gulp.task('pug', function(){
-    const pug = require('gulp-pug');
+    var pug = require('gulp-pug');
 
     gulp.src('app/shoot/*.pug')
         .pipe(pug({
@@ -44,11 +44,11 @@ gulp.task('pug', function(){
 });
 
 gulp.task('babel', function () {
-    const babel = require('gulp-babel');
+    var babel = require('gulp-babel');
 
-    return gulp.src('app/js/src/*.js')
+    return gulp.src('app/scripts/src/*.js')
         .pipe(babel())
-        .pipe(gulp.dest('app/js'));
+        .pipe(gulp.dest('app/scripts'));
 });
 
 gulp.task('watch', ['styles', 'pug', 'connect', 'serve'], function () {
@@ -56,14 +56,14 @@ gulp.task('watch', ['styles', 'pug', 'connect', 'serve'], function () {
     var livereload = require('gulp-livereload');
     livereload.listen();
 
-    gulp.watch('app/css/*.scss', ['styles']);
-    gulp.watch('app/js/src/*.js', ['babel']);
+    gulp.watch('app/styles/*.scss', ['styles']);
+    gulp.watch('app/scripts/src/*.js', ['babel']);
     gulp.watch('app/shoot/**/*.pug', ['pug']);
     
     gulp.watch([
         'app/**/*.html',
-        'app/css/*.css',
-        'app/js/*.js'
+        'app/styles/*.css',
+        'app/scripts/*.js'
     ]).on('change', function (file) {
         livereload.changed(file.path);
     });
@@ -74,15 +74,15 @@ gulp.task('default', ['clean'], function(){
 });
 
 gulp.task('clean', function(){
-    const clean = require('gulp-clean');
+    var clean = require('gulp-clean');
     return gulp.src('dist', {read: false})
         .pipe(clean());
 });
 
 gulp.task('build', function(){
-    const csso = require('gulp-csso');
-    const htmlmin = require('gulp-htmlmin');
-    const uglify = require('gulp-uglify');
+    var csso = require('gulp-csso');
+    var htmlmin = require('gulp-htmlmin');
+    var uglify = require('gulp-uglify');
 
     gulp.src('app/*')
     .pipe(gulp.dest('dist/'));
