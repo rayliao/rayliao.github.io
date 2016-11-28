@@ -396,3 +396,7 @@ body {
 .content {
   margin-left: 250px;
   float: left; }
+  .content img {
+    display: block;
+    max-width: 800px;
+    max-height: 700px; }
