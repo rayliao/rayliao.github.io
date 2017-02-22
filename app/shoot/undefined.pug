@@ -1,8 +1,11 @@
 extends partial/layout
 
+mixin list(num)
+    div
+        img(src="../images/2016/01.jpg")
+
 block content
     - var n = 1
     div#slick
         while n <= 35
-            div
-                img(src="../images/2016/01.jpg")
+            +list(n)
