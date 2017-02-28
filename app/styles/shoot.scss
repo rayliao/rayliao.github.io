@@ -3,6 +3,7 @@
 
 body {
   font: 14px/1.5 "papyrus", sans-serif;
+  background-color: #232323;
 }
 
 .sidebar {
@@ -38,9 +39,50 @@ body {
   margin-left: 250px;
   float: left;
 
+  div {
+    width: 800px;
+    margin-bottom: 5px;
+  }
+
   img {
     display: block;
-    max-width: 800px;
-    max-height: 700px;
+    width: 100%;
+  }
+}
+
+.unite {
+  overflow: hidden;
+  img {
+    width: 50%;
+    display: block;
+    float: left;
+  }
+}
+
+.phone {
+  img {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sidebar {
+    right: 0;
+    left: inherit;
+  }
+
+  .content {
+    margin: 0 5px;
+
+    div {
+      width: 100%;
+      max-width: 600px;
+    }
+  }
+
+  .phone {
+    img {
+      width: 100%;
+    }
   }
 }

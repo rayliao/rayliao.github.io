@@ -366,7 +366,8 @@ textarea {
   /* 2 */ }
 
 body {
-  font: 14px/1.5 "papyrus", sans-serif; }
+  font: 14px/1.5 "papyrus", sans-serif;
+  background-color: #232323; }
 
 .sidebar {
   position: fixed;
@@ -396,7 +397,31 @@ body {
 .content {
   margin-left: 250px;
   float: left; }
+  .content div {
+    width: 800px;
+    margin-bottom: 5px; }
   .content img {
     display: block;
-    max-width: 800px;
-    max-height: 700px; }
+    width: 100%; }
+
+.unite {
+  overflow: hidden; }
+  .unite img {
+    width: 50%;
+    display: block;
+    float: left; }
+
+.phone img {
+  width: 600px; }
+
+@media screen and (max-width: 600px) {
+  .sidebar {
+    right: 0;
+    left: inherit; }
+  .content {
+    margin: 0 5px; }
+    .content div {
+      width: 100%;
+      max-width: 600px; }
+  .phone img {
+    width: 100%; } }

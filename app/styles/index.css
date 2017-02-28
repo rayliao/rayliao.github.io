@@ -482,6 +482,10 @@ a:focus {
 .sns a {
   margin: 5px; }
 
+@media screen and (max-width: 320px) {
+  .nav {
+    margin-top: 0; } }
+
 @media screen and (max-width: 50em) {
   .container h1 {
     font-size: 8vw; } }
