@@ -5,7 +5,9 @@ mixin list(num)
         img(src="../images/2016/01.jpg")
 
 block content
-    - var n = 1
+    - var n = 0
     div#slick
-        while n <= 35
-            +list(n)
+        while n < 35
+            - n++
+            div
+                img(src='../images/undefined/' + n + '.jpg')
