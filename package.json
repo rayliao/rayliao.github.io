@@ -18,7 +18,12 @@
   },
   "homepage": "https://github.com/rayliao/rayliao#readme",
   "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.19.0",
+    "babel-plugin-transform-object-rest-spread": "^6.20.2",
+    "babel-preset-latest": "^6.16.0",
+    "babelify": "^7.3.0",
     "browser-sync": "^2.18.8",
+    "browserify": "^14.1.0",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "gulp-csso": "^2.0.0",
@@ -26,6 +31,9 @@
     "gulp-pug": "^3.0.4",
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^2.0.0",
-    "gulp-util": "^3.0.7"
+    "gulp-util": "^3.0.7",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.9.0"
   }
 }

@@ -1,7 +1,9 @@
-const init = () => {
-    console.log('home init')
+class Home {
+    init() {
+        console.log('home init')
+    }
 }
 
 export default () => {
-    init()
+    new Home.init()
 }
