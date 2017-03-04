@@ -1,29 +1,17 @@
-'use strict';
+var gulp = require('gulp')
+var gutil = require('gulp-util')
+var browserSync = require('browser-sync').create()
 
-var gulp = require('gulp');
-var gutil = require('gulp-util');
+var path = gutil.env.path || 'app'
 
-var path = gutil.env.path || 'app';
-
-gulp.task('connect', function () {
-    
-    var connect = require('connect'),
-        serveStatic = require('serve-static');
-
-    var app = connect()
-        .use(require('connect-livereload')({ port: 35729 }))
-        .use(serveStatic(__dirname));
-
-    require('http').createServer(app)
-        .listen(9000)
-        .on('listening', function () {
-            console.log('Started connect web server on http://localhost:9000');
-        });
-});
-
-gulp.task('serve', function () {
-    require('opn')('http://localhost:9000/app/index.html');
-});
+gulp.task('browserSync', function(){
+    browserSync.init({
+        port: 9000,
+        server: {
+            baseDir: 'app'
+        }
+    })
+})
 
 gulp.task('styles', function() {
     var sass = require('gulp-sass');
@@ -51,10 +39,7 @@ gulp.task('babel', function () {
         .pipe(gulp.dest('app/scripts'));
 });
 
-gulp.task('watch', ['styles', 'pug', 'connect', 'serve'], function () {
-
-    var livereload = require('gulp-livereload');
-    livereload.listen();
+gulp.task('watch', ['styles', 'pug', 'browserSync'], function () {
 
     gulp.watch('app/styles/*.scss', ['styles']);
     gulp.watch('app/scripts/src/*.js', ['babel']);
@@ -64,9 +49,7 @@ gulp.task('watch', ['styles', 'pug', 'connect', 'serve'], function () {
         'app/**/*.html',
         'app/styles/*.css',
         'app/scripts/*.js'
-    ]).on('change', function (file) {
-        livereload.changed(file.path);
-    });
+    ], browserSync.reload);
 });
 
 gulp.task('default', ['clean'], function(){
