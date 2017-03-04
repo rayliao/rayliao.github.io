@@ -1,8 +1,15 @@
 var gulp = require('gulp')
 var gutil = require('gulp-util')
 var browserSync = require('browser-sync').create()
+var watchify = require('watchify')
+var babelify = require('babelify')
+var browserify = require('browserify')
 
 var path = gutil.env.path || 'app'
+var config = {
+    js: 'app/scripts',
+    app: 'app/scripts/app.js',
+}
 
 gulp.task('browserSync', function(){
     browserSync.init({
@@ -11,6 +18,16 @@ gulp.task('browserSync', function(){
             baseDir: 'app'
         }
     })
+})
+
+gulp.task('compile', function(){
+    var bundler = watchify(browserify(config.app, {
+        debug: true
+    }).transform(babelify))
+
+    bundler.bundle()
+        .pipe(source('bundle.js'))
+        .pipe(gulp.dest(config.js))
 })
 
 gulp.task('styles', function() {
