@@ -1,11 +1,15 @@
 var gulp = require('gulp')
 var gutil = require('gulp-util')
 var browserSync = require('browser-sync').create()
+
 var watchify = require('watchify')
 var babelify = require('babelify')
 var browserify = require('browserify')
+
 var source = require('vinyl-source-stream')
 var buffer = require('vinyl-buffer')
+
+var sourcemaps = require('gulp-sourcemaps')
 
 var path = gutil.env.path || 'app'
 var config = {
@@ -38,12 +42,17 @@ gulp.task('compile', function () {
 })
 
 gulp.task('styles', function () {
-    var sass = require('gulp-sass');
+    var sass = require('gulp-sass')
 
     gulp.src('app/styles/*.scss')
+        .pipe(sourcemaps.init())
         .pipe(sass())
-        .pipe(gulp.dest('app/styles'));
-});
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest('app/styles'))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
+})
 
 gulp.task('pug', function () {
     var pug = require('gulp-pug');
