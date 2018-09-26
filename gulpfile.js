@@ -116,10 +116,6 @@ gulp.task('clean', function () {
 })
 
 gulp.task('minify-js', function () {
-  gulp.src('app/scripts/lib/*')
-    .pipe(uglify())
-    .pipe(gulp.dest('dist/scripts/lib'))
-
   pump([
     gulp.src([
       'app/scripts/about.js',
@@ -129,6 +125,10 @@ gulp.task('minify-js', function () {
     uglify(),
     gulp.dest('dist/scripts'),
   ])
+
+  return gulp.src('app/scripts/lib/*')
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/scripts/lib'))
 })
 
 gulp.task('build', ['clean', 'minify-js'], function () {
