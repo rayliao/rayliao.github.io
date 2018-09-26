@@ -112,7 +112,7 @@ gulp.task('watch', ['styles', 'pug', 'compile', 'browserSync'], function () {
 
 gulp.task('clean', function () {
   return gulp.src('dist', { read: false })
-    .pipe(clean());
+    .pipe(clean())
 })
 
 gulp.task('minify-js', function () {
@@ -131,7 +131,9 @@ gulp.task('minify-js', function () {
     .pipe(gulp.dest('dist/scripts/lib'))
 })
 
-gulp.task('build', ['clean', 'minify-js'], function () {
+gulp.task('build', ['clean'], function () {
+  gulp.start('minify-js')
+
   gulp.src('app/*')
     .pipe(gulp.dest('dist/'))
 
