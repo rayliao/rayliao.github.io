@@ -378,7 +378,7 @@ html.fp-enabled,
   padding: 0;
   overflow: hidden;
   /*Avoid flicker on slides transitions for mobile phones #336 */
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 #superContainer {
   height: 100%;

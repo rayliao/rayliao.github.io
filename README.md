@@ -3,11 +3,11 @@
 ## Start
 
 ```
-yarn install
+yarn
 ```
 
 ## Release
 
 ```
-yarn run release
+yarn release
 ```

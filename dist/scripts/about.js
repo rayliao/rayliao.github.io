@@ -1,0 +1,1 @@
+"use strict";$(function(){$("#fullpage").fullpage({navigation:!0})});
