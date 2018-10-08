@@ -1,1 +1,1 @@
-{"version":3,"file":"howlong.css","sources":["howlong.scss"],"sourcesContent":["body {\r\n  color: #eaeaea;\r\n  background: #232323;\r\n}"],"names":[],"mappings":"AAAA,AAAA,IAAI,CAAC;EACH,KAAK,EAAE,OAAO;EACd,UAAU,EAAE,OAAO,GACpB"}
+{"version":3,"file":"howlong.css","sources":["howlong.scss"],"sourcesContent":["body {\n  color: #eaeaea;\n  background: #232323;\n}"],"names":[],"mappings":"AAAA,AAAA,IAAI,CAAC;EACH,KAAK,EAAE,OAAO;EACd,UAAU,EAAE,OAAO,GACpB"}

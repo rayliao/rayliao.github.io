@@ -1,0 +1,33 @@
+@import 'variables';
+@import 'normalize';
+
+html,
+body {
+	height: 100%;
+}
+
+.section {
+	height: 100%;
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.invite {
+	padding: 20px 10px;
+	text-align: center;
+	background: url('#{$images}wedding/bg.png') repeat;
+
+	h1 {
+		margin: 0;
+		padding: 0;
+	}
+}
