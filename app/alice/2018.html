@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Alice's Birthday 2018</title>
+</head>
+<style>
+	html,
+	body {
+		height: 100%;
+	}
+
+	body {
+		margin: 0;
+		background: url('../images/birthday/2018.jpg') center no-repeat;
+		background-size: cover;
+	}
+
+	.container {
+		text-align: center;
+		color: #fff;
+		height: 100%;
+		padding-top: 20px;
+		box-sizing: border-box;
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+
+	.container h1 {
+		margin: 0;
+		font-size: 26px;
+	}
+
+	.container h3 {
+		font-size: 20px;
+		margin: 10px 0 50px 0;
+	}
+
+	.container .button {
+		color: #fff;
+		font-size: 18px;
+		border: none;
+		background: none;
+		outline: none;
+	}
+
+	.card {
+		display: none;
+		top: -60px;
+		position: relative;
+		margin: 0 auto;
+		padding: 15px;
+		width: 320px;
+		height: 201px;
+		background: url('../images/birthday/apple.png') center no-repeat;
+		background-size: contain;
+	}
+
+	.card p {
+		margin: 0;
+	}
+
+	.card .name {
+		color: #666;
+		text-align: right;
+		font-weight: bold;
+		font-size: 16px;
+	}
+
+	.card .tip {
+		position: absolute;
+		bottom: 15px;
+		left: 15px;
+		color: #666;
+		font-size: 12px;
+		font-style: italic;
+	}
+</style>
+
+<body>
+	<div class="container">
+		<h1>Happy Birthday My Dear</h1>
+		<h3>This is for you lah!</h3>
+		<button class="button j-button">Click Me</button>
+		<div class="card j-card">
+			<p class="name">iPhone XS</p>
+			<p class="tip">* This is just for Alice</p>
+		</div>
+	</div>
+</body>
+<script src="../scripts/lib/jquery.js"></script>
+<script>
+	$(function () {
+		var $card = $('.j-card')
+		$('.j-button').click(function () {
+			$card.fadeIn();
+		})
+	})
+</script>
+
+</html>
