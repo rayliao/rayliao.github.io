@@ -1,0 +1,32 @@
+{
+	"compileOnSave": true,
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "es2015",
+		"lib": [
+			"esnext"
+		],
+		"jsx": "preserve",
+		"strict": true,
+		"noImplicitAny": false,
+		"noUnusedLocals": true,
+		"moduleResolution": "node",
+		"baseUrl": "./",
+		"allowSyntheticDefaultImports": true,
+		"sourceMap": true,
+		"paths": {
+			"@app/*": [
+				"./src/*"
+			]
+		},
+		"noEmit": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"strictPropertyInitialization": false,
+		"skipLibCheck": true
+	},
+	"include": [
+		"src/**/*",
+		"dev.d.ts"
+	]
+}

@@ -1,8 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
-  "version": "0.1.0",
+  "name": "rayliao",
+  "description": "my website",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -13,7 +12,9 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
+    "@types/react": "^16.8.6",
     "gatsby": "^2.1.19",
+    "gatsby-plugin-typescript": "^2.0.10",
     "react": "^16.8.3",
     "react-dom": "^16.8.3"
   },
@@ -22,9 +23,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/rayliao/rayliao.git"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/rayliao/rayliao/issues"
   }
 }
