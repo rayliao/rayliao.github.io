@@ -1,3 +1,12 @@
-import React from "react"
+import * as React from 'react'
+import SEO from '../components/seo'
 
-export default () => <div>Hello world!</div>
+const Index = () =>
+  (
+    <>
+      <SEO />
+      <div>Hello world!</div>
+    </>
+  )
+
+export default Index
