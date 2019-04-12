@@ -1,17 +1,21 @@
 import * as React from 'react'
-import SEO from '../components/seo'
-// import WelGLView from '../components/webgl'
+import Global from '../components/global'
+import WelGLView from '../components/webgl'
+import './index.css'
 
 const Index = () =>
-  (
-    <>
-      <SEO />
-      <div>Hello world!</div>
-      {/* <div
-        className="container"
-        ref={mount => this.mount = mount}
-      /> */}
-    </>
-  )
+  <Global>
+    <div style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      color: '#fff'
+    }}>Hello world!</div>
+    <div
+      className="container"
+    >
+      <WelGLView />
+    </div>
+  </Global>
 
 export default Index

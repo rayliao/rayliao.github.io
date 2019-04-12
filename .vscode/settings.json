@@ -1,0 +1,14 @@
+{
+  "editor.tabSize": 2,
+  "tslint.autoFixOnSave": true,
+  "tslint.enable": true,
+  "files.exclude": {
+    "**/*.js.map": true,
+    "**/*.js": {
+      "when": "$(basename).tsx"
+    }
+  }
+  // "editor.codeActionsOnSave": {
+  //   "source.organizeImports": true
+  // },
+}
