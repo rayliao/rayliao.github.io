@@ -34,6 +34,9 @@
 			"never"
 		],
 		"arrow-parens": false,
+		"no-bitwise": false,
+		"variable-name": false,
+		"no-var-requires": false,
 		"jsx-alignment": false,
 		"jsdoc-format": false,
 		"no-implicit-dependencies": false,

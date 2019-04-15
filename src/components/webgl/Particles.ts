@@ -1,8 +1,9 @@
-import glslify from 'glslify'
 import { TweenLite } from 'gsap/TweenMax'
 import * as THREE from 'three'
 import { easeInOutQuad } from '../../utils/easing'
 import TouchTexture from './TouchTexture'
+
+const glslify = require('glslify')
 
 export default class Particles {
   webgl: any
@@ -22,7 +23,6 @@ export default class Particles {
 
   init(src) {
     const loader = new THREE.TextureLoader()
-
     loader.load(src, (texture) => {
       this.texture = texture
       this.texture.minFilter = THREE.LinearFilter
@@ -83,8 +83,8 @@ export default class Particles {
 
     const material = new THREE.RawShaderMaterial({
       uniforms,
-      vertexShader: glslify(require('../../shaders/particle.vert')),
-      fragmentShader: glslify(require('../../shaders/particle.frag')),
+      vertexShader: glslify('../../../shaders/particle.vert'),
+      fragmentShader: glslify('../../../shaders/particle.frag'),
       depthTest: false,
       transparent: true,
       // blending: THREE.AdditiveBlending

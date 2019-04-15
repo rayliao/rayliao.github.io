@@ -761,6 +761,11 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@brunoimbrizi/controlkit@^0.1.96":
+  version "0.1.96"
+  resolved "https://registry.yarnpkg.com/@brunoimbrizi/controlkit/-/controlkit-0.1.96.tgz#fc8b57d1a344e0d6f42c7f24653e6fc0af04215f"
+  integrity sha512-Xn/jGCobFo3mprBo4gkQyU/gkQdRI8/eT6X8A3kEIBJ65AU3Qxxv6z93u88PzsmAnBVLmEDqauYj7CZ8qyp4+w==
+
 "@choojs/findup@^0.2.0":
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@choojs/findup/-/findup-0.2.1.tgz#ac13c59ae7be6e1da64de0779a0a7f03d75615a3"
@@ -8437,6 +8442,11 @@ static-extend@^0.1.1:
   dependencies:
     define-property "^0.2.5"
     object-copy "^0.1.0"
+
+stats.js@^0.17.0:
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/stats.js/-/stats.js-0.17.0.tgz#b1c3dc46d94498b578b7fd3985b81ace7131cc7d"
+  integrity sha1-scPcRtlEmLV4t/05hbgaznExzH0=
 
 "statuses@>= 1.4.0 < 2", statuses@~1.4.0:
   version "1.4.0"

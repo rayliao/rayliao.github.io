@@ -6,7 +6,7 @@ import { BrowserDetectInfo } from 'browser-detect/dist/types/browser-detect.inte
 import { passiveEvent } from '../../utils/event'
 
 export default class InteractiveControls extends EventEmitter {
-    i_enabled: boolean
+    _enabled: boolean
     camera: THREE.PerspectiveCamera
     el: any
     plane: THREE.Plane
@@ -26,7 +26,7 @@ export default class InteractiveControls extends EventEmitter {
     rect: any
     intersectionData: any
     get enabled() {
-        return this.i_enabled
+        return this._enabled
     }
     constructor(camera: THREE.PerspectiveCamera, el: any) {
         super()
@@ -51,7 +51,7 @@ export default class InteractiveControls extends EventEmitter {
             return
         }
         this.addListeners()
-        this.i_enabled = true
+        this._enabled = true
     }
 
     disable() {
@@ -59,7 +59,7 @@ export default class InteractiveControls extends EventEmitter {
             return
         }
         this.removeListeners()
-        this.i_enabled = false
+        this._enabled = false
     }
 
     addListeners() {
@@ -95,7 +95,7 @@ export default class InteractiveControls extends EventEmitter {
         }
     }
 
-    resize(x: any, y: any, width: any, height: any) {
+    resize(x?: any, y?: any, width?: any, height?: any) {
         if (x || y || width || height) {
             this.rect = { x, y, width, height }
         }
@@ -108,6 +108,9 @@ export default class InteractiveControls extends EventEmitter {
     }
 
     onMove(e: any) {
+        if (!this.rect) {
+            return
+        }
         const t = (e.touches) ? e.touches[0] : e
         const touch = { x: t.clientX, y: t.clientY }
 
