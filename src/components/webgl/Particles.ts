@@ -84,7 +84,7 @@ export default class Particles {
     const material = new THREE.RawShaderMaterial({
       uniforms,
       vertexShader: glslify(require('./shaders/particle.vert')),
-      // fragmentShader: glslify('../../../shaders/particle.frag'),
+      fragmentShader: glslify(require('./shaders/particle.frag')),
       depthTest: false,
       transparent: true,
       // blending: THREE.AdditiveBlending
