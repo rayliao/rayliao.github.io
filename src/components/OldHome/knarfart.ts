@@ -1,0 +1,1 @@
+import KnarfartEOT from './fonts/knarfart-webfont.ttf'

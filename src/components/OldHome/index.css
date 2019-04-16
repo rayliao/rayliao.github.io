@@ -1,0 +1,150 @@
+@font-face {
+  font-family: 'knarfart';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../knarfart/knarfart-webfont.eot");
+  src: url("../knarfart/knarfart-webfont.eot?#iefix") format("embedded-opentype"), url("../knarfart/knarfart-webfont.woff2") format("woff2"), url("../knarfart/knarfart-webfont.woff") format("woff"), url("../knarfart/knarfart-webfont.ttf") format("truetype"), url("../knarfart/knarfart-webfont.svg#knarfart") format("svg");
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  counter-reset: gridcounter;
+  color: #eaeaea;
+  background: #232323;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: #eaeaea;
+}
+
+a:focus,
+a:hover {
+  outline: none;
+}
+
+.hidden {
+  position: absolute;
+  left: -100vw;
+  width: 0;
+  height: 0;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.deco {
+  font-family: 'knarfart', cursive;
+  font-size: 90vw;
+  line-height: 110vh;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  color: rgba(0, 0, 0, 0.06);
+}
+
+.container h1 {
+  font-size: 2.35em;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: .85em 0 0;
+  letter-spacing: .5em;
+  word-spacing: -0.3em;
+  text-transform: uppercase;
+  color: #b5e853;
+}
+
+.container h1 {
+  font-size: 3.35em;
+}
+
+.container p {
+  font-weight: 500;
+  margin: 2em 0 0;
+}
+
+.nav {
+  font-size: .95em;
+  font-weight: bold;
+  line-height: 1;
+  margin: 2em 0 0;
+}
+
+.nav a {
+  position: relative;
+  display: inline-block;
+  padding: 0 .5em;
+  pointer-events: auto;
+}
+
+.nav a:not(:last-child)::after {
+  left: calc(100% + 0.5em);
+}
+
+.nav a:not(:last-child) {
+  margin: 0 1em .1em 0;
+}
+
+.sns {
+  margin-top: 20px;
+}
+
+.sns a {
+  margin: 5px;
+}
+@media screen and (max-width: 320px) {
+  .nav {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 50em) {
+  .container h1 {
+    font-size: 8vw;
+  }
+}
+@media screen and (max-width: 40em) {
+  .container h1 {
+    font-size: 1.85em;
+  }
+}
