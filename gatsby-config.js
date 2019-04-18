@@ -1,7 +1,8 @@
 module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-typescript`,
     `gatsby-plugin-glslify`,
+    `gatsby-plugin-typescript`,
+    `gatsby-transformer-typescript-css-modules`,
   ],
 }

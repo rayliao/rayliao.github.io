@@ -22,6 +22,7 @@
     "gatsby-plugin-glslify": "^1.0.0",
     "gatsby-plugin-react-helmet": "^3.0.8",
     "gatsby-plugin-typescript": "^2.0.10",
+    "gatsby-transformer-typescript-css-modules": "^1.0.14",
     "glsl-noise": "^0.0.0",
     "glslify": "^7.0.0",
     "gsap": "^2.1.2",
