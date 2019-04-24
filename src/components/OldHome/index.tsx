@@ -1,7 +1,7 @@
 import { Link } from 'gatsby'
 import * as React from 'react'
-import Global from '../global'
-import './index.css'
+import Global from '../Global'
+// import * as styles from './index.module.css'
 
 export default class OldHome extends React.Component {
   render() {

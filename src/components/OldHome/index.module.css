@@ -1,24 +1,11 @@
-@font-face {
-  font-family: 'knarfart';
-  font-weight: normal;
-  font-style: normal;
-  src: url("../../fonts/knarfart-webfont.eot");
-  src: url("../../fonts/knarfart-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/knarfart-webfont.woff2") format("woff2"), url("../../fonts/knarfart-webfont.woff") format("woff"), url("../../fonts/knarfart-webfont.ttf") format("truetype"), url("../../fonts/knarfart-webfont.svg#knarfart") format("svg");
-}
+/* .hidden {
+  position: absolute;
+  left: -100vw;
+  width: 0;
+  height: 0;
+} */
 
-*,
-*::after,
-*::before {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-body,
-html {
-  height: 100%;
-}
-
-body {
+.container {
   font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   counter-reset: gridcounter;
   color: #eaeaea;
@@ -26,27 +13,6 @@ body {
   width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  text-decoration: none;
-  outline: none;
-  color: #eaeaea;
-}
-
-a:focus,
-a:hover {
-  outline: none;
-}
-
-.hidden {
-  position: absolute;
-  left: -100vw;
-  width: 0;
-  height: 0;
-}
-
-.container {
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -57,6 +23,17 @@ a:hover {
   flex-direction: column;
   -webkit-justify-content: center;
   justify-content: center;
+}
+
+/* .container a {
+  text-decoration: none;
+  outline: none;
+  color: #eaeaea;
+}
+
+.container a:focus,
+.container a:hover {
+  outline: none;
 }
 
 .deco {
@@ -147,4 +124,4 @@ a:hover {
   .container h1 {
     font-size: 1.85em;
   }
-}
+} */

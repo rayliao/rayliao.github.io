@@ -1,11 +1,11 @@
 import { Link } from 'gatsby'
 import * as React from 'react'
 import Helmet from 'react-helmet'
-import * as styles from './shoot.module.css'
+// import * as styles from './shoot.module.css' 
 
 export default ({ children }) => {
-  return <div className={styles.shoot}>
-    <Helmet defaultTitle="Photography">
+  return <div className="name">
+    {/* <Helmet defaultTitle="Photography">
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Helmet>
     <div className={styles.sidebar}>
@@ -22,6 +22,6 @@ export default ({ children }) => {
     </div>
     <div className={styles.content}>
       {children}
-    </div>
+    </div> */}
   </div>
 }
