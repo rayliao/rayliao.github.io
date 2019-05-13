@@ -1,20 +1,21 @@
 import { Link } from 'gatsby'
 import * as React from 'react'
 import Global from '../Global'
-// import * as styles from './index.module.css'
+import * as styles from './index.module.css'
 
 export default class OldHome extends React.Component {
   render() {
     return <Global>
-      <div className="container" data-m="home">
-        <div className="deco" aria-hidden="true">Ray</div>
-        <nav className="nav">
+      <div className={styles.container} data-m="home">
+        <div className={styles.deco} aria-hidden="true">Ray</div>
+        <nav className={styles.nav}>
+          <Link to="/">HOME</Link>
           <Link to="/blog">BLOG</Link>
           <Link to="/shoot/undefined">PHOTOGRAPHY</Link>
         </nav>
         <h1>WingRay Liao</h1>
         <p>Front-end developer, photography enthusiasts</p>
-        <div className="sns">
+        <div className={styles.sns}>
           <a href="https://github.com/rayliao" target="_blank" title="github"><i className="fa fa-github" /></a>
           <a href="https://instagram.com/wingrayliao/" target="_blank" title="instagram"><i className="fa fa-instagram" /></a>
           <a href="https://www.facebook.com/wingrayliao" target="_blank" title="facebook"><i className="fa fa-facebook-square" /></a>

@@ -8,7 +8,4 @@
       "when": "$(basename).tsx"
     }
   }
-  // "editor.codeActionsOnSave": {
-  //   "source.organizeImports": true
-  // },
 }
