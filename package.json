@@ -11,6 +11,7 @@
     "serve": "gatsby serve",
     "fix": "tslint --fix 'src/**/*.ts{,x}'",
     "precommit": "lint-staged",
+    "typed": "hakka typed-css-modules",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
@@ -33,6 +34,7 @@
     "three": "^0.103.0"
   },
   "devDependencies": {
+    "hakka-plugin-typed-css-modules": "^1.0.0",
     "prettier": "^1.16.4",
     "tslint": "^5.15.0",
     "tslint-config-prettier": "^1.18.0",
