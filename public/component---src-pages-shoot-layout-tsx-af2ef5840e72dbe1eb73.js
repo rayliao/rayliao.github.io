@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{140:function(e,n,a){"use strict";a.r(n);var t=a(0);n.default=function(e){var n=e.children;return t.createElement("div",{className:"name"},t.createElement("div",{className:"content"},n))}}}]);
+//# sourceMappingURL=component---src-pages-shoot-layout-tsx-af2ef5840e72dbe1eb73.js.map
