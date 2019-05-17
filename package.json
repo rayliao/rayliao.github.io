@@ -12,6 +12,7 @@
     "fix": "tslint --fix 'src/**/*.ts{,x}'",
     "precommit": "lint-staged",
     "watch": "hakka typed-css-modules -W",
+    "deploy": "sh release.sh",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
