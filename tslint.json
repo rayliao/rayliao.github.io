@@ -33,6 +33,10 @@
 			true,
 			"never"
 		],
+		"quotemark": [
+			true,
+			"single"
+		],
 		"arrow-parens": false,
 		"no-bitwise": false,
 		"variable-name": false,

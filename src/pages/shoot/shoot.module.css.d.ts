@@ -1,6 +1,10 @@
-export const shoot: string;
-export const sidebar: string;
-export const title: string;
-export const content: string;
-export const unite: string;
-export const phone: string;
+declare const styles: {
+  readonly 'shoot': string
+  readonly 'sidebar': string
+  readonly 'title': string
+  readonly 'content': string
+  readonly 'unite': string
+  readonly 'phone': string
+};
+export = styles;
+
