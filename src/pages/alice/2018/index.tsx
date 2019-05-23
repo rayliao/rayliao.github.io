@@ -13,10 +13,9 @@ export default class Index extends React.Component {
         <div className={styles.container}>
           <h1>Happy Birthday My Dear</h1>
           <h3>This is for you lah!</h3>
-          <button className='button j-button'>Click Me</button>
-          <div className='card j-card'>
-            <p className='name'>iPhone XS</p>
-            <p className='tip'>* This is just for Alice</p>
+          <div className={styles.card}>
+            <p className={styles.name}>iPhone XS</p>
+            <p className={styles.tip}>* This is just for Alice</p>
           </div>
         </div>
       </div>

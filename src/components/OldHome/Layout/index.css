@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'knarfart';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../../../fonts/knarfart-webfont.eot");
+  src: url("../../../fonts/knarfart-webfont.eot?#iefix") format("embedded-opentype"), url("../../../fonts/knarfart-webfont.woff2") format("woff2"), url("../../../fonts/knarfart-webfont.woff") format("woff"), url("../../../fonts/knarfart-webfont.ttf") format("truetype"), url("../../../fonts/knarfart-webfont.svg#knarfart") format("svg");
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}

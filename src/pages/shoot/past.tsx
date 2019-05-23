@@ -1,3 +1,4 @@
+import { Link } from 'gatsby'
 import * as React from 'react'
 import Helmet from 'react-helmet'
 import * as styles from './past.module.css'
@@ -8,11 +9,14 @@ export default class Past extends React.Component {
       <Helmet defaultTitle='Photography' />
       <div className={styles.main}>
         <div className={styles.header}>
-          <h2><a href='index.html'>copyright© 2011-2016 WINGRAY LIAO, all rights reserved.</a></h2>
+          <h2><Link to='/'>copyright© 2011-2016 WINGRAY LIAO, all rights reserved.</Link></h2>
           <div className={styles.line}>/</div>
           <div className={styles.right}>
-            <h1><a href='shoot/2016.html'>WingRay Liao Photopraphy</a></h1>
-            <div className={styles.nav}><a href='index.html'>home</a><span>/</span><a href='/blog' target='_blank'>blog</a></div>
+            <h1><Link to='/shoot/2016'>WingRay Liao Photopraphy</Link></h1>
+            <div className={styles.nav}>
+              <Link to='/'>home</Link><span>/</span>
+              <a href='/blog' target='_blank'>blog</a>
+            </div>
           </div>
         </div>
         <div>

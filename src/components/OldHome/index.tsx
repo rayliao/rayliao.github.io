@@ -1,17 +1,18 @@
 import { Link } from 'gatsby'
 import * as React from 'react'
-import Global from '../Global'
+import '../../styles/normalize.css'
 import * as styles from './index.module.css'
+import Global from './Layout'
 
 export default class OldHome extends React.Component {
   render() {
     return <Global>
-      <div className={styles.container} data-m='home'>
+      <div className={styles.container}>
         <div className={styles.deco} aria-hidden='true'>Ray</div>
         <nav className={styles.nav}>
           <Link to='/'>HOME</Link>
           <Link to='/blog'>BLOG</Link>
-          <Link to='/shoot/past'>PHOTOGRAPHY</Link>
+          <Link to='/shoot/2017'>PHOTOGRAPHY</Link>
         </nav>
         <h1>WingRay Liao</h1>
         <p>Front-end developer, photography enthusiasts</p>
