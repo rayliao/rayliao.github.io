@@ -12,6 +12,7 @@ export default ({ children }) => {
     <div className={styles.sidebar}>
       <h1 className={styles.title}>copyright© 2011-{now.getFullYear()} RAYLIAO</h1>
       <div className='menu'>
+        <div><Link to='/shoot/2018'>2018</Link></div>
         <div><Link to='/shoot/2017'>2017</Link></div>
         <div><Link to='/shoot/2016'>2016</Link></div>
         <div><Link to='/shoot/undefined'>undefined</Link></div>
