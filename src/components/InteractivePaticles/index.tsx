@@ -1,6 +1,6 @@
 import * as React from 'react'
-import GUIView from '../Gui'
-import WelGLView from '../Webgl'
+import GUIView from '../GUIView'
+import WelGLView from '../WebGLView'
 
 export default class InteractivePaticles extends React.Component {
   mount: any
