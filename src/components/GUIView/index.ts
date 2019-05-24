@@ -21,10 +21,10 @@ export default class GUIView {
 
   constructor(webgl) {
     this.webgl = webgl
-    this.initControlKit()
+    // this.initControlKit()
     // this.initStats();
 
-    // this.disable();
+    // this.disable()
   }
 
   initControlKit() {

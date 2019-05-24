@@ -1,14 +1,15 @@
 import { Link } from 'gatsby'
 import * as React from 'react'
 import '../../styles/normalize.css'
+import InteractivePaticles from '../InteractivePaticles'
 import * as styles from './index.module.css'
-import Global from './Layout'
+import Layout from './Layout'
 
 export default class OldHome extends React.Component {
   render() {
-    return <Global>
+    return <Layout>
       <div className={styles.container}>
-        <div className={styles.deco} aria-hidden='true'>Ray</div>
+        <InteractivePaticles />
         <nav className={styles.nav}>
           <Link to='/'>HOME</Link>
           <Link to='/blog'>BLOG</Link>
@@ -31,6 +32,6 @@ export default class OldHome extends React.Component {
           <a href='javascript:;' title='rayliao1989@gmail.com'><i className='fa fa-envelope' /></a>
         </div>
       </div>
-    </Global>
+    </Layout>
   }
 }

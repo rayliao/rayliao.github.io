@@ -64,7 +64,9 @@ export default class InteractivePaticles extends React.Component {
   }
   render() {
     return <div
-      className='container'
+      style={{
+        position: 'absolute',
+      }}
       ref={mount => this.mount = mount}
     />
   }

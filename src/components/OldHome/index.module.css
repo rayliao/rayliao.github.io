@@ -36,30 +36,6 @@
   outline: none;
 }
 
-.deco {
-  font-family: 'knarfart', cursive;
-  font-size: 90vw;
-  line-height: 110vh;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  color: rgba(0, 0, 0, 0.06);
-}
-
 .container h1 {
   font-size: 2.35em;
   font-weight: 400;
@@ -82,6 +58,9 @@
 }
 
 .nav {
+  position: absolute;
+  top: 20px;
+  left: 20px;
   font-size: .95em;
   font-weight: bold;
   line-height: 1;
@@ -103,7 +82,9 @@
 }
 
 .sns {
-  margin-top: 20px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
 
 .sns a {
