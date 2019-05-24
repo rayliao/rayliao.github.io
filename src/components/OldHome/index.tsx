@@ -15,8 +15,10 @@ export default class OldHome extends React.Component {
           <Link to='/blog'>BLOG</Link>
           <Link to='/shoot/2018'>PHOTOGRAPHY</Link>
         </nav>
-        <h1>WingRay Liao</h1>
-        <p>Front-end developer, photography enthusiasts</p>
+        <div className={styles.main}>
+          <h1>WingRay Liao</h1>
+          <p>Front-end developer, photography enthusiasts</p>
+        </div>
         <div className={styles.sns}>
           <a href='https://github.com/rayliao' target='_blank' title='github'><i className='fa fa-github' /></a>
           <a href='https://instagram.com/wingrayliao/' target='_blank' title='instagram'><i className='fa fa-instagram' /></a>
