@@ -1,6 +1,6 @@
 import ControlKit from '@brunoimbrizi/controlkit'
 import Stats from 'stats.js'
-import WebGLView from '../webgl'
+import WebGLView from '../Webgl'
 
 export default class GUIView {
   webgl: WebGLView

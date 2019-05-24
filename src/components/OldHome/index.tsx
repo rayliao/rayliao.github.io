@@ -12,7 +12,7 @@ export default class OldHome extends React.Component {
         <nav className={styles.nav}>
           <Link to='/'>HOME</Link>
           <Link to='/blog'>BLOG</Link>
-          <Link to='/shoot/2017'>PHOTOGRAPHY</Link>
+          <Link to='/shoot/2018'>PHOTOGRAPHY</Link>
         </nav>
         <h1>WingRay Liao</h1>
         <p>Front-end developer, photography enthusiasts</p>
