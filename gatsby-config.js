@@ -1,4 +1,8 @@
 module.exports = {
+  siteMetadata: {
+    title: 'RayLiao',
+    description: 'WingRay Liao',
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-manifest`,
