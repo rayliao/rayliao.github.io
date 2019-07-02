@@ -7,7 +7,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop -S",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
+    "start": "GITHUB_TOKEN=86d25f1dca0f8443379a9a5fdc4caca1a34ca1c2 npm run develop",
     "serve": "gatsby serve",
     "fix": "tslint --fix 'src/**/*.ts{,x}'",
     "precommit": "lint-staged",
