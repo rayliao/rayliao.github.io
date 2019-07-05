@@ -1,0 +1,19 @@
+.content {
+  height: 100vh;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.img {
+  max-width: 600px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 800px) {
+  .img {
+    width: 95%;
+  }
+}

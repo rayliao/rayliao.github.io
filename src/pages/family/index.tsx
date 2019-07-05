@@ -1,19 +1,33 @@
 import * as React from 'react'
+import * as styles from './index.module.css'
 
 interface IndexState {
-  num: number
+  current: number
 }
 
 class Index extends React.Component<any, IndexState> {
-  state: {
-    num: 1
+  shuffleList
+  max = 4
+  constructor(props) {
+    super(props)
+    const list = Array.from(new Array(this.max + 1).keys())
+    this.shuffleList = list.sort(() => .5 - Math.random())
+  }
+  state: IndexState = {
+    current: 0
   }
   switch = () => {
-    this.setState({ num: 2 })
+    const { current } = this.state
+    this.setState({ current: current === this.max ? 0 : current + 1 })
   }
   render() {
-    const { num } = this.state
-    return <div><img style={{ width: 500 }} src={`../../images/family/${num}.jpg`} /></div>
+    if (!this.shuffleList) {
+      return null
+    }
+    const { current } = this.state
+    return <div className={styles.content}>
+      <img className={styles.img} onClick={this.switch} src={`../../images/family/${this.shuffleList[current]}.jpg`} />
+    </div>
   }
 }
 
