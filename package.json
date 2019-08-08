@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "NODE_TLS_REJECT_UNAUTHORIZED=0 gatsby develop -S",
+    "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "GITHUB_TOKEN=13722bff4ea51f54b40d761823dd1254c6d44401 npm run develop",
     "serve": "gatsby serve",

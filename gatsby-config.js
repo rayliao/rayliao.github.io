@@ -17,22 +17,22 @@ module.exports = {
         crossOrigin: `use-credentials`,
       },
     },
-    {
-      resolve: "gatsby-source-graphql",
-      options: {
-        typeName: "GitHub",
-        fieldName: "github",
-        // Url to query from
-        url: "https://api.github.com/graphql",
-        // HTTP headers
-        headers: {
-          // Learn about environment variables: https://gatsby.dev/env-vars
-          Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
-        },
-        // Additional options to pass to node-fetch
-        fetchOptions: {},
-      },
-    },
+    // {
+    //   resolve: "gatsby-source-graphql",
+    //   options: {
+    //     typeName: "GitHub",
+    //     fieldName: "github",
+    //     // Url to query from
+    //     url: "https://api.github.com/graphql",
+    //     // HTTP headers
+    //     headers: {
+    //       // Learn about environment variables: https://gatsby.dev/env-vars
+    //       Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
+    //     },
+    //     // Additional options to pass to node-fetch
+    //     fetchOptions: {},
+    //   },
+    // },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-glslify`,
