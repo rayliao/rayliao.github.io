@@ -2,7 +2,7 @@ import * as React from 'react'
 import Layout from './layout'
 import * as styles from './shoot.module.css'
 
-export default class Empty extends React.Component {
+export default class Index extends React.Component {
   render() {
     return <Layout>
       <div><img src='../../images/2018/0203.jpg' /></div>

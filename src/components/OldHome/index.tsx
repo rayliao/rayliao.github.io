@@ -14,6 +14,7 @@ export default class OldHome extends React.Component {
           <Link to='/'>HOME</Link>
           <Link to='/blog'>BLOG</Link>
           <Link to='/shoot/2018'>PHOTOGRAPHY</Link>
+          <Link to='/about'>PHOTOGRAPHY</Link>
         </nav>
         <div className={styles.main}>
           <h1>WingRay Liao</h1>
