@@ -1,4 +1,5 @@
 import * as React from 'react'
+import Common from '../../components/Common'
 import * as styles from './index.module.css'
 
 interface IndexState {
@@ -25,9 +26,11 @@ class Index extends React.Component<any, IndexState> {
       return null
     }
     const { current } = this.state
-    return <div className={styles.content}>
-      <img className={styles.img} onClick={this.switch} src={`../../images/family/${this.shuffleList[current]}.jpg`} />
-    </div>
+    return <Common name='family'>
+      <div className={styles.content}>
+        <img className={styles.img} onClick={this.switch} src={`../../images/family/${this.shuffleList[current]}.jpg`} />
+      </div>
+    </Common>
   }
 }
 
