@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
+import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
 import '../../styles/normalize.css'
 

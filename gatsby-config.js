@@ -1,13 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: 'RayLiao',
+    title: 'rayliao',
     description: 'WingRay Liao',
   },
   plugins: [
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `RayLiao`,
+        name: `rayliao`,
         short_name: `rayliao`,
         start_url: `/`,
         background_color: `#f7f0eb`,

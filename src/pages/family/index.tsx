@@ -1,10 +1,9 @@
 import * as React from 'react'
+import Slider from 'react-slick'
 import Common from '../../components/Common'
 import * as styles from './index.module.css'
 
-interface IndexState {
-  current: number
-}
+interface IndexState { }
 
 class Index extends React.Component<any, IndexState> {
   shuffleList
@@ -14,21 +13,30 @@ class Index extends React.Component<any, IndexState> {
     const list = Array.from(new Array(this.max + 1).keys())
     this.shuffleList = list.sort(() => .5 - Math.random())
   }
-  state: IndexState = {
-    current: 0
-  }
-  switch = () => {
-    const { current } = this.state
-    this.setState({ current: current === this.max ? 0 : current + 1 })
-  }
+  slider: Slider
   render() {
     if (!this.shuffleList) {
       return null
     }
-    const { current } = this.state
+    const settings = {
+      infinite: true,
+      speed: 500,
+      lazyLoad: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      fade: true,
+    }
     return <Common name='family'>
-      <div className={styles.content}>
-        <img className={styles.img} onClick={this.switch} src={`../../images/family/${this.shuffleList[current]}.jpg`} />
+      <div className={styles.container} onClick={() => this.slider.slickNext()}>
+        <Slider ref={slider => (this.slider = slider)} {...settings}>
+          {
+            this.shuffleList.map(index => {
+              return <div key={index} className={styles.item}>
+                <img className={styles.img} src={`../../images/family/${index}.jpg`} />
+              </div>
+            })
+          }
+        </Slider>
       </div>
     </Common>
   }
