@@ -1,11 +1,12 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
+import Common from '../../../components/Common'
 import * as styles from './index.module.css'
 
 export default class Index extends React.Component {
   render() {
-    return <>
-      <Helmet defaultTitle={`Alice's Birthday 2018`}>
+    return <Common name={`alice's birthday 2018`}>
+      <Helmet>
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <meta http-equiv='X-UA-Compatible' content='ie=edge' />
       </Helmet>
@@ -19,6 +20,6 @@ export default class Index extends React.Component {
           </div>
         </div>
       </div>
-    </>
+      </Common>
   }
 }

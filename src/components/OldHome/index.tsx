@@ -1,19 +1,22 @@
 import { Link } from 'gatsby'
 import * as React from 'react'
-import '../../styles/normalize.css'
+import Helmet from 'react-helmet'
+import Common from '../Common'
 import InteractivePaticles from '../InteractivePaticles'
 import * as styles from './index.module.css'
-import Layout from './Layout'
 
 export default class OldHome extends React.Component {
   render() {
-    return <Layout>
+    return <Common>
+      <Helmet>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css' />
+      </Helmet>
       <div className={styles.container}>
         <InteractivePaticles />
         <nav className={styles.nav}>
           <Link to='/'>HOME</Link>
           <Link to='/blog'>BLOG</Link>
-          <Link to='/shoot/2018'>PHOTOGRAPHY</Link>
+          <Link to='/shoot/2018'>IMAGE</Link>
           <Link to='/about'>ABOUT</Link>
         </nav>
         <div className={styles.main}>
@@ -31,6 +34,6 @@ export default class OldHome extends React.Component {
           <a href='javascript:;' title='rayliao1989@gmail.com'><i className='fa fa-envelope' /></a>
         </div>
       </div>
-    </Layout>
+    </Common>
   }
 }
