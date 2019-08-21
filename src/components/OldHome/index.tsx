@@ -15,7 +15,7 @@ export default class OldHome extends React.Component {
         <InteractivePaticles />
         <nav className={styles.nav}>
           <Link to='/'>HOME</Link>
-          <Link to='/blog'>BLOG</Link>
+          <a href='/blog'>BLOG</a>
           <Link to='/shoot/2018'>IMAGE</Link>
           <Link to='/about'>ABOUT</Link>
         </nav>
@@ -24,12 +24,12 @@ export default class OldHome extends React.Component {
           <p>Front-end developer / Photography enthusiasts / Swimfan</p>
         </div>
         <div className={styles.sns}>
-          <a href='https://github.com/rayliao' target='_blank' title='github'><i className='fa fa-github' /></a>
-          <a href='https://instagram.com/wingrayliao/' target='_blank' title='instagram'><i className='fa fa-instagram' /></a>
-          <a href='https://www.facebook.com/wingrayliao' target='_blank' title='facebook'><i className='fa fa-facebook-square' /></a>
-          <a href='http://weibo.com/574954033' target='_blank' title='weibo'><i className='fa fa-weibo' /></a>
-          <a href='http://blog.segmentfault.com/rayliao' target='_blank' className='segmentfault'>sf</a>
-          <a href='http://www.douban.com/people/lensliao/' target='_blank' title='douban'>豆</a>
+          <a href='https://github.com/rayliao' target='_blank' rel='noopener' title='github'><i className='fa fa-github' /></a>
+          <a href='https://instagram.com/wingrayliao/' target='_blank' rel='noopener' title='instagram'><i className='fa fa-instagram' /></a>
+          <a href='https://www.facebook.com/wingrayliao' target='_blank' rel='noopener' title='facebook'><i className='fa fa-facebook-square' /></a>
+          <a href='http://weibo.com/574954033' target='_blank' rel='noopener' title='weibo'><i className='fa fa-weibo' /></a>
+          <a href='http://blog.segmentfault.com/rayliao' target='_blank' rel='noopener' className='segmentfault'>sf</a>
+          <a href='http://www.douban.com/people/lensliao/' target='_blank' rel='noopener' title='douban'>豆</a>
           <a href='javascript:;' title='QQ: 574954033'><i className='fa fa-qq' /></a>
           <a href='javascript:;' title='rayliao1989@gmail.com'><i className='fa fa-envelope' /></a>
         </div>

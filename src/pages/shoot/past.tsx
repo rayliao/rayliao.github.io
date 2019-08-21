@@ -15,7 +15,7 @@ export default class Past extends React.Component {
             <h1><Link to='/shoot/2016'>WingRay Liao Photopraphy</Link></h1>
             <div className={styles.nav}>
               <Link to='/'>home</Link><span>/</span>
-              <a href='/blog' target='_blank'>blog</a>
+              <a href='/blog' target='_blank' rel='noopener'>blog</a>
             </div>
           </div>
         </div>
