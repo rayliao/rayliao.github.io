@@ -1,6 +1,7 @@
 import { Link } from 'gatsby'
 import * as React from 'react'
 import Helmet from 'react-helmet'
+import { FormattedMessage } from 'react-intl'
 import Common from '../Common'
 import InteractivePaticles from '../InteractivePaticles'
 import * as styles from './index.module.css'
@@ -20,6 +21,7 @@ export default class OldHome extends React.Component {
           <Link to='/about'>ABOUT</Link>
         </nav>
         <div className={styles.main}>
+          <FormattedMessage id='oldHome.title' defaultMessage='标题' />
           <h1>WingRay Liao</h1>
           <p>Front-end developer / Photography enthusiasts / Swimfan</p>
         </div>
