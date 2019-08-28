@@ -4,6 +4,6 @@ declare const styles: {
   readonly 'card': string
   readonly 'name': string
   readonly 'tip': string
-};
-export = styles;
+}
+export = styles
 

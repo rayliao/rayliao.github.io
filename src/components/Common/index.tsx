@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
 import * as React from 'react'
 import Helmet from 'react-helmet'
 import { IntlProvider } from 'react-intl'
@@ -11,9 +11,14 @@ interface CommonProps {
   children?: React.ReactNode
   name?: string
 }
+export interface CommonState {
+  locale: string
+  switchLocale: any
+}
 
-export default (props: CommonProps) => {
-  const data = useStaticQuery(graphql`
+export const Context = React.createContext(null)
+
+export const commonQuery = graphql`
     query CommonQuery {
       site {
         siteMetadata {
@@ -22,18 +27,44 @@ export default (props: CommonProps) => {
         }
       }
     }
-  `)
-  const title = `${data.site.siteMetadata.title}${
-    props.name ? ` - ${props.name}` : ''
-    }`
-  const lang = 'en'
-  return (
-    <IntlProvider locale={lang} messages={translatedMessages[lang]}>
-      <Helmet defaultTitle={title}>
-        <html lang={lang} />
-        <meta content={data.site.siteMetadata.description} name='description' />
-      </Helmet>
-      {props.children}
-    </IntlProvider>
-  )
+  `
+
+export default class Common extends React.Component<CommonProps, CommonState> {
+  constructor(props) {
+    super(props)
+  }
+  /**
+   * 切换多语言
+   * @memberof Common
+   */
+  switchLocale = locale => { this.setState({ locale }) }
+  state = {
+    locale: 'en',
+    switchLocale: this.switchLocale
+  }
+  render() {
+    const { name } = this.props
+    const { locale } = this.state
+    return (
+      <Context.Provider value={this.state}>
+        <IntlProvider locale={locale} messages={translatedMessages[locale]}>
+          <StaticQuery
+            query={commonQuery}
+            render={data => {
+              const title = `${data.site.siteMetadata.title}${
+                name ? ` - ${name}` : ''
+                }`
+              return <React.Fragment>
+                <Helmet defaultTitle={title}>
+                  <html lang={locale} />
+                  <meta content={data.site.siteMetadata.description} name='description' />
+                </Helmet>
+                {this.props.children}
+              </React.Fragment>
+            }}
+          />
+        </IntlProvider>
+      </Context.Provider>
+    )
+  }
 }

@@ -12,6 +12,6 @@ declare const styles: {
   readonly 'infoInr': string
   readonly 'pic': string
   readonly 'rev': string
-};
-export = styles;
+}
+export = styles
 
