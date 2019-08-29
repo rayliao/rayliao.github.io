@@ -1,6 +1,9 @@
 import en from './en'
 import zh from './zh'
 import tw from './tw'
+import fr from './fr'
+import ja from './ja'
+import ko from './ko'
 
 /**
  * 已翻译的多语言为react-intl准备的
@@ -9,6 +12,9 @@ export const translatedMessages = {
   'zh-CN': zh,
   'zh-TW': tw,
   en,
+  fr,
+  ja,
+  ko,
 }
 
 /**
@@ -17,8 +23,8 @@ export const translatedMessages = {
 export const languages = {
   'zh-CN': '简体',
   'zh-TW': '繁體',
+  ja: '日本語',
   en: 'English',
   ko: '한국어',
-  ja: '日本語',
   fr: 'français',
 }

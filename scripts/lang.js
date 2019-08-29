@@ -4,7 +4,6 @@ const parser = require('typescript-react-intl').default
 const chalk = require('chalk')
 const Opencc = require('opencc')
 const log = console.log
-const targets = ['zh', 'en', 'ja', 'ko', 'fr']
 /**
  * runner
  * @param {*} pattern 文件过滤正则
@@ -37,9 +36,7 @@ runner(null, res => {
 
   log(chalk.green('从源码提取react-intl定义的多语言文件...'))
   const c = JSON.stringify(locale, null, 2)
-  targets.forEach(l => {
-    fs.writeFileSync(`src/lang/${l}.tsx`, `export default ${c}\r`)
-  })
+  fs.writeFileSync(`src/lang/zh.tsx`, `export default ${c}\r`)
   log(chalk.red('...提取zh完成'))
 
   log(chalk.green('\n开始简体转换繁体...'))

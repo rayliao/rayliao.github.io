@@ -3,8 +3,9 @@ import * as React from 'react'
 import Helmet from 'react-helmet'
 import { FormattedMessage } from 'react-intl'
 import Common, { CommonState, Context as IntlContext } from '../Common'
-import InteractivePaticles from '../InteractivePaticles'
+// import InteractivePaticles from '../InteractivePaticles'
 import * as styles from './index.module.css'
+import { languages } from '../../lang'
 
 export default class Home extends React.Component {
   render() {
@@ -17,37 +18,60 @@ export default class Home extends React.Component {
           />
         </Helmet>
         <div className={styles.container}>
-          <InteractivePaticles />
-          <div className="header">
-            <div className="left">
+          {/* <InteractivePaticles /> */}
+          <div className={styles.header}>
+            <div className={styles.headerLeft}>
               <nav className={styles.nav}>
-                <Link to="/">HOME</Link>
-                <a href="/blog">BLOG</a>
-                <Link to="/shoot/2018">IMAGE</Link>
-                <Link to="/about">ABOUT</Link>
+                <Link to="/">
+                  <FormattedMessage id="home.home" defaultMessage="首页" />
+                </Link>
+                <a href="/blog">
+                  <FormattedMessage id="home.blog" defaultMessage="博客" />
+                </a>
+                <Link to="/shoot/2018">
+                  <FormattedMessage id="home.image" defaultMessage="摄影" />
+                </Link>
+                <Link to="/about">
+                  <FormattedMessage id="home.about" defaultMessage="关于我" />
+                </Link>
               </nav>
             </div>
-            <div className="right">
-              <div className="language">
-                <div className="language-list" />
+            <div className={styles.headerRight}>
+              {/* <div className={styles.theme}>
+                <i className="fa fa-moon-o" />
+              </div> */}
+              <div className={styles.language}>
+                <i className={`fa fa-language ${styles.languageIcon}`} />
+                <IntlContext.Consumer>
+                  {({ locale, switchLocale }: CommonState) => (
+                    <div className={styles.languageList}>
+                      {Object.keys(languages).map(key => (
+                        <p
+                          onClick={() => switchLocale(key)}
+                          className={locale === key ? 'active' : ''}
+                          key={key}
+                        >
+                          {languages[key]}
+                        </p>
+                      ))}
+                    </div>
+                  )}
+                </IntlContext.Consumer>
               </div>
             </div>
           </div>
           <div className={styles.main}>
-            <FormattedMessage id="oldHome.title" defaultMessage="标题" />
-            <IntlContext.Consumer>
-              {({ switchLocale }: CommonState) => (
-                <button
-                  onClick={() => {
-                    switchLocale('zh-CN')
-                  }}
-                >
-                  切换多语言
-                </button>
-              )}
-            </IntlContext.Consumer>
             <h1>WingRay Liao</h1>
-            <p>Front-end developer / Photography enthusiasts / Swimfan</p>
+            <p>
+              <FormattedMessage id="home.frontEnd" defaultMessage="前端渣滓" />
+              &nbsp;/&nbsp;
+              <FormattedMessage
+                id="home.photography"
+                defaultMessage="摄影爱好者"
+              />
+              &nbsp;/&nbsp;
+              <FormattedMessage id="home.swimfan" defaultMessage="游泳爱好者" />
+            </p>
           </div>
           <div className={styles.sns}>
             <a
@@ -81,25 +105,6 @@ export default class Home extends React.Component {
               title="weibo"
             >
               <i className="fa fa-weibo" />
-            </a>
-            <a
-              href="http://blog.segmentfault.com/rayliao"
-              target="_blank"
-              rel="noopener"
-              className="segmentfault"
-            >
-              sf
-            </a>
-            <a
-              href="http://www.douban.com/people/lensliao/"
-              target="_blank"
-              rel="noopener"
-              title="douban"
-            >
-              豆
-            </a>
-            <a href="javascript:;" title="QQ: 574954033">
-              <i className="fa fa-qq" />
             </a>
             <a href="javascript:;" title="rayliao1989@gmail.com">
               <i className="fa fa-envelope" />

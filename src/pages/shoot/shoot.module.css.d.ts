@@ -5,6 +5,6 @@ declare const styles: {
   readonly 'content': string
   readonly 'unite': string
   readonly 'phone': string
-}
-export = styles
+};
+export = styles;
 
