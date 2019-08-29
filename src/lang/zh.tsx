@@ -1,3 +1,3 @@
 export default {
-  'oldHome.title': '标题'
-}
+  "oldHome.title": "标题"
+}

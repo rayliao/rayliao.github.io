@@ -7183,7 +7183,7 @@ name-all-modules-plugin@^1.0.1:
   resolved "https://registry.yarnpkg.com/name-all-modules-plugin/-/name-all-modules-plugin-1.0.1.tgz#0abfb6ad835718b9fb4def0674e06657a954375c"
   integrity sha1-Cr+2rYNXGLn7Te8GdOBmV6lUN1w=
 
-nan@^2.13.2:
+nan@^2.13.2, nan@^2.5.1:
   version "2.14.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.0.tgz#7818f722027b2459a86f0295d434d1fc2336c52c"
   integrity sha512-INOFj37C7k3AfaNTtX8RhsTw7qRy7eLET14cROi9+5HAVbbHuIWUHEauBv5qT4Av2tWasiTY1Jw6puUNqRJXQg==
@@ -7617,6 +7617,13 @@ onetime@^2.0.0:
   integrity sha1-BnQoIw/WdEOyeUsiu6UotoZ5YtQ=
   dependencies:
     mimic-fn "^1.0.0"
+
+opencc@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/opencc/-/opencc-1.0.5.tgz#53a928ac29dc3557a1b1e058d369b423673ab7e5"
+  integrity sha1-U6korCncNVehseBY02m0I2c6t+U=
+  dependencies:
+    nan "^2.5.1"
 
 opentracing@^0.14.3:
   version "0.14.3"
@@ -10412,6 +10419,18 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
+
+typescript-react-intl@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/typescript-react-intl/-/typescript-react-intl-0.4.0.tgz#45d5ff1ea4f7f4677a59769eee654d1556df160b"
+  integrity sha512-sCQN2YdWSaWNAK9bBezmqZStswfh0MMWQnIlBOn+iFBN4fE1m36fv1zqUaw33jTbQUjIaZ4N+NFbMfS/cnyIew==
+  dependencies:
+    typescript "^2.6.2"
+
+typescript@^2.6.2:
+  version "2.9.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.2.tgz#1cbf61d05d6b96269244eb6a3bce4bd914e0f00c"
+  integrity sha512-Gr4p6nFNaoufRIY4NMdpQRNmgxVIGMs4Fcu/ujdYk3nAZqk7supzBE9idmvfZIlH/Cuj//dvi+019qEue9lV0w==
 
 typescript@^3.4.3:
   version "3.4.3"

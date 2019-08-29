@@ -1,8 +1,8 @@
 import * as React from 'react'
-import OldHome from '../components/OldHome'
+import Home from '../components/Home'
 
 export default class Index extends React.Component {
   render() {
-    return <OldHome/>
+    return <Home />
   }
 }

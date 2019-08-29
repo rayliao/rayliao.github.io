@@ -6,7 +6,7 @@ import Common, { CommonState, Context as IntlContext } from '../Common'
 import InteractivePaticles from '../InteractivePaticles'
 import * as styles from './index.module.css'
 
-export default class OldHome extends React.Component {
+export default class Home extends React.Component {
   render() {
     return (
       <Common>
@@ -18,12 +18,21 @@ export default class OldHome extends React.Component {
         </Helmet>
         <div className={styles.container}>
           <InteractivePaticles />
-          <nav className={styles.nav}>
-            <Link to="/">HOME</Link>
-            <a href="/blog">BLOG</a>
-            <Link to="/shoot/2018">IMAGE</Link>
-            <Link to="/about">ABOUT</Link>
-          </nav>
+          <div className="header">
+            <div className="left">
+              <nav className={styles.nav}>
+                <Link to="/">HOME</Link>
+                <a href="/blog">BLOG</a>
+                <Link to="/shoot/2018">IMAGE</Link>
+                <Link to="/about">ABOUT</Link>
+              </nav>
+            </div>
+            <div className="right">
+              <div className="language">
+                <div className="language-list" />
+              </div>
+            </div>
+          </div>
           <div className={styles.main}>
             <FormattedMessage id="oldHome.title" defaultMessage="标题" />
             <IntlContext.Consumer>
