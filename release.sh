@@ -1,6 +1,9 @@
 # release 
 # build production files
 
+echo 'cleaning...'
+gatsby clean
+
 echo 'building ...'
 yarn build 
 
