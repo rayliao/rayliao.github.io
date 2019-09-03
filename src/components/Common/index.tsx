@@ -6,6 +6,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
 import { translatedMessages } from '../../lang'
 import '../../styles/normalize.css'
+import '../../styles/index.css'
 
 interface CommonProps {
   children?: React.ReactNode
@@ -13,6 +14,8 @@ interface CommonProps {
 }
 export interface CommonState {
   locale: string
+  dark: boolean
+  switchTheme: any
   switchLocale: any
 }
 
@@ -30,6 +33,7 @@ export const commonQuery = graphql`
 `
 
 export default class Common extends React.Component<CommonProps, CommonState> {
+  transition = false
   constructor(props) {
     super(props)
   }
@@ -40,13 +44,24 @@ export default class Common extends React.Component<CommonProps, CommonState> {
   switchLocale = locale => {
     this.setState({ locale })
   }
+  /**
+   * 切换主题
+   * @memberof Common
+   */
+  switchTheme = () => {
+    this.transition = true
+    this.setState({ dark: !this.state.dark })
+    setTimeout(() => (this.transition = false), 1000)
+  }
   state = {
     locale: 'en',
+    dark: true,
     switchLocale: this.switchLocale,
+    switchTheme: this.switchTheme,
   }
   render() {
     const { name } = this.props
-    const { locale } = this.state
+    const { locale, dark } = this.state
     return (
       <Context.Provider value={this.state}>
         <IntlProvider locale={locale} messages={translatedMessages[locale]}>
@@ -59,7 +74,13 @@ export default class Common extends React.Component<CommonProps, CommonState> {
               return (
                 <React.Fragment>
                   <Helmet defaultTitle={title}>
-                    <html lang={locale} />
+                    <html
+                      className={
+                        this.transition ? 'color-theme-in-transition' : ''
+                      }
+                      lang={locale}
+                      data-theme={dark ? 'dark' : 'light'}
+                    />
                     <meta
                       content={data.site.siteMetadata.description}
                       name="description"

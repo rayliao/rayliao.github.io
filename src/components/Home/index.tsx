@@ -36,14 +36,18 @@ export default class Home extends React.Component {
                 </Link>
               </nav>
             </div>
-            <div className={styles.headerRight}>
-              {/* <div className={styles.theme}>
-                <i className="fa fa-moon-o" />
-              </div> */}
-              <div className={styles.language}>
-                <i className={`fa fa-language ${styles.languageIcon}`} />
-                <IntlContext.Consumer>
-                  {({ locale, switchLocale }: CommonState) => (
+            <IntlContext.Consumer>
+              {({ locale, dark, switchLocale, switchTheme }: CommonState) => (
+                <div className={styles.headerRight}>
+                  <div onClick={switchTheme} className={styles.theme}>
+                    {dark ? (
+                      <i className="fa fa-sun-o" />
+                    ) : (
+                      <i className="fa fa-moon-o" />
+                    )}
+                  </div>
+                  <div className={styles.language}>
+                    <i className={`fa fa-language ${styles.languageIcon}`} />
                     <div className={styles.languageList}>
                       {Object.keys(languages).map(key => (
                         <p
@@ -55,10 +59,10 @@ export default class Home extends React.Component {
                         </p>
                       ))}
                     </div>
-                  )}
-                </IntlContext.Consumer>
-              </div>
-            </div>
+                  </div>
+                </div>
+              )}
+            </IntlContext.Consumer>
           </div>
           <div className={styles.main}>
             <h1>WingRay Liao</h1>
