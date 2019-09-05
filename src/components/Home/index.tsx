@@ -6,7 +6,6 @@ import Common, { CommonState, Context as IntlContext } from '../Common'
 // import InteractivePaticles from '../InteractivePaticles'
 import * as styles from './index.module.css'
 import { languages } from '../../lang'
-import bg from './bg.jpg'
 
 export default class Home extends React.Component {
   render() {
@@ -73,7 +72,6 @@ export default class Home extends React.Component {
               <div className={styles.glitchImg} />
               <div className={styles.glitchImg} />
             </div>
-            {/* <img className={styles.mainBg} src={bg} width="300" alt="bg" /> */}
             <h1>WingRay Liao</h1>
             <p>
               <FormattedMessage id="home.frontEnd" defaultMessage="前端渣滓" />
