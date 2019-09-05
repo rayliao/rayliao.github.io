@@ -66,15 +66,15 @@ export default class Home extends React.Component {
             </IntlContext.Consumer>
           </div>
           <div className={styles.main}>
+            <div className={styles.glitch}>
+              <div className={styles.glitchImg} />
+              <div className={styles.glitchImg} />
+              <div className={styles.glitchImg} />
+              <div className={styles.glitchImg} />
+              <div className={styles.glitchImg} />
+            </div>
+            {/* <img className={styles.mainBg} src={bg} width="300" alt="bg" /> */}
             <h1>WingRay Liao</h1>
-            <img
-              src={bg}
-              data-original-url={bg}
-              data-render-type="gif"
-              width="500"
-              alt="bg"
-              data-inited="true"
-            />
             <p>
               <FormattedMessage id="home.frontEnd" defaultMessage="前端渣滓" />
               &nbsp;/&nbsp;
