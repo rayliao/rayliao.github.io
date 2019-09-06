@@ -1,10 +1,3 @@
-.hidden {
-  position: absolute;
-  left: -100vw;
-  width: 0;
-  height: 0;
-}
-
 .container {
   font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial,
     sans-serif;
@@ -12,10 +5,11 @@
   color: var(--text-color-normal);
   background: var(--background);
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  position: relative;
+  position: absolute;
   overflow: hidden;
   text-align: center;
   display: -webkit-flex;
@@ -40,6 +34,7 @@
 .header {
   position: absolute;
   top: 0;
+  z-index: 3;
   padding: 10px;
   width: 100%;
   height: 48px;
@@ -129,6 +124,7 @@
   --blend-color-4: transparent;
   --blend-color-5: #c9b09a;
   position: relative;
+  top: -50px;
 }
 
 .glitch {
@@ -203,14 +199,6 @@
 
 .glitch:hover > .glitchImg:nth-child(5) {
   animation: glitch-anim-flash 0.5s steps(1, end) infinite;
-}
-
-.mainBg {
-  position: absolute;
-  top: -100px;
-  right: 0;
-  left: 0;
-  margin: 0 auto;
 }
 
 .main h1 {
