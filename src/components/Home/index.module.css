@@ -114,12 +114,12 @@
   --gap-vertical: 10px;
   --time-anim: 2s;
   --blend-mode-1: none;
-  --blend-mode-2: none;
+  --blend-mode-2: darken;
   --blend-mode-3: luminosity;
   --blend-mode-4: none;
   --blend-mode-5: none;
   --blend-color-1: transparent;
-  --blend-color-2: transparent;
+  --blend-color-2: #f30c0c;
   --blend-color-3: #4d8c60;
   --blend-color-4: transparent;
   --blend-color-5: #c9b09a;
