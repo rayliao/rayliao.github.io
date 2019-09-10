@@ -33,7 +33,7 @@ module.exports = {
     //     fetchOptions: {},
     //   },
     // },
-    `gatsby-plugin-offline`,
+    // `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-glslify`,
     `gatsby-plugin-typescript`,
