@@ -1,5 +1,4 @@
 declare const styles: {
-  readonly 'hidden': string
   readonly 'container': string
   readonly 'header': string
   readonly 'headerLeft': string
@@ -16,7 +15,6 @@ declare const styles: {
   readonly 'glitch-anim-2-horizontal': string
   readonly 'glitch-anim-3-horizontal': string
   readonly 'glitch-anim-flash': string
-  readonly 'mainBg': string
   readonly 'sns': string
 };
 export = styles;
