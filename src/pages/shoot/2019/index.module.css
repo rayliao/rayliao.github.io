@@ -126,7 +126,7 @@ a:focus {
   right: 0;
 }
 
-.item__img-wrap {
+.itemImgWrap {
   --aspect-ratio: 1/1.5;
   overflow: hidden;
   width: 500px;
@@ -136,52 +136,52 @@ a:focus {
   will-change: transform;
 }
 
-.item:first-child .item__img-wrap {
+.item:first-child .itemImgWrap {
   --aspect-ratio: 8/10;
   --image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/1.jpg);
 }
 
-.item:nth-child(2) .item__img-wrap {
+.item:nth-child(2) .itemImgWrap {
   width: 1000px;
   --aspect-ratio: 120/76;
   --image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/2.jpg);
 }
 
-.item:nth-child(3) .item__img-wrap {
+.item:nth-child(3) .itemImgWrap {
   --aspect-ratio: 60/75;
   --image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/3.jpg);
 }
 
-.item:nth-child(4) .item__img-wrap {
+.item:nth-child(4) .itemImgWrap {
   width: 800px;
   --aspect-ratio: 900/505;
   --image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/4.jpg);
 }
 
-.item:nth-child(5) .item__img-wrap {
+.item:nth-child(5) .itemImgWrap {
   --aspect-ratio: 6/8;
   --image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/5.jpg);
 }
 
-.item:nth-child(6) .item__img-wrap {
+.item:nth-child(6) .itemImgWrap {
   width: calc(100vw - 2rem);
   --aspect-ratio: 1500/844;
   --image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/6.jpg);
 }
 
-.item:nth-child(7) .item__img-wrap {
+.item:nth-child(7) .itemImgWrap {
   width: 900px;
   --aspect-ratio: 1000/749;
   --image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/7.jpg);
 }
 
-.item:nth-child(8) .item__img-wrap {
+.item:nth-child(8) .itemImgWrap {
   width: 900px;
   --aspect-ratio: 1000/562;
   --image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/8.jpg);
 }
 
-.item:nth-child(9) .item__img-wrap {
+.item:nth-child(9) .itemImgWrap {
   --aspect-ratio: 60/75;
   --image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/9.jpg);
 }
@@ -198,15 +198,15 @@ a:focus {
   will-change: transform;
 }
 
-.item__img--t1 {
+.itemImgT1 {
   --overflow: 60px;
 }
 
-.item__img--t2 {
+.itemImgT2 {
   --overflow: 80px;
 }
 
-.item__img--t3 {
+.itemImgT3 {
   --overflow: 120px;
 }
 
@@ -214,18 +214,18 @@ a:focus {
   padding: 2rem 1rem;
 }
 
-.item__caption-title {
+.itemCaptionTitle {
   font-family: paralucent, sans-serif;
   font-weight: 400;
   font-size: 3rem;
   margin: 0;
 }
 
-.item__caption-copy {
+.itemCaptionCopy {
   margin: 0;
 }
 
-.item__caption-copy::before {
+.itemCaptionCopy::before {
   content: '__';
   line-height: 1;
   color: var(--color-link);

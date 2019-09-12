@@ -10,14 +10,14 @@ declare const styles: {
   readonly 'frame__demo--current': string
   readonly 'content': string
   readonly 'item': string
-  readonly 'item__img-wrap': string
+  readonly 'itemImgWrap': string
   readonly 'item__img': string
-  readonly 'item__img--t1': string
-  readonly 'item__img--t2': string
-  readonly 'item__img--t3': string
+  readonly 'itemImgT1': string
+  readonly 'itemImgT2': string
+  readonly 'itemImgT3': string
   readonly 'item__caption': string
-  readonly 'item__caption-title': string
-  readonly 'item__caption-copy': string
+  readonly 'itemCaptionTitle': string
+  readonly 'itemCaptionCopy': string
 };
 export = styles;
 
