@@ -3,6 +3,12 @@ import Common from '../../../components/Common'
 import * as styles from './index.module.css'
 
 export default class Index extends React.Component {
+  state = {
+    content: 'Ready to land',
+  }
+  onTest = () => {
+    this.setState({ content: 'landing now' })
+  }
   render() {
     return (
       <Common name="2019">
@@ -61,7 +67,9 @@ export default class Index extends React.Component {
                     />
                   </div>
                   <div className={styles.item__caption}>
-                    <h2 className={styles.itemCaptionTitle}>Ready to land</h2>
+                    <h2 className={styles.itemCaptionTitle}>
+                      {this.state.content}
+                    </h2>
                     <p className={styles.itemCaptionCopy}>
                       Cosmos encyclopaedia galactica a billion trillion culture
                       cosmic ocean.
