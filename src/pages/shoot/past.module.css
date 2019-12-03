@@ -16,7 +16,7 @@
 
 .header h2 {
   margin: 0;
-  font-family: "Adobe Hebrew", "Tahoma", serif;
+  font-family: 'Adobe Hebrew', 'Tahoma', serif;
   font-size: 18px;
   font-style: italic;
   font-weight: normal;
@@ -32,7 +32,7 @@
 
 .header .line {
   font-style: normal;
-  font-family: "Segoe UI Light", sans-serif;
+  font-family: 'Segoe UI Light', sans-serif;
   font-size: 80px;
   font-weight: 100;
   float: left;
@@ -45,7 +45,7 @@
 .header .right {
   float: left;
   padding-top: 30px;
-  font-family: "papyrus", sans-serif;
+  font-family: 'papyrus', sans-serif;
 }
 
 .header .right h1 {
@@ -140,4 +140,109 @@
 .rev .infoInr {
   margin-left: inherit;
   margin-right: -195px;
+}
+
+@media screen and (max-width: 995px) {
+  .main {
+    width: 100%;
+  }
+
+  .header {
+    padding: 0;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .header h2 {
+    font-size: 12px;
+    height: 20px;
+    float: inherit;
+    line-height: 20px;
+    padding-left: 22px;
+  }
+
+  .header .line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 50px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+    float: inherit;
+  }
+
+  .header .right {
+    float: inherit;
+    padding-top: 2px;
+    margin-left: 18px;
+  }
+
+  .header .nav {
+    margin-left: -5px;
+    font-size: 14px;
+  }
+
+  .header .nav span {
+    padding: 0 5px;
+  }
+
+  .entry {
+    padding-bottom: 10px;
+  }
+
+  .info {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .info h3 {
+    margin: 4px 0;
+    font-size: 12px;
+  }
+
+  .info p {
+    margin: 0;
+    line-height: 20px;
+  }
+
+  .infoBlack {
+    white-space: normal;
+  }
+
+  .infoWhite .infoClip {
+    margin-left: 50px;
+  }
+
+  .infoWhite .infoInr {
+    margin-left: -50px;
+  }
+
+  .pic {
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 50px;
+    margin-left: 0;
+  }
+
+  .pic img {
+    display: block;
+    width: 100%;
+  }
+
+  .rev .pic {
+    padding-left: 0;
+    margin-right: 0;
+    padding-right: 50px;
+  }
+
+  .rev .infoClip {
+    margin-left: inherit;
+    margin-right: 50px;
+  }
+
+  .rev .infoInr {
+    margin-left: inherit;
+    margin-right: -50px;
+  }
 }

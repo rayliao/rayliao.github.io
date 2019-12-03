@@ -12,9 +12,6 @@ declare const styles: {
   readonly 'item': string
   readonly 'itemImgWrap': string
   readonly 'item__img': string
-  readonly 'itemImgT1': string
-  readonly 'itemImgT2': string
-  readonly 'itemImgT3': string
   readonly 'item__caption': string
   readonly 'itemCaptionTitle': string
   readonly 'itemCaptionCopy': string

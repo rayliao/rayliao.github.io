@@ -3,7 +3,6 @@ import * as React from 'react'
 import Helmet from 'react-helmet'
 import { FormattedMessage } from 'react-intl'
 import Common, { CommonState, Context as IntlContext } from '../Common'
-// import InteractivePaticles from '../InteractivePaticles'
 import * as styles from './index.module.css'
 import { languages } from '../../lang'
 
@@ -18,7 +17,6 @@ export default class Home extends React.Component {
           />
         </Helmet>
         <div className={styles.container}>
-          {/* <InteractivePaticles /> */}
           <div className={styles.header}>
             <div className={styles.headerLeft}>
               <nav className={styles.nav}>

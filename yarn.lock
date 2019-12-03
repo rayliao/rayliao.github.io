@@ -1010,11 +1010,6 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@brunoimbrizi/controlkit@^0.1.96":
-  version "0.1.96"
-  resolved "https://registry.yarnpkg.com/@brunoimbrizi/controlkit/-/controlkit-0.1.96.tgz#fc8b57d1a344e0d6f42c7f24653e6fc0af04215f"
-  integrity sha512-Xn/jGCobFo3mprBo4gkQyU/gkQdRI8/eT6X8A3kEIBJ65AU3Qxxv6z93u88PzsmAnBVLmEDqauYj7CZ8qyp4+w==
-
 "@choojs/findup@^0.2.0":
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@choojs/findup/-/findup-0.2.1.tgz#ac13c59ae7be6e1da64de0779a0a7f03d75615a3"
@@ -2221,13 +2216,6 @@ brorand@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/brorand/-/brorand-1.1.0.tgz#12c25efe40a45e3c323eb8675a0a0ce57b22371f"
   integrity sha1-EsJe/kCkXjwyPrhnWgoM5XsiNx8=
-
-browser-detect@^0.2.28:
-  version "0.2.28"
-  resolved "https://registry.yarnpkg.com/browser-detect/-/browser-detect-0.2.28.tgz#5688fc22f638390614ebea4646483403fb20ebfb"
-  integrity sha512-KeWGHqYQmHDkCFG2dIiX/2wFUgqevbw/rd6wNi9N6rZbaSJFtG5kel0HtprRwCGp8sqpQP79LzDJXf/WCx4WAw==
-  dependencies:
-    core-js "^2.5.7"
 
 browserify-aes@^1.0.0, browserify-aes@^1.0.4:
   version "1.2.0"
@@ -5171,11 +5159,6 @@ glsl-inject-defines@^1.0.1:
     glsl-token-string "^1.0.1"
     glsl-tokenizer "^2.0.2"
 
-glsl-noise@^0.0.0:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/glsl-noise/-/glsl-noise-0.0.0.tgz#367745f3a33382c0eeec4cb54b7e99cfc1d7670b"
-  integrity sha1-NndF86MzgsDu7Ey1S36Zz8HXZws=
-
 glsl-resolve@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/glsl-resolve/-/glsl-resolve-0.0.1.tgz#894bef73910d792c81b5143180035d0a78af76d3"
@@ -5418,11 +5401,6 @@ graphql@^14.1.1:
   integrity sha512-C5zDzLqvfPAgTtP8AUPIt9keDabrdRAqSWjj2OPRKrKxI9Fb65I36s1uCs1UUBFnSWTdO7hyHi7z1ZbwKMKF6Q==
   dependencies:
     iterall "^1.2.2"
-
-gsap@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/gsap/-/gsap-2.1.2.tgz#2ad017608f883379e546d8bcc3046182083d4da2"
-  integrity sha512-7saMzK2HQ3OD4/hbygtkh0uAK8LUqcom6abL4YqGttyxAQdEvywQOw5VK3obKQ7GaLU8KhszArKJPxIKe8mbvg==
 
 gud@^1.0.0:
   version "1.0.0"
@@ -8788,6 +8766,11 @@ react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.3.tgz#4ad8b029c2a718fc0cfc746c8d4e1b7221e5387d"
   integrity sha512-Y4rC1ZJmsxxkkPuMLwvKvlL1Zfpbcu+Bf4ZigkHup3v9EfdYhAlWAaVyA19olXq2o2mGn0w+dFKvk3pVVlYcIA==
 
+react-lazyload@^2.6.5:
+  version "2.6.5"
+  resolved "https://registry.yarnpkg.com/react-lazyload/-/react-lazyload-2.6.5.tgz#7a5ac001f0f8aeddc10c30e4ce318c10f13aa723"
+  integrity sha512-C/juO9l7dGS7jEARBLjM3oG7F1lL5bqajz/55sk3GFc0Ippd9vnSkdRxdiaE6gf5si3YxIow8dSJ+YuB2D/3vg==
+
 react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
@@ -9824,11 +9807,6 @@ static-extend@^0.1.1:
     define-property "^0.2.5"
     object-copy "^0.1.0"
 
-stats.js@^0.17.0:
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/stats.js/-/stats.js-0.17.0.tgz#b1c3dc46d94498b578b7fd3985b81ace7131cc7d"
-  integrity sha1-scPcRtlEmLV4t/05hbgaznExzH0=
-
 "statuses@>= 1.4.0 < 2", statuses@~1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.4.0.tgz#bb73d446da2796106efcc1b601a253d6c46bd087"
@@ -10175,11 +10153,6 @@ text-table@0.2.0, text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
-
-three@^0.103.0:
-  version "0.103.0"
-  resolved "https://registry.yarnpkg.com/three/-/three-0.103.0.tgz#63b3dbccc861caad93269618061a73dadebae71b"
-  integrity sha512-4WKRHTMt96sp+lX+Hx/eHtN9CWFyejDqr1ikgxZUJIkKEHVglSE7FY8n81NC6yWXqVSjUIQQppaxsoUe26Zi9g==
 
 through2@^0.6.3:
   version "0.6.5"
