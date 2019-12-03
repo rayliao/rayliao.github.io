@@ -7,6 +7,7 @@
 .item {
   outline: none;
   max-width: 600px;
+  box-sizing: border-box;
   padding: 0 10px;
   margin: 0 auto;
 }

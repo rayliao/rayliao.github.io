@@ -3,7 +3,7 @@ import Slider from 'react-slick'
 import Common from '../../../components/Common'
 import * as styles from './index.module.css'
 
-interface IndexState { }
+interface IndexState {}
 
 class Index extends React.Component<any, IndexState> {
   title = [
@@ -37,7 +37,7 @@ class Index extends React.Component<any, IndexState> {
   constructor(props) {
     super(props)
     const list = Array.from(new Array(this.max + 1).keys())
-    this.shuffleList = list.sort(() => .5 - Math.random())
+    this.shuffleList = list.sort(() => 0.5 - Math.random())
   }
   slider: Slider
   render() {
@@ -51,21 +51,30 @@ class Index extends React.Component<any, IndexState> {
       slidesToShow: 1,
       slidesToScroll: 1,
       fade: true,
+      arrows: false,
     }
-    return <Common name='lover'>
-      <div className={styles.container} onClick={() => this.slider.slickNext()}>
-        <Slider ref={slider => (this.slider = slider)} {...settings}>
-          {
-            this.shuffleList.map(index => {
-              return <div key={index} className={styles.item}>
-                <img className={styles.img} src={`../../../images/lover/${index}.jpg`} />
-                <p className={styles.title}>{this.title[index]}</p>
-              </div>
-            })
-          }
-        </Slider>
-      </div>
-    </Common>
+    return (
+      <Common name="lover">
+        <div
+          className={styles.container}
+          onClick={() => this.slider.slickNext()}
+        >
+          <Slider ref={slider => (this.slider = slider)} {...settings}>
+            {this.shuffleList.map(index => {
+              return (
+                <div key={index} className={styles.item}>
+                  <img
+                    className={styles.img}
+                    src={`../../../images/lover/${index}.jpg`}
+                  />
+                  <p className={styles.title}>{this.title[index]}</p>
+                </div>
+              )
+            })}
+          </Slider>
+        </div>
+      </Common>
+    )
   }
 }
 
