@@ -39,11 +39,12 @@ export default class Common extends React.Component<CommonProps, CommonState> {
     super(props)
   }
   async componentDidMount() {
-    const dark = await localStorage.getItem(storage.dark)
-    const locale = await localStorage.getItem(storage.locale)
+    const { dark, locale } = this.state
+    const itemDark = await localStorage.getItem(storage.dark)
+    const itemLocale = await localStorage.getItem(storage.locale)
     this.setState({
-      dark: dark === '1' ? true : false,
-      locale: locale ? locale : 'en',
+      dark: itemDark ? (itemDark === '1' ? true : false) : dark,
+      locale: itemLocale ? itemLocale : locale,
     })
   }
   /**
