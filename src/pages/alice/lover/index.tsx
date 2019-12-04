@@ -33,19 +33,18 @@ class Index extends React.Component<any, IndexState> {
     '2019年，香港長洲',
     '2019年，香港長洲',
     '时间和菲林的魔力就是如此，已然忘记是什么时候，你具体是在缝什么，可当我看到这张照片，幸福和温暖由心口化开，散到全身。2019年，洛濤居',
-    '曾許諾過要每個月都紀錄你的模樣和變化，然而懒惰和放松对变化的细微关注，稍未留神，成长就在你的肚子上形成了不小的形状。2019，百萬葵園',
     '拍照拍到西边太阳落山，葵园的游客都陆续离开，我的眼皮都快眯到翻过来，而你翻看照片和精心编辑朋友圈时那可爱又满足的开心劲，让这一点点辛劳不值一提。2019，百万葵园',
+    '曾許諾過要每個月都紀錄你的模樣和變化，然而懒惰和放松对变化的细微关注，稍未留神，成长就在你的肚子上形成了不小的形状。2019，百萬葵園',
   ]
-  shuffleList
-  max = 26
+  shuffleList = []
   constructor(props) {
     super(props)
-    const list = Array.from(new Array(this.max + 1).keys())
+    const list = Array.from(new Array(this.title.length).keys())
     this.shuffleList = list.sort(() => 0.5 - Math.random())
   }
   slider: Slider
   render() {
-    if (!this.shuffleList) {
+    if (!this.shuffleList.length) {
       return null
     }
     const settings = {

@@ -7,6 +7,7 @@ import 'slick-carousel/slick/slick.css'
 import { translatedMessages } from '../../lang'
 import '../../styles/normalize.css'
 import '../../styles/index.css'
+import { storage } from '../../utils'
 
 interface CommonProps {
   children?: React.ReactNode
@@ -37,12 +38,21 @@ export default class Common extends React.Component<CommonProps, CommonState> {
   constructor(props) {
     super(props)
   }
+  async componentDidMount() {
+    const dark = await localStorage.getItem(storage.dark)
+    const locale = await localStorage.getItem(storage.locale)
+    this.setState({
+      dark: dark === '1' ? true : false,
+      locale: locale ? locale : 'en',
+    })
+  }
   /**
    * 切换多语言
    * @memberof Common
    */
   switchLocale = locale => {
     this.setState({ locale })
+    localStorage.setItem(storage.locale, locale)
   }
   /**
    * 切换主题
@@ -50,7 +60,9 @@ export default class Common extends React.Component<CommonProps, CommonState> {
    */
   switchTheme = () => {
     this.transition = true
-    this.setState({ dark: !this.state.dark })
+    const { dark } = this.state
+    this.setState({ dark: !dark })
+    localStorage.setItem(storage.dark, !dark ? '1' : '0')
     setTimeout(() => (this.transition = false), 1000)
   }
   state = {

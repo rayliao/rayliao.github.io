@@ -12,6 +12,7 @@ html {
   --text-color-richer: hsl(var(--hue), 75%, 35%);
   --text-color-highlight: hsl(var(--hue), 5%, 85%);
   --background: hsl(var(--hue), 5%, 95%);
+  background-color: var(--background);
 }
 
 html[data-theme='dark'] {
