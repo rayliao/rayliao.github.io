@@ -17,6 +17,9 @@ export default ({ children }) => {
         </h1>
         <div className="menu">
           <div>
+            <Link to="/shoot/2019">2019</Link>
+          </div>
+          <div>
             <Link to="/shoot/2018">2018</Link>
           </div>
           <div>

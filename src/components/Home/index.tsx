@@ -26,7 +26,7 @@ export default class Home extends React.Component {
                 <a href="/blog">
                   <FormattedMessage id="home.blog" defaultMessage="博客" />
                 </a>
-                <Link to="/shoot/2018">
+                <Link to="/shoot/2019">
                   <FormattedMessage id="home.image" defaultMessage="摄影" />
                 </Link>
                 <Link to="/about">
