@@ -18,7 +18,7 @@ html {
 html[data-theme='dark'] {
   --hue: 71;
   --text-color-normal: hsl(var(--hue), 5%, 85%);
-  --text-color-light: hsl(var(--hue), 5%, 85%);
+  --text-color-light: hsl(var(--hue), 5%, 45%);
   --text-color-richer: hsl(var(--hue), 75%, 65%);
   --text-color-highlight: hsl(var(--hue), 5%, 85%);
   --background: hsl(var(--hue), 5%, 15%);

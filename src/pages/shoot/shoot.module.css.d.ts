@@ -6,6 +6,7 @@ declare const styles: {
   readonly 'item': string
   readonly 'unite': string
   readonly 'phone': string
+  readonly 'tip': string
 };
 export = styles;
 

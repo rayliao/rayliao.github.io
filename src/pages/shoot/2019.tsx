@@ -23,7 +23,7 @@ export default class Index extends React.Component {
         </Lazyload>
         <Lazyload height={250}>
           <div className={`${styles.item} ${styles.unite}`}>
-            <img src="../../images/2019/0225.jpg" />
+            <img src="../../images/2019/0226.jpg" />
             <img src="../../images/2019/0227.jpg" />
           </div>
         </Lazyload>
@@ -64,6 +64,9 @@ export default class Index extends React.Component {
             <img src="../../images/2019/1122.jpg" />
           </div>
         </Lazyload>
+        <p className={styles.tip}>
+          *有些是他人所影，科哥/黄劲/夫人/年会酒店服务员/冲浪店店员
+        </p>
       </Layout>
     )
   }
