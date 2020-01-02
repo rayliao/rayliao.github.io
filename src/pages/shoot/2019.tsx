@@ -11,11 +11,6 @@ export default class Index extends React.Component {
           <img src="../../images/2019/0120.jpg" />
         </div>
         <Lazyload height={250}>
-          <div className={styles.item}>
-            <img src="../../images/2019/0206.jpg" />
-          </div>
-        </Lazyload>
-        <Lazyload height={250}>
           <div className={`${styles.item} ${styles.unite}`}>
             <img src="../../images/2019/0210.jpg" />
             <img src="../../images/2019/0225.jpg" />
@@ -62,6 +57,36 @@ export default class Index extends React.Component {
         <Lazyload height={250}>
           <div className={styles.item}>
             <img src="../../images/2019/1122.jpg" />
+          </div>
+        </Lazyload>
+        <Lazyload height={250}>
+          <div className={styles.item}>
+            <img src="../../images/2019/1201.jpg" />
+          </div>
+        </Lazyload>
+        <Lazyload height={250}>
+          <div className={styles.item}>
+            <img src="../../images/2019/1202.jpg" />
+          </div>
+        </Lazyload>
+        <Lazyload height={250}>
+          <div className={styles.item}>
+            <img src="../../images/2019/1203.jpg" />
+          </div>
+        </Lazyload>
+        <Lazyload height={250}>
+          <div className={styles.item}>
+            <img src="../../images/2019/1204.jpg" />
+          </div>
+        </Lazyload>
+        <Lazyload height={250}>
+          <div className={styles.item}>
+            <img src="../../images/2019/1205.jpg" />
+          </div>
+        </Lazyload>
+        <Lazyload height={250}>
+          <div className={styles.item}>
+            <img src="../../images/2019/1206.jpg" />
           </div>
         </Lazyload>
         <p className={styles.tip}>
