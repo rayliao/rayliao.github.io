@@ -53,17 +53,17 @@ export default class Index extends React.Component {
         </Lazyload>
         <Lazyload height={250}>
           <div className={styles.item}>
+            <img src="../../images/2016/1000.jpg" />
+          </div>
+        </Lazyload>
+        <Lazyload height={250}>
+          <div className={styles.item}>
             <img src="../../images/2016/1001.jpg" />
           </div>
         </Lazyload>
         <Lazyload height={250}>
           <div className={styles.item}>
             <img src="../../images/2016/1002.jpg" />
-          </div>
-        </Lazyload>
-        <Lazyload height={250}>
-          <div className={styles.item}>
-            <img src="../../images/2016/1003.jpg" />
           </div>
         </Lazyload>
         <Lazyload height={250}>
