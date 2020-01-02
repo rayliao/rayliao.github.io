@@ -6,7 +6,7 @@ import * as styles from './shoot.module.css'
 export default class Index extends React.Component {
   render() {
     return (
-      <Layout>
+      <Layout name="2016">
         <div className={styles.item}>
           <img src="../../images/2016/0401.jpg" />
         </div>

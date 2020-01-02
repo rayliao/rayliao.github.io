@@ -7,7 +7,7 @@ export default class Undefined extends React.Component {
   render() {
     const list = Array.from(new Array(34).keys())
     return (
-      <Layout>
+      <Layout name="undefined">
         <div className={styles.phone}>
           {list.map(k => (
             <Lazyload key={k} height={250}>

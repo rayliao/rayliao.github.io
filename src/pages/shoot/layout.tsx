@@ -4,10 +4,10 @@ import Helmet from 'react-helmet'
 import Common from '../../components/Common'
 import * as styles from './shoot.module.css'
 
-export default ({ children }) => {
+export default ({ children, name = '' }) => {
   const now = new Date()
   return (
-    <Common name="Photography">
+    <Common name={`image ${name}`}>
       <Helmet>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Helmet>
