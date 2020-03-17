@@ -5,8 +5,8 @@ import { IntlProvider } from 'react-intl'
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
 import { translatedMessages } from '../../lang'
-import '../../styles/normalize.css'
 import '../../styles/index.css'
+import '../../styles/normalize.css'
 import { storage } from '../../utils'
 
 interface CommonProps {
