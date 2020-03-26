@@ -1257,11 +1257,6 @@
   resolved "https://registry.yarnpkg.com/@types/tmp/-/tmp-0.0.32.tgz#0d3cb31022f8427ea58c008af32b80da126ca4e3"
   integrity sha1-DTyzECL4Qn6ljACK8yuA2hJspOM=
 
-"@types/zdog@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@types/zdog/-/zdog-1.1.0.tgz#b0812704f2b0b2dfd80c25ac0b6109550aceffb0"
-  integrity sha512-e21h1Y7O4QVeny8+/NoAER2shOboDLURguRwfyHLHlUk7gwkAaa8hnk7lA34AIFJiN9ameQomudW6pXARQXynQ==
-
 "@webassemblyjs/ast@1.7.11":
   version "1.7.11"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.7.11.tgz#b988582cafbb2b095e8b556526f30c90d057cace"
@@ -1492,6 +1487,11 @@ alphanum-sort@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/alphanum-sort/-/alphanum-sort-1.0.2.tgz#97a1119649b211ad33691d9f9f486a8ec9fbe0a3"
   integrity sha1-l6ERlkmyEa0zaR2fn0hqjsn74KM=
+
+animejs@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/animejs/-/animejs-3.1.0.tgz#748a90fc1d4bef3efed64508af9a6a82babf5c47"
+  integrity sha512-BjnCroPPQPEAngT0M89pz9TBcOGgOFLnVoq3+jV2upl4rn60k57/AXvESTnuILsNgOEjGuhMEOMp7IlQzk40kA==
 
 ansi-align@^2.0.0:
   version "2.0.0"
@@ -11217,11 +11217,6 @@ yurnalist@^1.0.5:
     semver "^5.1.0"
     strip-ansi "^5.0.0"
     strip-bom "^3.0.0"
-
-zdog@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/zdog/-/zdog-1.1.0.tgz#88b60a73e5c8a11fcf0c29d28c0339553ffe9566"
-  integrity sha512-PlgvESx/LKMnHbfRdGvpXn/QpoDK6jmO4HyxtydIXcMYt6qr1DMwNsiqJIiU1ibryKEnlFl/JyNrNe9Tk0+Y9w==
 
 zen-observable-ts@^0.8.15:
   version "0.8.15"
