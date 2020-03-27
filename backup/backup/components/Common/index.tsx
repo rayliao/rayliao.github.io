@@ -4,10 +4,10 @@ import Helmet from 'react-helmet'
 import { IntlProvider } from 'react-intl'
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
-import { translatedMessages } from '../../lang'
+import { translatedMessages } from '../../../../src/lang'
+import { storage } from '../../../../src/utils'
 import '../../styles/index.css'
 import '../../styles/normalize.css'
-import { storage } from '../../utils'
 
 interface CommonProps {
   children?: React.ReactNode
