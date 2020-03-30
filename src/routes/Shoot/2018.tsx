@@ -1,84 +1,100 @@
-import * as React from 'react'
+import React from 'react'
 import Lazyload from 'react-lazyload'
 import Layout from './layout'
-import * as styles from './shoot.module.css'
+import styles from './shoot.module.css'
 
 export default class Index extends React.Component {
   render() {
     return (
-      <Layout name="2016">
+      <Layout>
         <div className={styles.item}>
-          <img src="../../images/2016/0401.jpg" />
+          <img src="../../images/2018/0203.jpg" />
         </div>
         <Lazyload height={250}>
           <div className={styles.item}>
-            <img src="../../images/2016/0402.jpg" />
-          </div>
-        </Lazyload>
-        <Lazyload height={250}>
-          <div className={styles.item}>
-            <img src="../../images/2016/0403.jpg" />
-          </div>
-        </Lazyload>
-        <Lazyload height={250}>
-          <div className={styles.item}>
-            <img src="../../images/2016/0405.jpg" />
-          </div>
-        </Lazyload>
-        <Lazyload height={250}>
-          <div className={styles.item}>
-            <img src="../../images/2016/0406.jpg" />
-          </div>
-        </Lazyload>
-        <Lazyload height={250}>
-          <div className={styles.item}>
-            <img src="../../images/2016/0407.jpg" />
-          </div>
-        </Lazyload>
-        <Lazyload height={250}>
-          <div className={styles.item}>
-            <img src="../../images/2016/0801.jpg" />
-          </div>
-        </Lazyload>
-        <Lazyload height={250}>
-          <div className={styles.item}>
-            <img src="../../images/2016/0802.jpg" />
+            <img src="../../images/2018/0204.jpg" />
           </div>
         </Lazyload>
         <Lazyload height={250}>
           <div className={`${styles.item} ${styles.unite}`}>
-            <img src="../../images/2016/0404.jpg" />
-            <img src="../../images/2016/0901.jpg" />
+            <img src="../../images/2018/0619.jpg" />
+            <img src="../../images/2018/0620.jpg" />
           </div>
         </Lazyload>
         <Lazyload height={250}>
           <div className={styles.item}>
-            <img src="../../images/2016/1000.jpg" />
+            <img src="../../images/2018/0621.jpg" />
           </div>
         </Lazyload>
         <Lazyload height={250}>
           <div className={styles.item}>
-            <img src="../../images/2016/1001.jpg" />
+            <img src="../../images/2018/0622.jpg" />
           </div>
         </Lazyload>
         <Lazyload height={250}>
           <div className={styles.item}>
-            <img src="../../images/2016/1002.jpg" />
+            <img src="../../images/2018/0623.jpg" />
           </div>
         </Lazyload>
         <Lazyload height={250}>
           <div className={styles.item}>
-            <img src="../../images/2016/1004.jpg" />
+            <img src="../../images/2018/0624.jpg" />
           </div>
         </Lazyload>
         <Lazyload height={250}>
           <div className={styles.item}>
-            <img src="../../images/2016/1005.jpg" />
+            <img src="../../images/2018/0625.jpg" />
           </div>
         </Lazyload>
         <Lazyload height={250}>
           <div className={styles.item}>
-            <img src="../../images/2016/1006.jpg" />
+            <img src="../../images/2018/0626.jpg" />
+          </div>
+        </Lazyload>
+        <Lazyload height={250}>
+          <div className={styles.item}>
+            <img src="../../images/2018/0627.jpg" />
+          </div>
+        </Lazyload>
+        <Lazyload height={250}>
+          <div className={styles.item}>
+            <img src="../../images/2018/0628.jpg" />
+          </div>
+        </Lazyload>
+        <Lazyload height={250}>
+          <div className={styles.item}>
+            <img src="../../images/2018/0629.jpg" />
+          </div>
+        </Lazyload>
+        <Lazyload height={250}>
+          <div className={styles.item}>
+            <img src="../../images/2018/0630.jpg" />
+          </div>
+        </Lazyload>
+        <Lazyload height={250}>
+          <div className={styles.item}>
+            <img src="../../images/2018/0802.jpg" />
+          </div>
+        </Lazyload>
+        <Lazyload height={250}>
+          <div className={styles.item}>
+            <img src="../../images/2018/1003.jpg" />
+          </div>
+        </Lazyload>
+        <Lazyload height={250}>
+          <div className={styles.item}>
+            <img src="../../images/2018/1004.jpg" />
+          </div>
+        </Lazyload>
+        <Lazyload height={250}>
+          <div className={styles.item}>
+            <img src="../../images/2018/1101.jpg" />
+          </div>
+        </Lazyload>
+        <Lazyload height={250}>
+          <div className={`${styles.item} ${styles.unite}`}>
+            <img src="../../images/2018/1201.jpg" />
+            <img src="../../images/2018/1203.jpg" />
           </div>
         </Lazyload>
       </Layout>

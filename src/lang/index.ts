@@ -8,7 +8,9 @@ import zh from './zh'
 /**
  * 已翻译的多语言为react-intl准备的
  */
-export const translatedMessages = {
+export const translatedMessages: {
+  [key: string]: typeof zh
+} = {
   'zh-CN': zh,
   'zh-TW': tw,
   en,
@@ -20,7 +22,9 @@ export const translatedMessages = {
 /**
  * 多语言
  */
-export const languages = {
+export const languages: {
+  [key: string]: string
+} = {
   'zh-CN': '简体',
   'zh-TW': '繁體',
   ja: '日本語',

@@ -1,0 +1,55 @@
+.main {
+  height: 100vh;
+  margin: 0;
+  background: url('./images/2018.jpg') center no-repeat;
+  background-size: cover;
+}
+
+.container {
+  text-align: center;
+  color: #fff;
+  height: 100%;
+  padding-top: 20px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.container h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.container h3 {
+  font-size: 20px;
+  margin: 10px 0 50px;
+}
+
+.card {
+  position: relative;
+  margin: 0 auto;
+  padding: 15px;
+  width: 320px;
+  height: 201px;
+  background: url('./images/apple.png') center no-repeat;
+  background-size: contain;
+}
+
+.card p {
+  margin: 0;
+}
+
+.card .name {
+  color: #666;
+  text-align: right;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.card .tip {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: #666;
+  font-size: 12px;
+  font-style: italic;
+}

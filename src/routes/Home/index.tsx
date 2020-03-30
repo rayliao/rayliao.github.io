@@ -1,5 +1,9 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import { FormattedMessage } from 'react-intl'
+import { Link } from 'react-router-dom'
+import { languages } from '../../lang'
+import { AppState, Context as IntlContext } from '../App'
 import styles from './index.module.css'
 
 function Home() {
@@ -14,7 +18,7 @@ function Home() {
       <div className={styles.container}>
         <div className={styles.header}>
           <div className={styles.headerLeft}>
-            {/* <nav className={styles.nav}>
+            <nav className={styles.nav}>
               <Link to="/">
                 <FormattedMessage id="home.home" defaultMessage="首页" />
               </Link>
@@ -27,35 +31,37 @@ function Home() {
               <Link to="/about">
                 <FormattedMessage id="home.about" defaultMessage="关于我" />
               </Link>
-            </nav> */}
+            </nav>
           </div>
-          {/* <IntlContext.Consumer>
-            {({ locale, dark, switchLocale, switchTheme }: CommonState) => (
-              <div className={styles.headerRight}>
-                <div onClick={switchTheme} className={styles.theme}>
-                  {dark ? (
-                    <i className="fa fa-sun-o" />
-                  ) : (
-                    <i className="fa fa-moon-o" />
-                  )}
-                </div>
-                <div className={styles.language}>
-                  <i className={`fa fa-language ${styles.languageIcon}`} />
-                  <div className={styles.languageList}>
-                    {Object.keys(languages).map(key => (
-                      <p
-                        onClick={() => switchLocale(key)}
-                        className={locale === key ? 'active' : ''}
-                        key={key}
-                      >
-                        {languages[key]}
-                      </p>
-                    ))}
+          <IntlContext.Consumer>
+            {(state: AppState | null) =>
+              state ? (
+                <div className={styles.headerRight}>
+                  <div onClick={state.switchTheme} className={styles.theme}>
+                    {state.dark ? (
+                      <i className="fa fa-sun-o" />
+                    ) : (
+                      <i className="fa fa-moon-o" />
+                    )}
+                  </div>
+                  <div className={styles.language}>
+                    <i className={`fa fa-language ${styles.languageIcon}`} />
+                    <div className={styles.languageList}>
+                      {Object.keys(languages).map(key => (
+                        <p
+                          onClick={() => state.switchLocale(key)}
+                          className={state.locale === key ? 'active' : ''}
+                          key={key}
+                        >
+                          {languages[key]}
+                        </p>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-            )}
-          </IntlContext.Consumer> */}
+              ) : null
+            }
+          </IntlContext.Consumer>
         </div>
         <div className={styles.main}>
           <div className={styles.glitch}>
@@ -66,7 +72,7 @@ function Home() {
             <div className={styles.glitchImg} />
           </div>
           <h1>WingRay Liao</h1>
-          {/* <p>
+          <p>
             <FormattedMessage id="home.frontEnd" defaultMessage="前端渣滓" />
             &nbsp;/&nbsp;
             <FormattedMessage
@@ -75,7 +81,7 @@ function Home() {
             />
             &nbsp;/&nbsp;
             <FormattedMessage id="home.swimfan" defaultMessage="游泳爱好者" />
-          </p> */}
+          </p>
         </div>
         <div className={styles.sns}>
           <a

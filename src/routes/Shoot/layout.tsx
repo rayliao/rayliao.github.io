@@ -1,16 +1,11 @@
-import { Link } from 'gatsby'
-import * as React from 'react'
-import Helmet from 'react-helmet'
-import Common from '../../components/Common'
-import * as styles from './shoot.module.css'
+import React, { ReactNode } from 'react'
+import { Link } from 'react-router-dom'
+import styles from './shoot.module.css'
 
-export default ({ children, name = '' }) => {
+export default (props: { children: ReactNode }) => {
   const now = new Date()
   return (
-    <Common name={`image ${name}`}>
-      <Helmet>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Helmet>
+    <>
       <div className={styles.sidebar}>
         <h1 className={styles.title}>
           copyright© 2011-{now.getFullYear()} RAYLIAO
@@ -41,7 +36,7 @@ export default ({ children, name = '' }) => {
           </div>
         </div>
       </div>
-      <div className={styles.content}>{children}</div>
-    </Common>
+      <div className={styles.content}>{props.children}</div>
+    </>
   )
 }
