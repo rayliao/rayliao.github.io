@@ -1,9 +1,13 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import styles from './index.module.css'
 
-function Index() {
+function Alice2018() {
   return (
     <div className={styles.main}>
+      <Helmet>
+        <title>Alice 2018</title>
+      </Helmet>
       <div className={styles.container}>
         <h1>Happy Birthday My Dear</h1>
         <h3>This is for you lah!</h3>
@@ -16,4 +20,4 @@ function Index() {
   )
 }
 
-export default Index
+export default Alice2018

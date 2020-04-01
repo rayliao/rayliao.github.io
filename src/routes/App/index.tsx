@@ -4,8 +4,9 @@ import { IntlProvider } from 'react-intl'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { translatedMessages } from '../../lang'
 import { storage } from '../../utils'
-import Alice2018 from '../Alice/2018'
+import About from '../About'
 import Lover from '../Alice/Lover'
+import Alice2018 from '../Alice/Year2018'
 import Family from '../Family'
 import Home from '../Home'
 import NotFound from '../NotFound'
@@ -98,6 +99,7 @@ function App() {
                 </Switch>
               )}
             />
+            <Route path="/about" component={About} />
             <Route path="/subway" component={Subway} />
             <Route path="*" component={NotFound} />
           </Switch>

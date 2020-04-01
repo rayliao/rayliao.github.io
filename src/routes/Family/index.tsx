@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Helmet from 'react-helmet'
 import Slider from 'react-slick'
 import styles from './index.module.css'
 
@@ -15,6 +16,9 @@ function Family() {
       className={styles.container}
       onClick={() => slider && slider.slickNext()}
     >
+      <Helmet>
+        <title>家族</title>
+      </Helmet>
       <Slider
         ref={s => (slider = s)}
         infinite={true}
