@@ -227,7 +227,8 @@
   right: 20px;
 }
 
-.sns a {
+.sns a,
+.sns span {
   padding: 5px;
 }
 

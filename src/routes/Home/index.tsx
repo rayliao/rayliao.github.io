@@ -87,7 +87,7 @@ function Home() {
           <a
             href="https://github.com/rayliao"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             title="github"
           >
             <i className="fa fa-github" />
@@ -95,7 +95,7 @@ function Home() {
           <a
             href="https://instagram.com/wingrayliao/"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             title="instagram"
           >
             <i className="fa fa-instagram" />
@@ -103,7 +103,7 @@ function Home() {
           <a
             href="https://www.facebook.com/wingrayliao"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             title="facebook"
           >
             <i className="fa fa-facebook-square" />
@@ -111,14 +111,14 @@ function Home() {
           <a
             href="http://weibo.com/574954033"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             title="weibo"
           >
             <i className="fa fa-weibo" />
           </a>
-          <a href="javascript:;" title="rayliao1989@gmail.com">
+          <span title="rayliao1989@gmail.com">
             <i className="fa fa-envelope" />
-          </a>
+          </span>
         </div>
       </div>
     </>

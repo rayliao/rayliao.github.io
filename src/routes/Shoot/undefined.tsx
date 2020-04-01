@@ -11,7 +11,7 @@ function Undefined() {
         {list.map(k => (
           <Lazyload key={k} height={250}>
             <div>
-              <img src={`../../images/undefined/${k + 1}.jpg`} />
+              <img alt="" src={`../../images/undefined/${k + 1}.jpg`} />
             </div>
           </Lazyload>
         ))}

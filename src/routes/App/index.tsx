@@ -6,8 +6,15 @@ import { translatedMessages } from '../../lang'
 import { storage } from '../../utils'
 import Alice2018 from '../Alice/2018'
 import Lover from '../Alice/Lover'
+import Family from '../Family'
 import Home from '../Home'
 import NotFound from '../NotFound'
+import Shoot2016 from '../Shoot/2016'
+import Shoot2017 from '../Shoot/2017'
+import Shoot2018 from '../Shoot/2018'
+import Shoot2019 from '../Shoot/2019'
+import Past from '../Shoot/past'
+import Undefined from '../Shoot/undefined'
 import Subway from '../Subway'
 
 export interface AppState {
@@ -55,7 +62,7 @@ function App() {
       }}
     >
       <IntlProvider locale={locale} messages={translatedMessages[locale]}>
-        <Helmet>
+        <Helmet defaultTitle="RayLiao" titleTemplate="RayLiao - %s">
           <html
             className={transition ? 'color-theme-in-transition' : ''}
             lang={locale}
@@ -71,6 +78,23 @@ function App() {
                 <Switch>
                   <Route path={`${match.url}/2018`} component={Alice2018} />
                   <Route path={`${match.url}/lover`} component={Lover} />
+                </Switch>
+              )}
+            />
+            <Route path="/family" component={Family} />
+            <Route
+              path="/shoot"
+              render={({ match }) => (
+                <Switch>
+                  <Route path={`${match.url}/2016`} component={Shoot2016} />
+                  <Route path={`${match.url}/2017`} component={Shoot2017} />
+                  <Route path={`${match.url}/2018`} component={Shoot2018} />
+                  <Route path={`${match.url}/2019`} component={Shoot2019} />
+                  <Route path={`${match.url}/past`} component={Past} />
+                  <Route
+                    path={`${match.url}/undefined`}
+                    component={Undefined}
+                  />
                 </Switch>
               )}
             />

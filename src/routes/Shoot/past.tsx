@@ -39,7 +39,7 @@ function Past() {
               <p>天气很好，人少海水很清澈，我们在玩沙，戏水，游泳，乐此不彼</p>
             </div>
             <div className={styles.pic}>
-              <img src="../../images/albums/201510.jpeg" />
+              <img alt="" src="../../images/albums/201510.jpeg" />
             </div>
             <div className={`${styles.info} ${styles.infoWhite}`}>
               <div className={styles.infoClip}>
@@ -60,7 +60,7 @@ function Past() {
           <div className={`${styles.entry} ${styles.rev}`}>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img src="../../images/albums/201507.jpeg" />
+                <img alt="" src="../../images/albums/201507.jpeg" />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoBlack}`}>
@@ -76,7 +76,7 @@ function Past() {
           <div className={styles.entry}>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img src="../../images/albums/201506.jpeg" />
+                <img alt="" src="../../images/albums/201506.jpeg" />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoBlack}`}>
@@ -103,7 +103,7 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img src="../../images/albums/201503.jpeg" />
+                <img alt="" src="../../images/albums/201503.jpeg" />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoWhite}`}>
@@ -134,7 +134,7 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img src="../../images/albums/201411.jpeg" />
+                <img alt="" src="../../images/albums/201411.jpeg" />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoWhite}`}>
@@ -165,7 +165,7 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img src="../../images/albums/201410.jpeg" />
+                <img alt="" src="../../images/albums/201410.jpeg" />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoWhite}`}>
@@ -187,7 +187,7 @@ function Past() {
           <div className={styles.entry}>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img src="../../images/albums/201408.jpeg" />
+                <img alt="" src="../../images/albums/201408.jpeg" />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoBlack}`}>
@@ -214,7 +214,7 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img src="../../images/albums/201407.jpeg" />
+                <img alt="" src="../../images/albums/201407.jpeg" />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoWhite}`}>
@@ -236,7 +236,7 @@ function Past() {
           <div className={styles.entry}>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img src="../../images/albums/201405.jpeg" />
+                <img alt="" src="../../images/albums/201405.jpeg" />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoBlack}`}>
@@ -265,7 +265,7 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img src="../../images/albums/20140501.jpeg" />
+                <img alt="" src="../../images/albums/20140501.jpeg" />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoWhite}`}>
@@ -296,7 +296,7 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img src="../../images/albums/201404.jpeg" />
+                <img alt="" src="../../images/albums/201404.jpeg" />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoWhite}`}>
@@ -325,7 +325,7 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img src="../../images/albums/201401.jpeg" />
+                <img alt="" src="../../images/albums/201401.jpeg" />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoWhite}`}>
@@ -356,7 +356,7 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img src="../../images/albums/201308.jpeg" />
+                <img alt="" src="../../images/albums/201308.jpeg" />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoWhite}`}>
@@ -387,7 +387,7 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img src="../../images/albums/201305.jpeg" />
+                <img alt="" src="../../images/albums/201305.jpeg" />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoWhite}`}>
@@ -407,7 +407,7 @@ function Past() {
           <div className={styles.entry}>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img src="../../images/albums/201302.jpeg" />
+                <img alt="" src="../../images/albums/201302.jpeg" />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoBlack}`}>
@@ -432,7 +432,7 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img src="../../images/albums/201301.jpeg" />
+                <img alt="" src="../../images/albums/201301.jpeg" />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoWhite}`}>
@@ -452,7 +452,7 @@ function Past() {
           <div className={styles.entry}>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img src="../../images/albums/201212.jpeg" />
+                <img alt="" src="../../images/albums/201212.jpeg" />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoBlack}`}>
@@ -481,7 +481,7 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img src="../../images/albums/201211.jpeg" />
+                <img alt="" src="../../images/albums/201211.jpeg" />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoWhite}`}>
@@ -503,7 +503,7 @@ function Past() {
           <div className={styles.entry}>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img src="../../images/albums/201210.jpeg" />
+                <img alt="" src="../../images/albums/201210.jpeg" />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoBlack}`}>

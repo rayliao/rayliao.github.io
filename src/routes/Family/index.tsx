@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Slider from 'react-slick'
 import styles from './index.module.css'
 
 function Family() {
-  let shuffleList: number[] = []
+  const [shuffleList, setShuffleList] = useState<number[]>([])
   const max = 4
   useEffect(() => {
     const list = Array.from(new Array(max + 1).keys())
-    shuffleList = list.sort(() => 0.5 - Math.random())
-  })
+    setShuffleList(list.sort(() => 0.5 - Math.random()))
+  }, [])
   let slider: Slider | null
   return shuffleList ? (
     <div
@@ -28,6 +28,7 @@ function Family() {
           return (
             <div key={index} className={styles.item}>
               <img
+                alt=""
                 className={styles.img}
                 src={`../../images/family/${index}.jpg`}
               />

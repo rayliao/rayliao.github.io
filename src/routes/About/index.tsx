@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 
 function About() {
   return (
@@ -7,6 +8,9 @@ function About() {
         height: '100vh',
       }}
     >
+      <Helmet>
+        <title>关于我</title>
+      </Helmet>
       <iframe
         src="https://m.douban.com/people/52842379/subject_profile?dt_dapp=1"
         width="100%"

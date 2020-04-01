@@ -8,93 +8,93 @@ export default class Index extends React.Component {
     return (
       <Layout>
         <div className={styles.item}>
-          <img src="../../images/2018/0203.jpg" />
+          <img alt="" src="../../images/2018/0203.jpg" />
         </div>
         <Lazyload height={250}>
           <div className={styles.item}>
-            <img src="../../images/2018/0204.jpg" />
+            <img alt="" src="../../images/2018/0204.jpg" />
           </div>
         </Lazyload>
         <Lazyload height={250}>
           <div className={`${styles.item} ${styles.unite}`}>
-            <img src="../../images/2018/0619.jpg" />
-            <img src="../../images/2018/0620.jpg" />
+            <img alt="" src="../../images/2018/0619.jpg" />
+            <img alt="" src="../../images/2018/0620.jpg" />
           </div>
         </Lazyload>
         <Lazyload height={250}>
           <div className={styles.item}>
-            <img src="../../images/2018/0621.jpg" />
+            <img alt="" src="../../images/2018/0621.jpg" />
           </div>
         </Lazyload>
         <Lazyload height={250}>
           <div className={styles.item}>
-            <img src="../../images/2018/0622.jpg" />
+            <img alt="" src="../../images/2018/0622.jpg" />
           </div>
         </Lazyload>
         <Lazyload height={250}>
           <div className={styles.item}>
-            <img src="../../images/2018/0623.jpg" />
+            <img alt="" src="../../images/2018/0623.jpg" />
           </div>
         </Lazyload>
         <Lazyload height={250}>
           <div className={styles.item}>
-            <img src="../../images/2018/0624.jpg" />
+            <img alt="" src="../../images/2018/0624.jpg" />
           </div>
         </Lazyload>
         <Lazyload height={250}>
           <div className={styles.item}>
-            <img src="../../images/2018/0625.jpg" />
+            <img alt="" src="../../images/2018/0625.jpg" />
           </div>
         </Lazyload>
         <Lazyload height={250}>
           <div className={styles.item}>
-            <img src="../../images/2018/0626.jpg" />
+            <img alt="" src="../../images/2018/0626.jpg" />
           </div>
         </Lazyload>
         <Lazyload height={250}>
           <div className={styles.item}>
-            <img src="../../images/2018/0627.jpg" />
+            <img alt="" src="../../images/2018/0627.jpg" />
           </div>
         </Lazyload>
         <Lazyload height={250}>
           <div className={styles.item}>
-            <img src="../../images/2018/0628.jpg" />
+            <img alt="" src="../../images/2018/0628.jpg" />
           </div>
         </Lazyload>
         <Lazyload height={250}>
           <div className={styles.item}>
-            <img src="../../images/2018/0629.jpg" />
+            <img alt="" src="../../images/2018/0629.jpg" />
           </div>
         </Lazyload>
         <Lazyload height={250}>
           <div className={styles.item}>
-            <img src="../../images/2018/0630.jpg" />
+            <img alt="" src="../../images/2018/0630.jpg" />
           </div>
         </Lazyload>
         <Lazyload height={250}>
           <div className={styles.item}>
-            <img src="../../images/2018/0802.jpg" />
+            <img alt="" src="../../images/2018/0802.jpg" />
           </div>
         </Lazyload>
         <Lazyload height={250}>
           <div className={styles.item}>
-            <img src="../../images/2018/1003.jpg" />
+            <img alt="" src="../../images/2018/1003.jpg" />
           </div>
         </Lazyload>
         <Lazyload height={250}>
           <div className={styles.item}>
-            <img src="../../images/2018/1004.jpg" />
+            <img alt="" src="../../images/2018/1004.jpg" />
           </div>
         </Lazyload>
         <Lazyload height={250}>
           <div className={styles.item}>
-            <img src="../../images/2018/1101.jpg" />
+            <img alt="" src="../../images/2018/1101.jpg" />
           </div>
         </Lazyload>
         <Lazyload height={250}>
           <div className={`${styles.item} ${styles.unite}`}>
-            <img src="../../images/2018/1201.jpg" />
-            <img src="../../images/2018/1203.jpg" />
+            <img alt="" src="../../images/2018/1201.jpg" />
+            <img alt="" src="../../images/2018/1203.jpg" />
           </div>
         </Lazyload>
       </Layout>
