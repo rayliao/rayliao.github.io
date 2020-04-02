@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Helmet from 'react-helmet'
 import Slider from 'react-slick'
 import styles from './index.module.css'
@@ -36,17 +36,22 @@ function Lover() {
   ]
   const list = Array.from(new Array(title.length).keys())
   const shuffleList = list.sort(() => 0.5 - Math.random())
-  let slider: Slider | null
+  const slider = useRef<Slider | null>()
   return shuffleList ? (
     <div
       className={styles.container}
-      onClick={() => slider && slider.slickNext()}
+      onClick={e => {
+        e.preventDefault()
+        if (slider && slider.current) {
+          slider.current.slickNext()
+        }
+      }}
     >
       <Helmet>
         <title>Alice Lover</title>
       </Helmet>
       <Slider
-        ref={s => (slider = s)}
+        ref={s => (slider.current = s)}
         infinite={true}
         speed={500}
         lazyLoad="progressive"

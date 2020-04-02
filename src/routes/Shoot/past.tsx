@@ -5,7 +5,11 @@ import styles from './past.module.css'
 
 function Past() {
   return (
-    <div>
+    <div
+      style={{
+        backgroundColor: 'hsl(71, 5%, 95%)',
+      }}
+    >
       <div className={styles.main}>
         <div className={styles.header}>
           <h2>
