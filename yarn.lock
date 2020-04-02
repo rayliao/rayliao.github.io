@@ -6816,7 +6816,7 @@ mute-stream@0.0.8:
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.8.tgz#1630c42b2251ff81e2a283de96a5497ea92e5e0d"
   integrity sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==
 
-nan@^2.12.1:
+nan@^2.12.1, nan@^2.5.1:
   version "2.14.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.0.tgz#7818f722027b2459a86f0295d434d1fc2336c52c"
   integrity sha512-INOFj37C7k3AfaNTtX8RhsTw7qRy7eLET14cROi9+5HAVbbHuIWUHEauBv5qT4Av2tWasiTY1Jw6puUNqRJXQg==
@@ -7148,6 +7148,13 @@ open@^7.0.2:
   dependencies:
     is-docker "^2.0.0"
     is-wsl "^2.1.1"
+
+opencc@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/opencc/-/opencc-1.0.5.tgz#53a928ac29dc3557a1b1e058d369b423673ab7e5"
+  integrity sha1-U6korCncNVehseBY02m0I2c6t+U=
+  dependencies:
+    nan "^2.5.1"
 
 opn@^5.5.0:
   version "5.5.0"
@@ -10203,6 +10210,18 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
+
+typescript-react-intl@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/typescript-react-intl/-/typescript-react-intl-0.4.1.tgz#9b92732ebe7cbe36aaf14f89322452613bba1a63"
+  integrity sha512-ktOVL7L6NDxMyVOhN56eovI6MPlnLYvB+IEn/Gsb8BMFQGpzZuiMv9KvD2RI2CemWiyF3sxz7jwehbmFrh8hfQ==
+  dependencies:
+    typescript "^2.6.2"
+
+typescript@^2.6.2:
+  version "2.9.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.2.tgz#1cbf61d05d6b96269244eb6a3bce4bd914e0f00c"
+  integrity sha512-Gr4p6nFNaoufRIY4NMdpQRNmgxVIGMs4Fcu/ujdYk3nAZqk7supzBE9idmvfZIlH/Cuj//dvi+019qEue9lV0w==
 
 typescript@~3.7.2:
   version "3.7.5"

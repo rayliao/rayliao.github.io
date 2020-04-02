@@ -36,12 +36,12 @@ runner(null, res => {
 
   log(chalk.green('从源码提取react-intl定义的多语言文件...'))
   const c = JSON.stringify(locale, null, 2)
-  fs.writeFileSync(`src/lang/zh.tsx`, `export default ${c}\r`)
+  fs.writeFileSync(`src/lang/zh.ts`, `export default ${c}\r`)
   log(chalk.red('...提取zh完成'))
 
   log(chalk.green('\n开始简体转换繁体...'))
   const opencc = new Opencc()
   const tw = opencc.convertSync(c)
-  fs.writeFileSync('src/lang/tw.tsx', `export default ${tw}\r`)
+  fs.writeFileSync('src/lang/tw.ts', `export default ${tw}\r`)
   log(chalk.red('...繁体转换完成'))
 })
