@@ -63,7 +63,7 @@ function App() {
       }}
     >
       <IntlProvider locale={locale} messages={translatedMessages[locale]}>
-        <Helmet defaultTitle="RayLiao" titleTemplate="RayLiao - %s">
+        <Helmet defaultTitle="RayLiao" titleTemplate="%s | RayLiao">
           <html
             className={transition ? 'color-theme-in-transition' : ''}
             lang={locale}
