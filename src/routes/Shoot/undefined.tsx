@@ -8,7 +8,7 @@ function Undefined() {
   return (
     <Layout>
       <div className={styles.phone}>
-        {list.map(k => (
+        {list.map((k) => (
           <Lazyload key={k} height={250}>
             <div>
               <img alt="" src={`../../images/undefined/${k + 1}.jpg`} />

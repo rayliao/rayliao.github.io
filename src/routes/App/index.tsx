@@ -21,18 +21,16 @@ import Subway from '../Subway'
 export interface AppState {
   locale: string
   dark: boolean
-  switchTheme: any
-  switchLocale: any
+  switchTheme: () => void
+  switchLocale: (l: string) => void
 }
 
 export const Context = React.createContext<AppState | null>(null)
 
 function App() {
   let transition = false
-  useEffect(() => {
-    initLocale()
-    initDark()
-  })
+  const [dark, setDark] = useState(true)
+  const [locale, setLocale] = useState('en')
   const initLocale = async () => {
     const itemLocale = await localStorage.getItem(storage.locale)
     setLocale(itemLocale ? itemLocale : locale)
@@ -41,6 +39,10 @@ function App() {
     const itemDark = await localStorage.getItem(storage.dark)
     setDark(itemDark ? (itemDark === '1' ? true : false) : dark)
   }
+  useEffect(() => {
+    initLocale()
+    initDark()
+  })
   const switchTheme = () => {
     transition = true
     setDark(!dark)
@@ -51,8 +53,6 @@ function App() {
     setLocale(l)
     localStorage.setItem(storage.locale, l)
   }
-  const [dark, setDark] = useState(true)
-  const [locale, setLocale] = useState('en')
   return (
     <Context.Provider
       value={{

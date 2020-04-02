@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './shoot.module.css'
 
-export default (props: { children: ReactNode }) => {
+function Layout(props: { children: ReactNode }) {
   const now = new Date()
   return (
     <>
@@ -40,3 +40,5 @@ export default (props: { children: ReactNode }) => {
     </>
   )
 }
+
+export default Layout

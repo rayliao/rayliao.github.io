@@ -4,7 +4,7 @@ import React, { useEffect } from 'react'
 function Subway() {
   useEffect(() => {
     const pathEls = document.querySelectorAll('path')
-    pathEls.forEach(p => {
+    pathEls.forEach((p) => {
       const offset = anime.setDashoffset(p)
       p.setAttribute('stroke-dashoffset', offset.toString())
       anime({

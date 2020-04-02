@@ -7,7 +7,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "fix": "tslint --fix 'src/**/*.ts{,x}'",
+    "lint": "tsc --noEmit && eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",
     "lang": "node scripts/lang.js",
     "precommit": "lint-staged",
     "watch": "hakka typed-css-modules -W",
@@ -29,14 +29,14 @@
     ]
   },
   "lint-staged": {
-    "src/**/*.tsx": [
-      "yarn fix",
+    "src/**/*.{js,ts,tsx}": [
+      "eslint --fix",
       "git add"
     ]
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "tsc --noEmit && lint-staged"
     }
   },
   "repository": {
@@ -68,10 +68,13 @@
     "typescript": "~3.7.2"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.19.0",
     "opencc": "^1.0.5",
-    "tslint": "^6.1.0",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-react": "^4.2.0",
+    "prettier": "^2.0.2",
     "typescript-react-intl": "^0.4.1"
   }
 }

@@ -20,7 +20,7 @@ function Family() {
         <title>家族</title>
       </Helmet>
       <Slider
-        ref={s => (slider = s)}
+        ref={(s) => (slider = s)}
         infinite={true}
         speed={500}
         lazyLoad="progressive"
@@ -28,7 +28,7 @@ function Family() {
         slidesToScroll={1}
         fade={true}
       >
-        {shuffleList.map(index => {
+        {shuffleList.map((index) => {
           return (
             <div key={index} className={styles.item}>
               <img

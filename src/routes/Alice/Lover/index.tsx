@@ -40,7 +40,7 @@ function Lover() {
   return shuffleList ? (
     <div
       className={styles.container}
-      onClick={e => {
+      onClick={(e) => {
         e.preventDefault()
         if (slider && slider.current) {
           slider.current.slickNext()
@@ -51,14 +51,14 @@ function Lover() {
         <title>Alice Lover</title>
       </Helmet>
       <Slider
-        ref={s => (slider.current = s)}
+        ref={(s) => (slider.current = s)}
         infinite={true}
         speed={500}
         lazyLoad="progressive"
         fade={true}
         arrows={false}
       >
-        {shuffleList.map(index => {
+        {shuffleList.map((index) => {
           return (
             <div key={index} className={styles.item}>
               <img

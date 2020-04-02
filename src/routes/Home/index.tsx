@@ -48,7 +48,7 @@ function Home() {
                   <div className={styles.language}>
                     <i className={`fa fa-language ${styles.languageIcon}`} />
                     <div className={styles.languageList}>
-                      {Object.keys(languages).map(key => (
+                      {Object.keys(languages).map((key) => (
                         <p
                           onClick={() => state.switchLocale(key)}
                           className={state.locale === key ? 'active' : ''}
