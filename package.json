@@ -10,7 +10,6 @@
     "lint": "tsc --noEmit && eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",
     "lang": "node scripts/lang.js",
     "precommit": "lint-staged",
-    "watch": "hakka typed-css-modules -W",
     "deploy": "sh release.sh"
   },
   "eslintConfig": {
