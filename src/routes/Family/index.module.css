@@ -1,18 +1,82 @@
 .container {
-  margin-top: 15vh;
-  height: 70vh;
-}
-
-.item {
-  outline: none;
-}
-
-.img {
-  max-width: 600px;
   margin: 0 auto;
+  max-width: 1000px;
 }
-@media screen and (max-width: 800px) {
-  .img {
-    width: 95%;
+
+.container img {
+  display: block;
+  max-width: 100%;
+}
+
+.wrapper {
+  overflow: hidden;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-gap: 10px;
+}
+
+.nav {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: block;
+}
+
+.nav a {
+  height: 200px;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.navImg {
+  object-fit: cover;
+  filter: saturate(0);
+  transition: 0.3s ease all;
+}
+
+.navImg:hover {
+  transform: scale(1.05);
+  filter: saturate(1);
+}
+
+.gallery {
+  display: block;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+.galleryImg {
+  scroll-snap-align: start;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 1000px) {
+  .wrapper {
+    grid-template-rows: 2fr 1fr;
+    grid-template-columns: auto;
+  }
+
+  .nav {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    display: flex;
+    align-items: center;
+    grid-row-start: 2;
+  }
+
+  .nav a {
+    height: 150px;
+    width: 50px;
+    flex: 0 0 auto;
+  }
+
+  .gallery {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    display: flex;
   }
 }

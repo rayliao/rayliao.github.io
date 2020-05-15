@@ -1,25 +1,49 @@
 import React, { useEffect, useState } from 'react'
 import Helmet from 'react-helmet'
-import Slider from 'react-slick'
+// import Slider from 'react-slick'
 import styles from './index.module.css'
 
-function Family() {
+const Family = () => {
   const [shuffleList, setShuffleList] = useState<number[]>([])
-  const max = 4
+  const max = 9
   useEffect(() => {
     const list = Array.from(new Array(max + 1).keys())
     setShuffleList(list.sort(() => 0.5 - Math.random()))
   }, [])
-  let slider: Slider | null
+  // let slider: Slider | null
   return shuffleList ? (
     <div
       className={styles.container}
-      onClick={() => slider && slider.slickNext()}
+      // onClick={() => slider && slider.slickNext()}
     >
       <Helmet>
         <title>家族</title>
       </Helmet>
-      <Slider
+      <div className={styles.wrapper}>
+        <nav className={styles.nav}>
+          {shuffleList.map((item, index) => (
+            <a href={`#image-${index}`} key={index}>
+              <img
+                className={styles.navImg}
+                src={`../../images/family/${item}.jpg`}
+                alt={`img${item}`}
+              />
+            </a>
+          ))}
+        </nav>
+        <div className={styles.gallery}>
+          {shuffleList.map((item, index) => (
+            <img
+              className={styles.galleryImg}
+              key={index}
+              id={`image-${index}`}
+              src={`../../images/family/${item}.jpg`}
+              alt={`img${item}`}
+            />
+          ))}
+        </div>
+      </div>
+      {/* <Slider
         ref={(s) => (slider = s)}
         infinite={true}
         speed={500}
@@ -39,7 +63,7 @@ function Family() {
             </div>
           )
         })}
-      </Slider>
+      </Slider> */}
     </div>
   ) : null
 }
