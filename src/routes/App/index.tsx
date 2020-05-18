@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Helmet from 'react-helmet'
 import { IntlProvider } from 'react-intl'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import { translatedMessages } from '../../lang'
 import { storage } from '../../utils'
 import About from '../About'

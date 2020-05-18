@@ -1,9 +1,23 @@
 import React, { useEffect, useState } from 'react'
 import Helmet from 'react-helmet'
 import Lazyload from 'react-lazyload'
+import { Link } from 'react-router-dom'
 import styles from './index.module.css'
 
 const Family = () => {
+  window.location.hash = window.decodeURIComponent(window.location.hash)
+  const scrollToAnchor = () => {
+    const hashParts = window.location.hash.split('#')
+    if (hashParts.length > 2) {
+      const hash = hashParts.slice(-1)[0]
+      const idEle = document.querySelector(`#${hash}`)
+      if (idEle) {
+        idEle.scrollIntoView()
+      }
+    }
+  }
+  scrollToAnchor()
+  window.onhashchange = scrollToAnchor
   const [shuffleList, setShuffleList] = useState<number[]>([])
   const max = 25
   useEffect(() => {
@@ -20,13 +34,13 @@ const Family = () => {
         <nav className={styles.nav}>
           {shuffleList.map((item, index) => (
             <Lazyload key={index} once>
-              <a href={`#image-${index}`}>
+              <Link to={`/family#image-${index}`}>
                 <img
                   className={styles.navImg}
                   src={`../../images/family/${item}.jpg`}
                   alt={`img${item}`}
                 />
-              </a>
+              </Link>
             </Lazyload>
           ))}
         </nav>
