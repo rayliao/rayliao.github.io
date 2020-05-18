@@ -5,6 +5,7 @@ import './normalize.css'
 import App from './routes/App'
 import * as serviceWorker from './serviceWorker'
 
+// TODO: deploy to github调整下
 ReactDOM.render(
   <React.StrictMode>
     <App />
