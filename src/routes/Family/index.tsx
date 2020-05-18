@@ -5,7 +5,7 @@ import styles from './index.module.css'
 
 const Family = () => {
   const [shuffleList, setShuffleList] = useState<number[]>([])
-  const max = 21
+  const max = 25
   useEffect(() => {
     const list = Array.from(new Array(max + 1).keys())
     // setShuffleList(list.sort(() => 0.5 - Math.random()))
@@ -19,7 +19,7 @@ const Family = () => {
       <div className={styles.wrapper}>
         <nav className={styles.nav}>
           {shuffleList.map((item, index) => (
-            <Lazyload key={index}>
+            <Lazyload key={index} once>
               <a href={`#image-${index}`}>
                 <img
                   className={styles.navImg}
@@ -32,7 +32,7 @@ const Family = () => {
         </nav>
         <div className={styles.gallery}>
           {shuffleList.map((item, index) => (
-            <Lazyload key={index}>
+            <Lazyload key={index} once>
               <img
                 className={styles.galleryImg}
                 id={`image-${index}`}
