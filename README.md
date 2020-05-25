@@ -1,5 +1,19 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Images Files to WebP
+
+Windows:
+
+```bat
+> for /R . %I in (*.jpg) do ( cwebp.exe %I -o %~fnI.webp )
+```
+
+Linux / Mac:
+
+```bat
+$ for F in *.jpg; do cwebp $F -o `basename ${F%.jpg}`.webp; done
+```
+
 ## Available Scripts
 
 In the project directory, you can run:

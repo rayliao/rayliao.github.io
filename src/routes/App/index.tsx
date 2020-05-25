@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import { IntlProvider } from 'react-intl'
 import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import { translatedMessages } from '../../lang'
-import { storage } from '../../utils'
+import { canUseWebp, storage } from '../../utils'
 import About from '../About'
 import Lover from '../Alice/Lover'
 import Alice2018 from '../Alice/Year2018'
@@ -53,6 +53,7 @@ function App() {
     setLocale(l)
     localStorage.setItem(storage.locale, l)
   }
+  const clsName = canUseWebp() ? 'use-webp' : 'no-webp'
   return (
     <Context.Provider
       value={{
@@ -65,7 +66,9 @@ function App() {
       <IntlProvider locale={locale} messages={translatedMessages[locale]}>
         <Helmet defaultTitle="RayLiao" titleTemplate="%s | RayLiao">
           <html
-            className={transition ? 'color-theme-in-transition' : ''}
+            className={
+              transition ? `${clsName} color-theme-in-transition` : clsName
+            }
             lang={locale}
             data-theme={dark ? 'dark' : 'light'}
           />
