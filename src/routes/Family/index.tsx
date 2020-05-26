@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react'
 import Helmet from 'react-helmet'
 import Lazyload from 'react-lazyload'
 import { Link } from 'react-router-dom'
+import { canUseWebp } from '../../utils'
 import styles from './index.module.css'
 
 const Family = () => {
+  const fm = canUseWebp() ? 'webp' : 'jpg'
   window.location.hash = window.decodeURIComponent(window.location.hash)
   const scrollToAnchor = () => {
     const hashParts = window.location.hash.split('#')
@@ -37,7 +39,7 @@ const Family = () => {
               <Link to={`/family#image-${index}`}>
                 <img
                   className={styles.navImg}
-                  src={`../../images/family/${item}.jpg`}
+                  src={`../../images/family/${item}.${fm}`}
                   alt={`img${item}`}
                 />
               </Link>
@@ -50,7 +52,7 @@ const Family = () => {
               <img
                 className={styles.galleryImg}
                 id={`image-${index}`}
-                src={`../../images/family/${item}.jpg`}
+                src={`../../images/family/${item}.${fm}`}
                 alt={`img${item}`}
               />
             </Lazyload>

@@ -1,5 +1,6 @@
 import React from 'react'
 import Lazyload from 'react-lazyload'
+import ImgWithFallback from '../../components/ImgWithFallback'
 import Layout from './layout'
 import styles from './shoot.module.css'
 
@@ -11,7 +12,11 @@ function Undefined() {
         {list.map((k) => (
           <Lazyload key={k} height={250}>
             <div>
-              <img alt="" src={`../../images/undefined/${k + 1}.jpg`} />
+              <ImgWithFallback
+                fallback={`../../images/undefined/${k + 1}.jpg`}
+                src={`../../images/undefined/${k + 1}.webp`}
+                alt={k.toString()}
+              />
             </div>
           </Lazyload>
         ))}

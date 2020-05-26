@@ -1,6 +1,6 @@
 import React from 'react'
 
-interface Props {
+interface Props extends React.HTMLAttributes<HTMLImageElement> {
   src: string
   fallback: string
   type?: string

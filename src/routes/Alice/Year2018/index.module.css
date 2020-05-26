@@ -1,8 +1,17 @@
 .main {
   height: 100vh;
   margin: 0;
-  background: url('./images/2018.jpg') center no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
+}
+
+:global(.use-webp) .main {
+  background-image: url('./images/2018.webp');
+}
+
+:global(.no-webp) .main {
+  background-image: url('./images/2018.jpg');
 }
 
 .container {
@@ -30,8 +39,17 @@
   padding: 15px;
   width: 320px;
   height: 201px;
-  background: url('./images/apple.png') center no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: contain;
+}
+
+:global(.use-webp) .card {
+  background-image: url('./images/apple.webp');
+}
+
+:global(.no-webp) .card {
+  background-image: url('./images/apple.png');
 }
 
 .card p {

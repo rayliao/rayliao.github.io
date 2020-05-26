@@ -1,6 +1,7 @@
 import React from 'react'
 import Lazyload from 'react-lazyload'
 import { Link } from 'react-router-dom'
+import ImgWithFallback from '../../components/ImgWithFallback'
 import styles from './past.module.css'
 
 function Past() {
@@ -43,7 +44,11 @@ function Past() {
               <p>天气很好，人少海水很清澈，我们在玩沙，戏水，游泳，乐此不彼</p>
             </div>
             <div className={styles.pic}>
-              <img alt="" src="../../images/albums/201510.jpeg" />
+              <ImgWithFallback
+                fallback="../../images/albums/201510.jpeg"
+                src="../../images/albums/201510.webp"
+                alt="201510"
+              />
             </div>
             <div className={`${styles.info} ${styles.infoWhite}`}>
               <div className={styles.infoClip}>
@@ -64,7 +69,11 @@ function Past() {
           <div className={`${styles.entry} ${styles.rev}`}>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img alt="" src="../../images/albums/201507.jpeg" />
+                <ImgWithFallback
+                  fallback="../../images/albums/201507.jpeg"
+                  src="../../images/albums/201507.webp"
+                  alt="201507"
+                />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoBlack}`}>
@@ -80,7 +89,11 @@ function Past() {
           <div className={styles.entry}>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img alt="" src="../../images/albums/201506.jpeg" />
+                <ImgWithFallback
+                  fallback="../../images/albums/201506.jpeg"
+                  src="../../images/albums/201506.webp"
+                  alt="201506"
+                />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoBlack}`}>
@@ -107,7 +120,11 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img alt="" src="../../images/albums/201503.jpeg" />
+                <ImgWithFallback
+                  fallback="../../images/albums/201503.jpeg"
+                  src="../../images/albums/201503.webp"
+                  alt="201503"
+                />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoWhite}`}>
@@ -138,7 +155,11 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img alt="" src="../../images/albums/201411.jpeg" />
+                <ImgWithFallback
+                  fallback="../../images/albums/201411.jpeg"
+                  src="../../images/albums/201411.webp"
+                  alt="201411"
+                />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoWhite}`}>
@@ -169,7 +190,11 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img alt="" src="../../images/albums/201410.jpeg" />
+                <ImgWithFallback
+                  fallback="../../images/albums/201410.jpeg"
+                  src="../../images/albums/201410.webp"
+                  alt="201410"
+                />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoWhite}`}>
@@ -191,7 +216,11 @@ function Past() {
           <div className={styles.entry}>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img alt="" src="../../images/albums/201408.jpeg" />
+                <ImgWithFallback
+                  fallback="../../images/albums/201408.jpeg"
+                  src="../../images/albums/201408.webp"
+                  alt="201408"
+                />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoBlack}`}>
@@ -218,7 +247,11 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img alt="" src="../../images/albums/201407.jpeg" />
+                <ImgWithFallback
+                  fallback="../../images/albums/201407.jpeg"
+                  src="../../images/albums/201407.webp"
+                  alt="201407"
+                />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoWhite}`}>
@@ -240,7 +273,11 @@ function Past() {
           <div className={styles.entry}>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img alt="" src="../../images/albums/201405.jpeg" />
+                <ImgWithFallback
+                  fallback="../../images/albums/201405.jpeg"
+                  src="../../images/albums/201405.webp"
+                  alt="201405"
+                />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoBlack}`}>
@@ -269,7 +306,11 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img alt="" src="../../images/albums/20140501.jpeg" />
+                <ImgWithFallback
+                  fallback="../../images/albums/20140501.jpeg"
+                  src="../../images/albums/20140501.webp"
+                  alt="20140501"
+                />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoWhite}`}>
@@ -300,7 +341,11 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img alt="" src="../../images/albums/201404.jpeg" />
+                <ImgWithFallback
+                  fallback="../../images/albums/201404.jpeg"
+                  src="../../images/albums/201404.webp"
+                  alt="201404"
+                />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoWhite}`}>
@@ -329,7 +374,11 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img alt="" src="../../images/albums/201401.jpeg" />
+                <ImgWithFallback
+                  fallback="../../images/albums/201401.jpeg"
+                  src="../../images/albums/201401.webp"
+                  alt="201401"
+                />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoWhite}`}>
@@ -360,7 +409,11 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img alt="" src="../../images/albums/201308.jpeg" />
+                <ImgWithFallback
+                  fallback="../../images/albums/201308.jpeg"
+                  src="../../images/albums/201308.webp"
+                  alt="201308"
+                />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoWhite}`}>
@@ -391,7 +444,11 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img alt="" src="../../images/albums/201305.jpeg" />
+                <ImgWithFallback
+                  fallback="../../images/albums/201305.jpeg"
+                  src="../../images/albums/201305.webp"
+                  alt="201305"
+                />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoWhite}`}>
@@ -411,7 +468,11 @@ function Past() {
           <div className={styles.entry}>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img alt="" src="../../images/albums/201302.jpeg" />
+                <ImgWithFallback
+                  fallback="../../images/albums/201302.jpeg"
+                  src="../../images/albums/201302.webp"
+                  alt="201302"
+                />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoBlack}`}>
@@ -436,7 +497,11 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img alt="" src="../../images/albums/201301.jpeg" />
+                <ImgWithFallback
+                  fallback="../../images/albums/201301.jpeg"
+                  src="../../images/albums/201301.webp"
+                  alt="201301"
+                />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoWhite}`}>
@@ -456,7 +521,11 @@ function Past() {
           <div className={styles.entry}>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img alt="" src="../../images/albums/201212.jpeg" />
+                <ImgWithFallback
+                  fallback="../../images/albums/201212.jpeg"
+                  src="../../images/albums/201212.webp"
+                  alt="201212"
+                />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoBlack}`}>
@@ -485,7 +554,11 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img alt="" src="../../images/albums/201211.jpeg" />
+                <ImgWithFallback
+                  fallback="../../images/albums/201211.jpeg"
+                  src="../../images/albums/201211.webp"
+                  alt="201211"
+                />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoWhite}`}>
@@ -507,7 +580,11 @@ function Past() {
           <div className={styles.entry}>
             <div className={styles.pic}>
               <Lazyload height={250}>
-                <img alt="" src="../../images/albums/201210.jpeg" />
+                <ImgWithFallback
+                  fallback="../../images/albums/201210.jpeg"
+                  src="../../images/albums/201210.webp"
+                  alt="201210"
+                />
               </Lazyload>
             </div>
             <div className={`${styles.info} ${styles.infoBlack}`}>
