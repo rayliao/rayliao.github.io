@@ -1,3 +1,14 @@
+import {
+  BulbFilled,
+  BulbOutlined,
+  EnvironmentOutlined,
+  FacebookFilled,
+  GithubOutlined,
+  InstagramOutlined,
+  MailOutlined,
+  TranslationOutlined,
+  WeiboOutlined,
+} from '@ant-design/icons'
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
 import { Link } from 'react-router-dom'
@@ -30,14 +41,10 @@ function Home() {
             state ? (
               <div className={styles.headerRight}>
                 <div onClick={state.switchTheme} className={styles.theme}>
-                  {state.dark ? (
-                    <i className="fa fa-sun-o" />
-                  ) : (
-                    <i className="fa fa-moon-o" />
-                  )}
+                  {state.dark ? <BulbFilled /> : <BulbOutlined />}
                 </div>
                 <div className={styles.language}>
-                  <i className={`fa fa-language ${styles.languageIcon}`} />
+                  <TranslationOutlined className={styles.languageIcon} />
                   <div className={styles.languageList}>
                     {Object.keys(languages).map((key) => (
                       <p
@@ -81,7 +88,7 @@ function Home() {
             <textPath xlinkHref="#textPath">{`24°01'50.4"N  116°28'40.6"E`}</textPath>
           </text>
         </svg>
-        <i className={`fa fa-map-marker ${styles.belongIcon}`} />
+        <EnvironmentOutlined className={styles.belongIcon} />
       </div>
       <div className={styles.sns}>
         <a
@@ -90,7 +97,7 @@ function Home() {
           rel="noopener noreferrer"
           title="github"
         >
-          <i className="fa fa-github" />
+          <GithubOutlined />
         </a>
         <a
           href="https://instagram.com/wingrayliao/"
@@ -98,7 +105,7 @@ function Home() {
           rel="noopener noreferrer"
           title="instagram"
         >
-          <i className="fa fa-instagram" />
+          <InstagramOutlined />
         </a>
         <a
           href="https://www.facebook.com/wingrayliao"
@@ -106,7 +113,7 @@ function Home() {
           rel="noopener noreferrer"
           title="facebook"
         >
-          <i className="fa fa-facebook-square" />
+          <FacebookFilled />
         </a>
         <a
           href="http://weibo.com/574954033"
@@ -114,10 +121,10 @@ function Home() {
           rel="noopener noreferrer"
           title="weibo"
         >
-          <i className="fa fa-weibo" />
+          <WeiboOutlined />
         </a>
         <span title="rayliao1989@gmail.com">
-          <i className="fa fa-envelope" />
+          <MailOutlined />
         </span>
       </div>
     </div>
