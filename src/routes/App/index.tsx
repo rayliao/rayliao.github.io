@@ -9,6 +9,7 @@ import Lover from '../Alice/Lover'
 import Alice2018 from '../Alice/Year2018'
 import Family from '../Family'
 import Home from '../Home'
+import Li from '../Li'
 import NotFound from '../NotFound'
 import Shoot2016 from '../Shoot/2016'
 import Shoot2017 from '../Shoot/2017'
@@ -86,6 +87,7 @@ function App() {
               )}
             />
             <Route path="/family" component={Family} />
+            <Route path="/li" component={Li} />
             <Route
               path="/shoot"
               render={({ match }) => (
