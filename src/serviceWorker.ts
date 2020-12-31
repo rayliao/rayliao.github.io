@@ -131,35 +131,28 @@ export function register(config?: Config) {
       }
     })
 
-    window.addEventListener('fetch', (e: any) => {
-      // Clone the request
-      const req = e.request.clone()
-
-      // Check if the image is a jpeg
-      if (/\.jpg$|.png$/.test(e.request.url)) {
-        // Get all of the headers
-        const headers: string[] = Array.from(req.headers.entries())
-
-        // Inspect the accept header for WebP support
-        const acceptHeader: string[] = headers.filter(
-          (item) => item[0] === 'accept'
-        )
-        const supportsWebp = acceptHeader[1].includes('webp')
-
-        // If we support WebP
-        if (supportsWebp) {
-          // Build the return URL
-          const returnUrl =
-            req.url.substr(0, req.url.lastIndexOf('.')) + '.webp'
-
-          e.respondWith(
-            fetch(returnUrl, {
-              mode: 'no-cors',
-            })
-          )
-        }
-      }
-    })
+    // window.addEventListener('fetch', (e: any) => {
+    //   // Check if the image is a jpeg
+    //   if (/\.jpg$|.png$/.test(e.request.url)) {
+    //     let supportsWebp = false
+    //     if (e.request.headers.has('accept')) {
+    //       supportsWebp = e.request.headers.get('accept').includes('webp')
+    //     }
+    //     // If we support WebP
+    //     if (supportsWebp) {
+    //       // Clone the request
+    //       const req = e.request.clone()
+    //       // Build the return URL
+    //       const returnUrl =
+    //         req.url.substr(0, req.url.lastIndexOf('.')) + '.webp'
+    //       e.respondWith(
+    //         fetch(returnUrl, {
+    //           mode: 'no-cors',
+    //         })
+    //       )
+    //     }
+    //   }
+    // })
   }
 }
 

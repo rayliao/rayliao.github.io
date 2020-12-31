@@ -1,41 +1,41 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Lazyload from 'react-lazyload'
+import ImgWithFallback from '../../components/ImgWithFallback'
 import Layout from './layout'
 import styles from './shoot.module.css'
 
-export default class Index extends React.Component {
-  render() {
-    return (
-      <Layout>
-        <div className={styles.item}>
-          <img alt="" src="../../images/2017/0101.jpg" />
-        </div>
-        <Lazyload height={250}>
-          <div className={styles.item}>
-            <img alt="" src="../../images/2017/0102.jpg" />
-          </div>
-        </Lazyload>
-        <Lazyload height={250}>
-          <div className={styles.item}>
-            <img alt="" src="../../images/2017/0402.jpg" />
-          </div>
-        </Lazyload>
-        <Lazyload height={250}>
-          <div className={styles.item}>
-            <img alt="" src="../../images/2017/0403.jpg" />
-          </div>
-        </Lazyload>
-        <Lazyload height={250}>
-          <div className={styles.item}>
-            <img alt="" src="../../images/2017/1001.jpg" />
-          </div>
-        </Lazyload>
-        <Lazyload height={250}>
-          <div className={`${styles.item} ${styles.unite}`}>
-            <img alt="" src="../../images/2017/1002.jpg" />
-          </div>
-        </Lazyload>
-      </Layout>
-    )
-  }
+const Index = () => {
+  const images = ['0101', '0102', '0402', '0403', '1001', ['1002']]
+  return (
+    <Layout>
+      {images.map((item, index) => {
+        const single = typeof item === 'string'
+        return (
+          <Lazyload key={index} height={250}>
+            <div className={`${styles.item} ${single ? '' : styles.unite}`}>
+              {single ? (
+                <ImgWithFallback
+                  src={`../../images/2017/${item}.webp`}
+                  fallback={`../../images/2017/${item}.jpg`}
+                  alt={item.toString()}
+                />
+              ) : (
+                (item as string[]).map((n, i) => (
+                  <Fragment key={i}>
+                    <ImgWithFallback
+                      src={`../../images/2017/${n}.webp`}
+                      fallback={`../../images/2017/${n}.jpg`}
+                      alt={n}
+                    />
+                  </Fragment>
+                ))
+              )}
+            </div>
+          </Lazyload>
+        )
+      })}
+    </Layout>
+  )
 }
+
+export default Index

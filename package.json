@@ -46,6 +46,7 @@
     "url": "https://github.com/rayliao/rayliao/issues"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.2.1",
     "@types/animejs": "^3.1.0",
     "@types/jest": "^24.0.0",
     "@types/node": "^12.0.0",
