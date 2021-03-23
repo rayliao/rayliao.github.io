@@ -30,9 +30,7 @@ const Li = () => {
   // }, [])
   return shuffleList ? (
     <div className={styles.container}>
-      <Helmet>
-        <title>Li</title>
-      </Helmet>
+      <Helmet title="Li" />
       <div className={styles.wrapper}>
         <nav className={styles.nav}>
           {shuffleList.map((item, index) => (

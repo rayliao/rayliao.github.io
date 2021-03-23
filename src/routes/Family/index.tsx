@@ -27,40 +27,42 @@ const Family = () => {
     // setShuffleList(list.sort(() => 0.5 - Math.random()))
     setShuffleList(list.reverse())
   }, [])
-  return shuffleList ? (
-    <div className={styles.container}>
-      <Helmet>
-        <title>Family</title>
-      </Helmet>
-      <div className={styles.wrapper}>
-        <nav className={styles.nav}>
-          {shuffleList.map((item, index) => (
-            <Lazyload key={index} once>
-              <Link to={`/family#image-${index}`}>
-                <img
-                  className={styles.navImg}
-                  src={`../../images/family/${item}.${fm}`}
-                  alt={`img${item}`}
-                />
-              </Link>
-            </Lazyload>
-          ))}
-        </nav>
-        <div className={styles.gallery}>
-          {shuffleList.map((item, index) => (
-            <Lazyload key={index} once>
-              <img
-                className={styles.galleryImg}
-                id={`image-${index}`}
-                src={`../../images/family/${item}.${fm}`}
-                alt={`img${item}`}
-              />
-            </Lazyload>
-          ))}
+  return (
+    <>
+      <Helmet title="Family" />
+      {shuffleList ? (
+        <div className={styles.container}>
+          <div className={styles.wrapper}>
+            <nav className={styles.nav}>
+              {shuffleList.map((item, index) => (
+                <Lazyload key={index} once>
+                  <Link to={`/family#image-${index}`}>
+                    <img
+                      className={styles.navImg}
+                      src={`../../images/family/${item}.${fm}`}
+                      alt={`img${item}`}
+                    />
+                  </Link>
+                </Lazyload>
+              ))}
+            </nav>
+            <div className={styles.gallery}>
+              {shuffleList.map((item, index) => (
+                <Lazyload key={index} once>
+                  <img
+                    className={styles.galleryImg}
+                    id={`image-${index}`}
+                    src={`../../images/family/${item}.${fm}`}
+                    alt={`img${item}`}
+                  />
+                </Lazyload>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  ) : null
+      ) : null}
+    </>
+  )
 }
 
 export default Family
