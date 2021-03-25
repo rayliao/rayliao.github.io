@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+   <url>
+
+      <loc>https://www.rayliao.com/blog/</loc>
+
+      <changefreq>monthly</changefreq>
+
+   </url>
+
+   <url>
+
+      <loc>https://www.rayliao.com/#/shoot/2020</loc>
+
+      <changefreq>yearly</changefreq>
+
+   </url>
+
+   <url>
+
+      <loc>https://www.rayliao.com/#/about</loc>
+      <changefreq>weekly</changefreq>
+
+   </url>
+
+   <url>
+
+      <loc>https://www.rayliao.com/blog/2020/04/3568a94a/</loc>
+      <changefreq>yearly</changefreq>
+   </url>
+
+</urlset>
