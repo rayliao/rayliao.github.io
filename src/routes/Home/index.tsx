@@ -28,7 +28,7 @@ function Home() {
             <a href="/blog">
               <FormattedMessage id="home.blog" defaultMessage="博客" />
             </a>
-            <Link to="/shoot/2020">
+            <Link to="/shoot/2021">
               <FormattedMessage id="home.image" defaultMessage="摄影" />
             </Link>
             <Link to="/about">

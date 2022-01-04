@@ -12,6 +12,9 @@ function Layout(props: { children: ReactNode }) {
         </h1>
         <div className="menu">
           <div>
+            <Link to="/shoot/2021">2021</Link>
+          </div>
+          <div>
             <Link to="/shoot/2020">2020</Link>
           </div>
           <div>

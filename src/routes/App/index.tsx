@@ -16,6 +16,7 @@ import Shoot2017 from '../Shoot/2017'
 import Shoot2018 from '../Shoot/2018'
 import Shoot2019 from '../Shoot/2019'
 import Shoot2020 from '../Shoot/2020'
+import Shoot2021 from '../Shoot/2021'
 import Past from '../Shoot/past'
 import Undefined from '../Shoot/undefined'
 import Subway from '../Subway'
@@ -98,6 +99,7 @@ function App() {
                   <Route path={`${match.url}/2018`} component={Shoot2018} />
                   <Route path={`${match.url}/2019`} component={Shoot2019} />
                   <Route path={`${match.url}/2020`} component={Shoot2020} />
+                  <Route path={`${match.url}/2021`} component={Shoot2021} />
                   <Route path={`${match.url}/past`} component={Past} />
                   <Route
                     path={`${match.url}/undefined`}
