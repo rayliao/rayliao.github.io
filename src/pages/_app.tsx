@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import { useLangStore } from "common";
 import { useEffect } from "react";
 import Script from "next/script";
+import { ThemeProvider } from "next-themes";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { locale } = useRouter();
@@ -17,7 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     return () => {};
   }, [locale, set]);
   return (
-    <>
+    <ThemeProvider attribute="class">
       <Head>
         <meta charSet="utf-8" />
         <link
@@ -44,7 +45,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       />
       <PreSvg />
       <Component {...pageProps} />
-    </>
+    </ThemeProvider>
   );
 }
 

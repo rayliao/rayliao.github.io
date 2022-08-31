@@ -9,7 +9,7 @@ import languages from "../common/lang";
 const Home: NextPage = () => {
   const lang = useLang();
   return (
-    <div className="font-mono bg-[#f3f3f2] h-screen relative text-center overflow-hidden text-gray-800 text-sm">
+    <div className="font-mono bg-[#f3f3f2] dark:bg-[#272824] h-screen relative text-center overflow-hidden text-gray-800 dark:text-gray-50 text-sm flex flex-col justify-center">
       <Head>
         <title>RayLiao</title>
       </Head>
@@ -23,9 +23,9 @@ const Home: NextPage = () => {
         <div className="group relative">
           <Svg
             name="language"
-            className="fill-gray-800 w-5 h-5 cursor-pointer"
+            className="fill-gray-800 dark:fill-gray-50 w-5 h-5 cursor-pointer"
           />
-          <div className="hidden group-hover:flex flex-col gap-2 pr-1 pt-1 text-right absolute right-0 border-t border-t-gray-500 border-dotted">
+          <div className="hidden group-hover:flex flex-col gap-2 pr-1 pt-1 text-right absolute z-50 right-0 border-t border-t-gray-500 border-dotted bg-gray-50/[0.4] dark:bg-gray-800/[0.3] lg:bg-transparent dark:lg:bg-transparent backdrop-blur">
             {Object.keys(languages).map((key) => (
               <Link href="/" className="cursor-pointer" key={key} locale={key}>
                 <a onClick={() => Cookies.set("NEXT_LOCALE", key)}>
@@ -35,68 +35,48 @@ const Home: NextPage = () => {
             ))}
           </div>
         </div>
-        {/* <IntlContext.Consumer>
-          {(state: AppState | null) =>
-            state ? (
-              <div className={styles.headerRight}>
-                <div onClick={state.switchTheme} className={styles.theme}>
-                  {state.dark ? <BulbFilled /> : <BulbOutlined />}
-                </div>
-                <div className={styles.language}>
-                  <TranslationOutlined className={styles.languageIcon} />
-                  <div className={styles.languageList}>
-                    {Object.keys(languages).map((key) => (
-                      <p
-                        onClick={() => state.switchLocale(key)}
-                        className={state.locale === key ? "active" : ""}
-                        key={key}
-                      >
-                        {languages[key]}
-                      </p>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ) : null
-          }
-        </IntlContext.Consumer> */}
       </div>
-      {/* <div className={styles.main}>
-        <div className={styles.glitch}>
-          <div className={styles.glitchImg} />
-          <div className={styles.glitchImg} />
-          <div className={styles.glitchImg} />
-          <div className={styles.glitchImg} />
-          <div className={styles.glitchImg} />
+      <div className="relative top-[-50px]">
+        <div className="glitch">
+          <div className="glitch-img" />
+          <div className="glitch-img" />
+          <div className="glitch-img" />
+          <div className="glitch-img" />
+          <div className="glitch-img" />
         </div>
-        <h1>WingRay Liao</h1>
-        <p>
-          <FormattedMessage id="home.frontEnd" defaultMessage="前端渣滓" />
+        <h1 className="font-extralight lg:font-light font-sans leading-none m-0 pt-2 tracking-[14px] lg:tracking-[30px] text-3xl lg:text-5xl uppercase relative text-grass-600">
+          WingRay Liao
+        </h1>
+        <p className="font-medium mt-[2em] text-grass-500 relative">
+          {lang.frontEnd}
           &nbsp;/&nbsp;
-          <FormattedMessage id="home.photography" defaultMessage="摄影爱好者" />
+          {lang.photography}
           &nbsp;/&nbsp;
-          <FormattedMessage id="home.swimfan" defaultMessage="游泳爱好者" />
+          {lang.swimfan}
         </p>
       </div>
-      <div className={styles.belong}>
-        <svg className={styles.belongSvg}>
+      <div className="absolute left-[-130px] bottom-[-130px] scale-[0.8]">
+        <Svg
+          name="location"
+          className="fill-gray-800 dark:fill-gray-50 absolute top-1/2 left-1/2 mt-[-10px] ml-[-10px] w-6 h-6"
+        />
+        <svg className="animate-[spin_15s_linear_infinite] w-[300px] h-[300px]">
           <defs>
             <path id="textPath" d="m61,149.99998a89,89 0 1 1 0,0.00004" />
           </defs>
-          <text className={styles.circleText}>
+          <text className="font-sans font-light text-[20px] fill-gray-800 dark:fill-gray-50 tracking-[11px]">
             <textPath xlinkHref="#textPath">{`24°01'50.4"N  116°28'40.6"E`}</textPath>
           </text>
         </svg>
-        <EnvironmentOutlined className={styles.belongIcon} />
       </div>
-      <div className={styles.sns}>
+      <div className="absolute right-4 bottom-4 flex gap-2">
         <a
           href="https://github.com/rayliao"
           target="_blank"
           rel="noopener noreferrer"
           title="github"
         >
-          <GithubOutlined />
+          Github
         </a>
         <a
           href="https://instagram.com/wingrayliao/"
@@ -104,28 +84,10 @@ const Home: NextPage = () => {
           rel="noopener noreferrer"
           title="instagram"
         >
-          <InstagramOutlined />
+          Instagram
         </a>
-        <a
-          href="https://www.facebook.com/wingrayliao"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="facebook"
-        >
-          <FacebookFilled />
-        </a>
-        <a
-          href="http://weibo.com/574954033"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="weibo"
-        >
-          <WeiboOutlined />
-        </a>
-        <span title="rayliao1989@gmail.com">
-          <MailOutlined />
-        </span>
-      </div> */}
+        <span title="rayliao1989@gmail.com">Email</span>
+      </div>
     </div>
   );
 };

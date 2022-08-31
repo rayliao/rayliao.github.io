@@ -2,6 +2,7 @@
 const colors = require("tailwindcss/colors");
 const plugin = require("tailwindcss/plugin");
 module.exports = {
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
@@ -15,7 +16,7 @@ module.exports = {
       gray: colors.gray,
       blue: colors.blue,
       green: colors.green,
-      rose: {
+      grass: {
         50: "#fbfde8",
         100: "#f5f9ce",
         200: "#eaf4a2",
