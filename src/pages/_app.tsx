@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     return () => {};
   }, [locale, set]);
   return (
-    <ThemeProvider attribute="class">
+    <ThemeProvider attribute="class" defaultTheme="dark">
       <Head>
         <meta charSet="utf-8" />
         <link
@@ -36,6 +36,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           content="RayLiao - Hakka Canton - 
       Father & Husband - Front-end developer / Photography enthusiasts / Swimfan"
         />
+        <link rel="manifest" href="/manifest.json" />
       </Head>
       <Script
         async
