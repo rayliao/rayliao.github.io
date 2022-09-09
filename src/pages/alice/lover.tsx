@@ -1,10 +1,10 @@
 import { NextPage } from "next";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/effect-flip";
-import { EffectFlip } from "swiper";
+import "swiper/css/effect-fade";
 import Head from "next/head";
 import Image from "next/image";
+import { EffectFade } from "swiper";
 
 const title = [
   "2019年，輕度發燒的你，軟弱可憐得像個小孩，平時都是你在照顧我，我不會照顧人，以致於粥都煮糊了。",
@@ -41,23 +41,38 @@ const Lover: NextPage = () => {
   const list = Array.from(new Array(title.length).keys());
   const shuffleList = list.sort(() => 0.5 - Math.random());
   return (
-    <>
+    <div className="h-screen">
       <Head>
         <title>lover alice - RayLiao</title>
       </Head>
-      <Swiper effect="flip" grabCursor={true} modules={[EffectFlip]}>
+      <Swiper
+        className="h-full lg:w-[600px]"
+        effect="fade"
+        fadeEffect={{
+          crossFade: true,
+        }}
+        grabCursor={true}
+        modules={[EffectFade]}
+      >
         {shuffleList.map((index) => (
-          <SwiperSlide key={index}>
-            <Image
-              layout="fill"
-              alt={`lover-${index}`}
-              src={`/images/lover/${index}.jpg`}
-            />
-            <p>{title[index]}</p>
+          <SwiperSlide
+            className="h-full flex flex-col justify-center gap-2 box-border px-2"
+            key={index}
+          >
+            <div className="relative w-full h-[300px] lg:h-[400px]">
+              <Image
+                priority
+                layout="fill"
+                objectFit="contain"
+                alt={`lover-${index}`}
+                src={`/images/lover/${index}.jpg`}
+              />
+            </div>
+            <div className="text-sm text-center">{title[index]}</div>
           </SwiperSlide>
         ))}
       </Swiper>
-    </>
+    </div>
   );
 };
 
