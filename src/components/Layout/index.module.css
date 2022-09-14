@@ -1,0 +1,54 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 20px;
+  width: 250px;
+  z-index: 10;
+  text-align: right;
+}
+
+.sidebar a {
+  display: inline-block;
+  background-color: #fff;
+  margin-bottom: 5px;
+  padding: 0 2px;
+  color: #000;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.title {
+  padding: 0 2px;
+  font-size: 16px;
+  font-style: italic;
+  font-family: "Adobe Hebrew", "Tahoma", serif;
+  font-weight: normal;
+  display: inline-block;
+  background-color: #fff;
+  color: #000;
+}
+
+.content {
+  margin-left: 250px;
+  float: left;
+}
+
+.content img {
+  display: block;
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .sidebar {
+    right: 0;
+    left: inherit;
+  }
+  .content {
+    margin: 0;
+  }
+
+  .content .item {
+    width: 100%;
+    max-width: 600px;
+  }
+}
