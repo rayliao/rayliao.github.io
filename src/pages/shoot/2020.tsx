@@ -37,7 +37,9 @@ const Index = () => {
         <div className={styles.item}>
           <Image
             objectFit="cover"
-            layout="fill"
+            layout="responsive"
+            width={1024}
+            height={1024}
             alt=""
             src="/images/2020/0130.jpg"
           />

@@ -10,9 +10,12 @@ const Index = () => {
         <title>Undefined Shoot - RayLiao</title>
       </Head>
       <Layout>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col items-center gap-2">
           {list.map((k) => (
-            <div className="relative w-[600px] h-[600px]" key={k}>
+            <div
+              className="relative w-full max-w-[600px] aspect-square lg:w-[600px] lg:h-[600px]"
+              key={k}
+            >
               <Image
                 objectFit="cover"
                 layout="fill"
