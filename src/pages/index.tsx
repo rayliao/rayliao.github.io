@@ -16,7 +16,13 @@ const Home: NextPage = () => {
       <div className="absolute top-0 z-[3] w-full p-[10px] h-[48px] box-border flex items-center justify-between">
         <nav className="flex gap-3">
           <Link href="/">{lang.home}</Link>
-          <a href="/blog">{lang.blog}</a>
+          <a
+            href="https://rayliao.github.io/blog/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            {lang.blog}
+          </a>
           <Link href="/shoot/2021">{lang.image}</Link>
           <Link href="/about">{lang.about}</Link>
         </nav>

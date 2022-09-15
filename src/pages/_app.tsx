@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     return () => {};
   }, [locale, set]);
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark">
+    <ThemeProvider attribute="class">
       <Head>
         <meta charSet="utf-8" />
         <link
