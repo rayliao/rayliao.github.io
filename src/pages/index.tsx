@@ -24,7 +24,7 @@ const Home: NextPage = () => {
             {lang.blog}
           </a>
           <Link href="/shoot/2021">{lang.image}</Link>
-          <Link href="/about">{lang.about}</Link>
+          {/* <Link href="/about">{lang.about}</Link> */}
         </nav>
         <div className="group relative">
           <Svg
