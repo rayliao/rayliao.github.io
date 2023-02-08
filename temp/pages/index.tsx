@@ -15,7 +15,9 @@ const Home: NextPage = () => {
       </Head>
       <div className="absolute top-0 z-[3] w-full p-[10px] h-[48px] box-border flex items-center justify-between">
         <nav className="flex gap-3">
-          <Link href="/">{lang.home}</Link>
+          <Link href="/" legacyBehavior>
+            {lang.home}
+          </Link>
           <a
             href="https://rayliao.github.io/blog/"
             rel="noopener noreferrer"
@@ -33,7 +35,13 @@ const Home: NextPage = () => {
           />
           <div className="hidden group-hover:flex flex-col gap-2 pr-1 pt-1 text-right absolute z-50 right-0 border-t border-t-gray-500 border-dotted bg-gray-50/[0.4] dark:bg-gray-800/[0.3] lg:bg-transparent dark:lg:bg-transparent backdrop-blur">
             {Object.keys(languages).map((key) => (
-              <Link href="/" className="cursor-pointer" key={key} locale={key}>
+              <Link
+                legacyBehavior
+                href="/"
+                className="cursor-pointer"
+                key={key}
+                locale={key}
+              >
                 <a onClick={() => Cookies.set("NEXT_LOCALE", key)}>
                   {languages[key].name}
                 </a>

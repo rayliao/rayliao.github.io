@@ -4,8 +4,9 @@ const plugin = require("tailwindcss/plugin");
 module.exports = {
   darkMode: "class",
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./content/**/*.mdx",
   ],
   theme: {
     colors: {
@@ -16,6 +17,8 @@ module.exports = {
       gray: colors.gray,
       blue: colors.blue,
       green: colors.green,
+      neutral: colors.neutral,
+      slate: colors.slate,
       grass: {
         50: "#fbfde8",
         100: "#f5f9ce",
@@ -29,10 +32,21 @@ module.exports = {
         900: "#434f18",
       },
     },
+    extend: {
+      typography: {
+        quoteless: {
+          css: {
+            "blockquote p:first-of-type::before": { content: "none" },
+            "blockquote p:first-of-type::after": { content: "none" },
+          },
+        },
+      },
+    },
   },
   plugins: [
     plugin(({ addVariant }) => {
       addVariant("selected", [".selected &", ".selected&"]);
     }),
+    require("@tailwindcss/typography"),
   ],
 };
