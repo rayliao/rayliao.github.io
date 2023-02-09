@@ -1,0 +1,12 @@
+{
+  "name": "français",
+  "content": {
+    "home": "Accueil",
+    "blog": "Blog",
+    "image": "Image",
+    "about": "À propos de",
+    "frontEnd": "Développeur front-end",
+    "photography": "Les passionnés de photographie",
+    "swimfan": "Swimfan"
+  }
+}
