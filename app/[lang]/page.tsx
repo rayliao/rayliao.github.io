@@ -1,33 +1,30 @@
-import { useLang } from "common";
 import Svg from "components/Svg";
 import Link from "next/link";
-// import languages from "../common/lang";
-import Cookies from "js-cookie";
 import { getDictionary } from "common/get-dictionary";
 import { Locale } from "common/i18n-config";
+import LocaleSwitcher from "components/locale";
 
 export default async function HomePage({
   params: { lang },
 }: {
   params: { lang: Locale };
 }) {
-  // const lang = useLang();
   const dictionary = await getDictionary(lang);
   return (
     <div className="font-mono bg-[#f3f3f2] dark:bg-[#272824] h-screen relative text-center overflow-hidden text-gray-800 dark:text-gray-50 text-sm flex flex-col justify-center">
       <div className="absolute top-0 z-[3] w-full p-[10px] h-[48px] box-border flex items-center justify-between">
         <nav className="flex gap-3">
           <Link href="/" legacyBehavior>
-            {dictionary.name}
+            {dictionary.home}
           </Link>
           <a
             href="https://rayliao.github.io/blog/"
             rel="noopener noreferrer"
             target="_blank"
           >
-            blog
+            {dictionary.blog}
           </a>
-          <Link href="/shoot/2021">image</Link>
+          <Link href="/shoot/2021">{dictionary.image}</Link>
           {/* <Link href="/about">{lang.about}</Link> */}
         </nav>
         <div className="group relative">
@@ -36,19 +33,7 @@ export default async function HomePage({
             className="fill-gray-800 dark:fill-gray-50 w-5 h-5 cursor-pointer"
           />
           <div className="hidden group-hover:flex flex-col gap-2 pr-1 pt-1 text-right absolute z-50 right-0 border-t border-t-gray-500 border-dotted bg-gray-50/[0.4] dark:bg-gray-800/[0.3] lg:bg-transparent dark:lg:bg-transparent backdrop-blur">
-            {/* {Object.keys(languages).map((key) => (
-              <Link
-                legacyBehavior
-                href="/"
-                className="cursor-pointer"
-                key={key}
-                locale={key}
-              >
-                <a onClick={() => Cookies.set("NEXT_LOCALE", key)}>
-                  {languages[key].name}
-                </a>
-              </Link>
-            ))} */}
+            <LocaleSwitcher />
           </div>
         </div>
       </div>
@@ -64,11 +49,11 @@ export default async function HomePage({
           WingRay Liao
         </h1>
         <p className="font-medium mt-[2em] text-grass-500 relative">
-          {/* {lang.frontEnd} */}
+          {dictionary.frontEnd}
           &nbsp;/&nbsp;
-          {/* {lang.photography} */}
+          {dictionary.photography}
           &nbsp;/&nbsp;
-          {/* {lang.swimfan} */}
+          {dictionary.swimfan}
         </p>
       </div>
       <div className="absolute left-[-130px] bottom-[-130px] scale-[0.8]">

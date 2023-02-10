@@ -1,8 +1,5 @@
 "use client";
 
-import { useLangStore } from "common";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 import { ThemeProvider } from "next-themes";
 
 export default function Dashboard({ children }) {

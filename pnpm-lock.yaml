@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@formatjs/intl-localematcher': 0.2.32
   '@tailwindcss/typography': ^0.5.9
   '@types/node': 18.7.14
   '@types/react': 18.0.17
@@ -29,6 +30,7 @@ specifiers:
   zustand: ^4.1.1
 
 dependencies:
+  '@formatjs/intl-localematcher': 0.2.32
   contentlayer: 0.3.0
   js-cookie: 3.0.1
   next: 13.1.7-canary.5_biqbaboplfbrettd7655fr4n2y
@@ -470,6 +472,12 @@ packages:
 
   /@fal-works/esbuild-plugin-global-externals/2.1.2:
     resolution: {integrity: sha512-cEee/Z+I12mZcFJshKcCqC8tuX5hG3s+d+9nZ3LabqKF1vKdF41B92pJVCBggjAGORAeOzyyDDKrZwIkLffeOQ==}
+    dev: false
+
+  /@formatjs/intl-localematcher/0.2.32:
+    resolution: {integrity: sha512-k/MEBstff4sttohyEpXxCmC3MqbUn9VvHGlZ8fauLzkbwXmVrEeyzS+4uhrvAk9DWU9/7otYWxyDox4nT/KVLQ==}
+    dependencies:
+      tslib: 2.5.0
     dev: false
 
   /@grpc/grpc-js/1.8.7:

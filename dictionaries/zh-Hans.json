@@ -1,12 +1,9 @@
 {
-  "name": "简体",
-  "content": {
-    "home": "首页",
-    "blog": "博客",
-    "image": "摄影",
-    "about": "关于我",
-    "frontEnd": "前端渣滓",
-    "photography": "摄影爱好者",
-    "swimfan": "游泳爱好者"
-  }
+  "home": "首页",
+  "blog": "博客",
+  "image": "摄影",
+  "about": "关于我",
+  "frontEnd": "前端渣滓",
+  "photography": "摄影爱好者",
+  "swimfan": "游泳爱好者"
 }

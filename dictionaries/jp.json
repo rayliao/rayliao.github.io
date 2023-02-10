@@ -1,12 +1,9 @@
 {
-  "name": "日本語",
-  "content": {
-    "home": "ホーム",
-    "blog": "ブログ",
-    "image": "画像",
-    "about": "について",
-    "frontEnd": "フロントエンド開発者",
-    "photography": "写真愛好家",
-    "swimfan": "水泳愛好家"
-  }
+  "home": "ホーム",
+  "blog": "ブログ",
+  "image": "画像",
+  "about": "について",
+  "frontEnd": "フロントエンド開発者",
+  "photography": "写真愛好家",
+  "swimfan": "水泳愛好家"
 }

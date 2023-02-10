@@ -41,14 +41,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang={params.lang}>
-      <Script
-        async
-        defer
-        data-website-id="4e517b17-fc44-4044-8427-896e6f22006f"
-        src="https://analysis.puffin.studio/umami.js"
-      />
-      <PreSvg />
-      <Dashboard>{children}</Dashboard>
+      <body>
+        <Script
+          async
+          defer
+          data-website-id="4e517b17-fc44-4044-8427-896e6f22006f"
+          src="https://analysis.puffin.studio/umami.js"
+        />
+        <PreSvg />
+        <Dashboard>{children}</Dashboard>
+      </body>
     </html>
   );
 }
