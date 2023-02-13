@@ -11,13 +11,12 @@ export default function Family({ count, path, lang }) {
     const list = Array.from(new Array(count + 1).keys());
     setShuffleList(list.reverse());
   }, []);
-  console.log(lang);
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <nav className={styles.nav}>
           {shuffleList.map((item, index) => (
-            <Link key={index} href={`/${path}#image-${index}`}>
+            <Link shallow key={index} href={`/${lang}/${path}/#image-${index}`}>
               <div className={styles.navItem}>
                 <Image
                   layout="fill"

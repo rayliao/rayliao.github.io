@@ -1,0 +1,250 @@
+.main {
+  margin: 0;
+  padding: 0;
+  font-family: Gotham, Arial, sans-serif;
+  width: 995px;
+  margin: 0 auto;
+}
+
+.main a {
+  text-decoration: none;
+}
+
+.header {
+  padding: 100px 0;
+}
+
+.header h2 {
+  margin: 0;
+  font-family: "Adobe Hebrew", "Tahoma", serif;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: normal;
+  float: left;
+  height: 100px;
+  line-height: 100px;
+  padding-left: 147px;
+}
+
+.header h2 a {
+  color: #16161f;
+}
+
+.header .line {
+  font-style: normal;
+  font-family: "Segoe UI Light", sans-serif;
+  font-size: 80px;
+  font-weight: 100;
+  float: left;
+  height: 80px;
+  line-height: 80px;
+  padding: 0 25px;
+  color: #333;
+}
+
+.header .right {
+  float: left;
+  padding-top: 30px;
+  font-family: "papyrus", sans-serif;
+}
+
+.header .right h1 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.header .right h1 a {
+  color: #16161f;
+}
+
+.header .nav a {
+  color: #656575;
+}
+
+.header .nav span {
+  padding: 0 10px;
+}
+
+.entry {
+  position: relative;
+  padding-bottom: 120px;
+}
+
+.entry img {
+  object-position: left center;
+}
+
+.rev img {
+  object-position: right center;
+}
+
+.info {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 100px;
+  font-style: italic;
+}
+
+.info h3 {
+  margin: 8px 0;
+  font-size: 28px;
+  font-weight: normal;
+}
+
+.info p {
+  font-size: 12px;
+}
+
+.infoBlack {
+  color: #000;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.infoWhite {
+  color: #fff;
+}
+
+.infoWhite .infoClip {
+  margin-left: 195px;
+}
+
+.infoWhite .infoInr {
+  margin-left: -195px;
+}
+
+.infoClip {
+  overflow: hidden;
+}
+
+.pic {
+  position: relative;
+  margin-left: 195px;
+  max-width: 800px;
+  height: 500px;
+}
+
+.rev .pic {
+  margin-left: 0;
+  margin-right: 195px;
+  text-align: right;
+}
+
+.rev .info {
+  right: 0;
+  left: inherit;
+  text-align: right;
+}
+
+.rev .infoClip {
+  margin-left: inherit;
+  margin-right: 195px;
+}
+
+.rev .infoInr {
+  margin-left: inherit;
+  margin-right: -195px;
+}
+
+@media screen and (max-width: 995px) {
+  .main {
+    width: 100%;
+  }
+
+  .header {
+    padding: 0;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .header h2 {
+    font-size: 12px;
+    height: 20px;
+    float: inherit;
+    line-height: 20px;
+    padding-left: 22px;
+  }
+
+  .header .line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 50px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+    float: inherit;
+  }
+
+  .header .right {
+    float: inherit;
+    padding-top: 2px;
+    margin-left: 18px;
+  }
+
+  .header .nav {
+    margin-left: -5px;
+    font-size: 14px;
+  }
+
+  .header .nav span {
+    padding: 0 5px;
+  }
+
+  .entry {
+    padding-bottom: 10px;
+  }
+
+  .info {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .info h3 {
+    margin: 4px 0;
+    font-size: 12px;
+  }
+
+  .info p {
+    margin: 0;
+    line-height: 20px;
+  }
+
+  .infoBlack {
+    white-space: normal;
+  }
+
+  .infoWhite .infoClip {
+    margin-left: 50px;
+  }
+
+  .infoWhite .infoInr {
+    margin-left: -50px;
+  }
+
+  .pic {
+    box-sizing: border-box;
+    width: 100%;
+    right: 0;
+    height: 300px;
+    margin-left: 0;
+  }
+
+  .rev .pic {
+    padding-left: 0;
+    margin-right: 0;
+    padding-right: 50px;
+  }
+
+  .rev .infoClip {
+    margin-left: inherit;
+    margin-right: 50px;
+  }
+
+  .rev .infoInr {
+    margin-left: inherit;
+    margin-right: -50px;
+  }
+}
