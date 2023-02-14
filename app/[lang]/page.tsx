@@ -17,13 +17,9 @@ export default async function HomePage({
           <Link href="/" legacyBehavior>
             {dictionary.home}
           </Link>
-          <a
-            href="https://rayliao.github.io/blog/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
+          <Link href="/blog" legacyBehavior>
             {dictionary.blog}
-          </a>
+          </Link>
           <Link href="/shoot/2021">{dictionary.image}</Link>
           {/* <Link href="/about">{lang.about}</Link> */}
         </nav>

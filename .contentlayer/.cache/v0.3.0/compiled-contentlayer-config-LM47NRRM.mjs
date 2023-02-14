@@ -8,15 +8,6 @@ var computedFields = {
   slug: {
     type: "string",
     resolve: (doc) => doc._raw.flattenedPath
-  },
-  tweetIds: {
-    type: "array",
-    resolve: (doc) => {
-      const tweetMatches = doc.body.raw.match(
-        /<StaticTweet\sid="[0-9]+"\s\/>/g
-      );
-      return tweetMatches?.map((tweet) => tweet.match(/[0-9]+/g)[0]) || [];
-    }
   }
 };
 var Blog = defineDocumentType(() => ({
@@ -81,4 +72,4 @@ export {
   Blog,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-AR5JLBUO.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-LM47NRRM.mjs.map

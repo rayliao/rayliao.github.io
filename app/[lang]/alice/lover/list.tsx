@@ -1,16 +1,15 @@
 "use client";
 
+import { EffectFade } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-fade";
-import { EffectFade } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/legacy/image";
 import { title } from "./page";
 
 export default function List() {
   const list = Array.from(new Array(title.length).keys());
-  const shuffleList = list;
-  // const shuffleList = list.sort(() => 0.5 - Math.random());
+  const shuffleList = list.sort(() => 0.5 - Math.random());
   return (
     <Swiper
       className="h-full lg:w-[600px]"
