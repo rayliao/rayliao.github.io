@@ -17,7 +17,7 @@ const Home: NextPage = () => {
         <nav className="flex gap-3">
           <Link href="/">{lang.home}</Link>
           <a
-            href="https://rayliao.github.io/blog/"
+            href="https://blog.rayliao.com"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -91,6 +91,14 @@ const Home: NextPage = () => {
           title="instagram"
         >
           Instagram
+        </a>
+        <a
+          href="https://bento.me/rayliao"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="instagram"
+        >
+          Bento
         </a>
         <span title="rayliao1989@gmail.com">Email</span>
       </div>
