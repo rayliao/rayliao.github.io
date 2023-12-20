@@ -85,7 +85,7 @@ const Home: NextPage = () => {
           Github
         </a>
         <a
-          href="https://instagram.com/wingrayliao/"
+          href="https://instagram.com/ray__liao/"
           target="_blank"
           rel="noopener noreferrer"
           title="instagram"
@@ -100,7 +100,7 @@ const Home: NextPage = () => {
         >
           Bento
         </a>
-        <span title="rayliao1989@gmail.com">Email</span>
+        <span title="rayliao89@outlook.com">Email</span>
       </div>
     </div>
   );

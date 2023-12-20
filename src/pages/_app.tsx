@@ -5,7 +5,6 @@ import { PreSvg } from "../components/Svg";
 import { useRouter } from "next/router";
 import { useLangStore } from "common";
 import { useEffect } from "react";
-import Script from "next/script";
 import { ThemeProvider } from "next-themes";
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -38,12 +37,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <link rel="manifest" href="/manifest.json" />
       </Head>
-      <Script
-        async
-        defer
-        data-website-id="4e517b17-fc44-4044-8427-896e6f22006f"
-        src="https://analysis.puffin.studio/umami.js"
-      />
       <PreSvg />
       <Component {...pageProps} />
     </ThemeProvider>
