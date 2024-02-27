@@ -1,0 +1,12 @@
+{
+  "name": "English",
+  "content": {
+    "home": "Home",
+    "blog": "Blog",
+    "image": "Image",
+    "about": "About",
+    "frontEnd": "Front-end developer",
+    "photography": "Photography enthusiasts",
+    "swimfan": "Swimfan"
+  }
+}
