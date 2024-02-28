@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Layout from "../../../components/Layout";
+import Layout from "../../../app/components/Layout";
 import styles from "./shoot.module.css";
 import Image from "next/image";
 

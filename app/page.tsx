@@ -1,45 +1,38 @@
-import type { NextPage } from "next";
+import { Locale } from "../i18n-config";
+import { getDictionary } from "../get-dictionary";
+import LocaleSwitcher from "./components/LocaleSwitcher";
 import Link from "next/link";
-import Head from "next/head";
-import { useLang } from "../common";
-import Cookies from "js-cookie";
-import Svg from "../../app/components/Svg";
-import languages from "../common/lang";
+import Svg from "./components/Svg";
 
-const Home: NextPage = () => {
-  const lang = useLang();
+export default async function Page({
+  params: { lang },
+}: {
+  params: { lang: Locale };
+}) {
+  const dictionary = await getDictionary(lang);
+  const content = dictionary.content;
   return (
     <div className="font-mono bg-[#f3f3f2] dark:bg-[#272824] h-screen relative text-center overflow-hidden text-gray-800 dark:text-gray-50 text-sm flex flex-col justify-center">
-      <Head>
-        <title>RayLiao</title>
-      </Head>
       <div className="absolute top-0 z-[3] w-full p-[10px] h-[48px] box-border flex items-center justify-between">
         <nav className="flex gap-3">
-          <Link href="/">{lang.home}</Link>
+          <Link href="/">{content.home}</Link>
           <a
             href="https://blog.rayliao.com"
             rel="noopener noreferrer"
             target="_blank"
           >
-            {lang.blog}
+            {content.blog}
           </a>
-          <Link href="/shoot/2021">{lang.image}</Link>
-          {/* <Link href="/about">{lang.about}</Link> */}
+          <Link href="/shoot/2021">{content.image}</Link>
         </nav>
         <div className="group relative">
-          <Svg
+          {/* <Svg
             name="language"
             className="fill-gray-800 dark:fill-gray-50 w-5 h-5 cursor-pointer"
           />
           <div className="hidden group-hover:flex flex-col gap-2 pr-1 pt-1 text-right absolute z-50 right-0 border-t border-t-gray-500 border-dotted bg-gray-50/[0.4] dark:bg-gray-800/[0.3] lg:bg-transparent dark:lg:bg-transparent backdrop-blur">
-            {Object.keys(languages).map((key) => (
-              <Link href="/" className="cursor-pointer" key={key} locale={key}>
-                <span onClick={() => Cookies.set("NEXT_LOCALE", key)}>
-                  {languages[key].name}
-                </span>
-              </Link>
-            ))}
-          </div>
+            <LocaleSwitcher />
+          </div> */}
         </div>
       </div>
       <div className="relative top-[-50px]">
@@ -54,11 +47,11 @@ const Home: NextPage = () => {
           WingRay Liao
         </h1>
         <p className="font-medium mt-[2em] text-grass-500 relative">
-          {lang.frontEnd}
+          {content.frontEnd}
           &nbsp;/&nbsp;
-          {lang.photography}
+          {content.photography}
           &nbsp;/&nbsp;
-          {lang.swimfan}
+          {content.swimfan}
         </p>
       </div>
       <div className="absolute left-[-130px] bottom-[-130px] scale-[0.8]">
@@ -104,6 +97,4 @@ const Home: NextPage = () => {
       </div>
     </div>
   );
-};
-
-export default Home;
+}

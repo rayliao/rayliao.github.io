@@ -1,7 +1,7 @@
 import type { AppProps } from "next/app";
 import "../styles/globals.css";
 import Head from "next/head";
-import { PreSvg } from "../../components/Svg";
+import { PreSvg } from "../../app/components/Svg";
 import { useRouter } from "next/router";
 import { useLangStore } from "../common";
 import { useEffect } from "react";
