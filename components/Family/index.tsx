@@ -13,7 +13,7 @@ const Family = ({ data, path }) => {
                 <Image
                   layout="fill"
                   className={styles.navImg}
-                  src={`/images/${path}/${item}.jpg`}
+                  src={`/public/images/${path}/${item}.jpg`}
                   alt={`img${item}`}
                 />
               </div>
@@ -27,7 +27,7 @@ const Family = ({ data, path }) => {
                 layout="fill"
                 objectFit="contain"
                 id={`image-${index}`}
-                src={`/images/${path}/${item}.jpg`}
+                src={`/public/images/${path}/${item}.jpg`}
                 alt={`img${item}`}
               />
             </div>

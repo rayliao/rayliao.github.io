@@ -15,9 +15,13 @@ export default function LocaleSwitcher() {
   return (
     <>
       {i18n.locales.map((locale) => (
-        <li key={locale} className="cursor-pointer">
-          <Link href={redirectedPathName(locale)}>{lang[locale]}</Link>
-        </li>
+        <Link
+          key={locale}
+          className="cursor-pointer"
+          href={redirectedPathName(locale)}
+        >
+          {lang[locale]}
+        </Link>
       ))}
     </>
   );
