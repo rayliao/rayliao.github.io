@@ -1,10 +1,9 @@
-import { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import bg from "./bg.jpg";
-import apple from "./apple.png";
+import bg from "../bg.jpg";
+import apple from "../apple.png";
 
-const Year2018: NextPage = () => {
+export default function Page() {
   return (
     <div className="relative h-screen">
       <Image alt="bg" src={bg} layout="fill" objectFit="cover" />
@@ -22,6 +21,4 @@ const Year2018: NextPage = () => {
       </div>
     </div>
   );
-};
-
-export default Year2018;
+}

@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from "./past.module.css";
 import Image from "next/image";
 
-function Past() {
+export default function Page() {
   return (
     <div
       style={{
@@ -44,8 +44,8 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Image
-                objectFit="contain"
-                layout="fill"
+                className="object-contain"
+                fill
                 src="/images/albums/201510.jpeg"
                 alt="201510"
               />
@@ -69,8 +69,8 @@ function Past() {
           <div className={`${styles.entry} ${styles.rev}`}>
             <div className={styles.pic}>
               <Image
-                objectFit="contain"
-                layout="fill"
+                className="object-contain"
+                fill
                 src="/images/albums/201507.jpeg"
                 alt="201507"
               />
@@ -88,8 +88,8 @@ function Past() {
           <div className={styles.entry}>
             <div className={styles.pic}>
               <Image
-                objectFit="contain"
-                layout="fill"
+                className="object-contain"
+                fill
                 src="/images/albums/201506.jpeg"
                 alt="201506"
               />
@@ -118,8 +118,8 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Image
-                objectFit="contain"
-                layout="fill"
+                className="object-contain"
+                fill
                 src="/images/albums/201503.jpeg"
                 alt="201503"
               />
@@ -152,8 +152,8 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Image
-                objectFit="contain"
-                layout="fill"
+                className="object-contain"
+                fill
                 src="/images/albums/201411.jpeg"
                 alt="201411"
               />
@@ -186,8 +186,8 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Image
-                objectFit="contain"
-                layout="fill"
+                className="object-contain"
+                fill
                 src="/images/albums/201410.jpeg"
                 alt="201410"
               />
@@ -211,8 +211,8 @@ function Past() {
           <div className={styles.entry}>
             <div className={styles.pic}>
               <Image
-                objectFit="contain"
-                layout="fill"
+                className="object-contain"
+                fill
                 src="/images/albums/201408.jpeg"
                 alt="201408"
               />
@@ -241,8 +241,8 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Image
-                objectFit="contain"
-                layout="fill"
+                className="object-contain"
+                fill
                 src="/images/albums/201407.jpeg"
                 alt="201407"
               />
@@ -266,8 +266,8 @@ function Past() {
           <div className={styles.entry}>
             <div className={styles.pic}>
               <Image
-                objectFit="contain"
-                layout="fill"
+                className="object-contain"
+                fill
                 src="/images/albums/201405.jpeg"
                 alt="201405"
               />
@@ -298,8 +298,8 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Image
-                objectFit="contain"
-                layout="fill"
+                className="object-contain"
+                fill
                 src="/images/albums/20140501.jpeg"
                 alt="20140501"
               />
@@ -332,8 +332,8 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Image
-                objectFit="contain"
-                layout="fill"
+                className="object-contain"
+                fill
                 src="/images/albums/201404.jpeg"
                 alt="201404"
               />
@@ -364,8 +364,8 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Image
-                objectFit="contain"
-                layout="fill"
+                className="object-contain"
+                fill
                 src="/images/albums/201401.jpeg"
                 alt="201401"
               />
@@ -398,8 +398,8 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Image
-                objectFit="contain"
-                layout="fill"
+                className="object-contain"
+                fill
                 src="/images/albums/201308.jpeg"
                 alt="201308"
               />
@@ -432,8 +432,8 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Image
-                objectFit="contain"
-                layout="fill"
+                className="object-contain"
+                fill
                 src="/images/albums/201305.jpeg"
                 alt="201305"
               />
@@ -455,8 +455,8 @@ function Past() {
           <div className={styles.entry}>
             <div className={styles.pic}>
               <Image
-                objectFit="contain"
-                layout="fill"
+                className="object-contain"
+                fill
                 src="/images/albums/201302.jpeg"
                 alt="201302"
               />
@@ -483,8 +483,8 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Image
-                objectFit="contain"
-                layout="fill"
+                className="object-contain"
+                fill
                 src="/images/albums/201301.jpeg"
                 alt="201301"
               />
@@ -506,8 +506,8 @@ function Past() {
           <div className={styles.entry}>
             <div className={styles.pic}>
               <Image
-                objectFit="contain"
-                layout="fill"
+                className="object-contain"
+                fill
                 src="/images/albums/201212.jpeg"
                 alt="201212"
               />
@@ -538,8 +538,8 @@ function Past() {
             </div>
             <div className={styles.pic}>
               <Image
-                objectFit="contain"
-                layout="fill"
+                className="object-contain"
+                fill
                 src="/images/albums/201211.jpeg"
                 alt="201211"
               />
@@ -563,8 +563,8 @@ function Past() {
           <div className={styles.entry}>
             <div className={styles.pic}>
               <Image
-                objectFit="contain"
-                layout="fill"
+                className="object-contain"
+                fill
                 src="/images/albums/201210.jpeg"
                 alt="201210"
               />
@@ -586,5 +586,3 @@ function Past() {
     </div>
   );
 }
-
-export default Past;
