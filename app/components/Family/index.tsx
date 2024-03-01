@@ -11,7 +11,7 @@ const Family = ({ data, path }) => {
             <Link key={index} href={`/${path}#image-${index}`}>
               <div className={styles.navItem}>
                 <Image
-                  layout="fill"
+                  fill
                   className={styles.navImg}
                   src={`/images/${path}/${item}.jpg`}
                   alt={`img${item}`}
@@ -24,8 +24,8 @@ const Family = ({ data, path }) => {
           {data.map((item, index) => (
             <div key={index} className={styles.galleryImg}>
               <Image
-                layout="fill"
-                objectFit="contain"
+                fill
+                className="object-contain"
                 id={`image-${index}`}
                 src={`/images/${path}/${item}.jpg`}
                 alt={`img${item}`}
