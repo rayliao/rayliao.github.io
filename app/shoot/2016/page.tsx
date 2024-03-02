@@ -1,6 +1,11 @@
+import { Metadata } from "next";
 import Layout from "../../components/Layout";
 import styles from "../shoot.module.css";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "2016 Shoot",
+};
 
 export default function Page() {
   const images = [

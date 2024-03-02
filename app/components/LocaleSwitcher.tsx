@@ -1,27 +1,22 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-import Link from "next/link";
-import { i18n, lang, type Locale } from "../../i18n-config";
+import { LOCALE_STORAGE } from "../common/config";
+import locales from "../common/lang";
 
 export default function LocaleSwitcher() {
-  const pathName = usePathname();
-  const redirectedPathName = (locale: Locale) => {
-    if (!pathName) return "/";
-    const segments = pathName.split("/");
-    segments[1] = locale;
-    return segments.join("/");
-  };
   return (
     <>
-      {i18n.locales.map((locale) => (
-        <Link
-          key={locale}
+      {Object.keys(locales).map((key) => (
+        <span
+          key={key}
           className="cursor-pointer"
-          href={redirectedPathName(locale)}
+          onClick={() => {
+            localStorage.setItem(LOCALE_STORAGE.LOCALE, key);
+            location.reload();
+          }}
         >
-          {lang[locale]}
-        </Link>
+          {locales[key].name}
+        </span>
       ))}
     </>
   );

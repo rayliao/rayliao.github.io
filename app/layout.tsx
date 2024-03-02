@@ -14,7 +14,10 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "RayLiao",
+  title: {
+    template: "%s | RayLiao",
+    default: "RayLiao", // a default is required when creating a template
+  },
   description: `RayLiao - Hakka Canton - 
   Father & Husband - Front-end developer / Photography enthusiasts / Swimfan`,
   icons: {
@@ -27,21 +30,15 @@ export const metadata: Metadata = {
   },
 };
 
-export async function generateStaticParams() {
-  return i18n.locales.map((locale) => ({ lang: locale }));
-}
-
 export default function RootLayout({
   // Layouts must accept a children prop.
   // This will be populated with nested layouts or pages
   children,
-  params,
 }: {
   children: React.ReactNode;
-  params: { lang: Locale };
 }) {
   return (
-    <html suppressHydrationWarning lang={params.lang}>
+    <html suppressHydrationWarning>
       <body>
         <Providers>{children}</Providers>
       </body>

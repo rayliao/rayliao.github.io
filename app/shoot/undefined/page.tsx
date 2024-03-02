@@ -1,5 +1,10 @@
+import { Metadata } from "next";
 import Layout from "../../components/Layout";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Undefined",
+};
 
 export default function Page() {
   const list = Array.from(new Array(34).keys());

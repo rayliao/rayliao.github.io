@@ -2,6 +2,11 @@ import React from "react";
 import Link from "next/link";
 import styles from "./past.module.css";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Past",
+};
 
 export default function Page() {
   return (

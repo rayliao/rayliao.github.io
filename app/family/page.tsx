@@ -1,4 +1,9 @@
+import { Metadata } from "next";
 import Family from "../components/Family";
+
+export const metadata: Metadata = {
+  title: "Family",
+};
 
 export default function Page() {
   const max = 25;
