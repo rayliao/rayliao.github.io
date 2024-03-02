@@ -1,5 +1,6 @@
-import Content from "./Content";
-import Header from "./Header";
+import dynamic from "next/dynamic";
+const Header = dynamic(() => import("./Header"), { ssr: false });
+const Content = dynamic(() => import("./Content"), { ssr: false });
 
 export default async function Page() {
   return (

@@ -7,7 +7,6 @@ import lang from "./common/lang";
 import { LOCALE_STORAGE } from "./common/config";
 
 export default function Header() {
-  console.log(localStorage.getItem(LOCALE_STORAGE.LOCALE));
   const locale = localStorage.getItem(LOCALE_STORAGE.LOCALE) ?? "en";
   const content = lang[locale].content;
   return (
