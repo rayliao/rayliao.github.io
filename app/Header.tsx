@@ -21,6 +21,7 @@ export default function Header() {
           {content.blog}
         </a>
         <Link href="/shoot/2021">{content.image}</Link>
+        <Link href="/jon">Jon</Link>
       </nav>
       <div className="group relative">
         <Svg
