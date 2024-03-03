@@ -1,7 +1,8 @@
 import { Metadata } from "next";
 import type { Viewport } from "next";
-import { i18n, type Locale } from "../i18n-config";
 import "./styles/globals.css";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Providers from "./components/Provider";
 
 export const viewport: Viewport = {
@@ -41,6 +42,8 @@ export default function RootLayout({
     <html suppressHydrationWarning>
       <body>
         <Providers>{children}</Providers>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
