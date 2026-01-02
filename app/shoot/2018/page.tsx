@@ -1,6 +1,7 @@
 import Layout from "../../components/Layout";
 import styles from "../shoot.module.css";
 import Image from "next/image";
+import { getImageUrl } from "../../common/image";
 
 export default function Page() {
   const images = [
@@ -36,7 +37,7 @@ export default function Page() {
                 objectFit="cover"
                 layout="fill"
                 alt=""
-                src={`/images/2018/${item}.jpg`}
+                src={getImageUrl(`2018/${item}.jpg`)}
               />
             ) : (
               (item as string[]).map((n, i) => (
@@ -45,7 +46,7 @@ export default function Page() {
                     objectFit="cover"
                     layout="fill"
                     alt=""
-                    src={`/images/2018/${n}.jpg`}
+                    src={getImageUrl(`2018/${n}.jpg`)}
                   />
                 </div>
               ))

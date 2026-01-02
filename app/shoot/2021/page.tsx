@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Layout from "../../components/Layout";
 import styles from "../shoot.module.css";
 import Image from "next/image";
+import { getImageUrl } from "../../common/image";
 export const metadata: Metadata = {
   title: "2021 Shoot",
 };
@@ -14,7 +15,7 @@ export default function Page() {
             className="object-cover"
             fill
             alt=""
-            src="/images/2021/0130.jpg"
+            src={getImageUrl("2021/0130.jpg")}
           />
         </div>
         <div className={styles.uniteItem}>
@@ -22,7 +23,7 @@ export default function Page() {
             className="object-cover"
             fill
             alt=""
-            src="/images/2021/0131.jpg"
+            src={getImageUrl("2021/0131.jpg")}
           />
         </div>
       </div>
@@ -31,7 +32,7 @@ export default function Page() {
           className="object-cover"
           fill
           alt=""
-          src="/images/2021/0213.jpg"
+          src={getImageUrl("2021/0213.jpg")}
         />
       </div>
       <div className={styles.item}>
@@ -39,7 +40,7 @@ export default function Page() {
           className="object-cover"
           fill
           alt=""
-          src="/images/2021/0214.jpg"
+          src={getImageUrl("2021/0214.jpg")}
         />
       </div>
       <div className={styles.item}>
@@ -47,7 +48,7 @@ export default function Page() {
           className="object-cover"
           fill
           alt=""
-          src="/images/2021/0215.jpg"
+          src={getImageUrl("2021/0215.jpg")}
         />
       </div>
       <div className={styles.item}>
@@ -55,7 +56,7 @@ export default function Page() {
           className="object-cover"
           fill
           alt=""
-          src="/images/2021/0318.jpg"
+          src={getImageUrl("2021/0318.jpg")}
         />
       </div>
       <div className={styles.item}>
@@ -63,7 +64,7 @@ export default function Page() {
           className="object-cover"
           fill
           alt=""
-          src="/images/2021/0319.jpg"
+          src={getImageUrl("2021/0319.jpg")}
         />
       </div>
       <div className={styles.item}>
@@ -71,7 +72,7 @@ export default function Page() {
           className="object-cover"
           fill
           alt=""
-          src="/images/2021/0328.jpg"
+          src={getImageUrl("2021/0328.jpg")}
         />
       </div>
       <div className={styles.item}>
@@ -79,7 +80,7 @@ export default function Page() {
           className="object-cover"
           fill
           alt=""
-          src="/images/2021/0329.jpg"
+          src={getImageUrl("2021/0329.jpg")}
         />
       </div>
       <div className={styles.item}>
@@ -87,7 +88,7 @@ export default function Page() {
           className="object-cover"
           fill
           alt=""
-          src="/images/2021/0411.jpg"
+          src={getImageUrl("2021/0411.jpg")}
         />
       </div>
       <div className={styles.item}>
@@ -95,7 +96,7 @@ export default function Page() {
           className="object-cover"
           fill
           alt=""
-          src="/images/2021/0412.jpg"
+          src={getImageUrl("2021/0412.jpg")}
         />
       </div>
       <div className={`${styles.item} ${styles.unite}`}>
@@ -104,7 +105,7 @@ export default function Page() {
             className="object-cover"
             fill
             alt=""
-            src="/images/2021/0413.jpg"
+            src={getImageUrl("2021/0413.jpg")}
           />
         </div>
         <div className={styles.uniteItem}>
@@ -112,7 +113,7 @@ export default function Page() {
             className="object-cover"
             fill
             alt=""
-            src="/images/2021/0415.jpg"
+            src={getImageUrl("2021/0415.jpg")}
           />
         </div>
       </div>
@@ -121,7 +122,7 @@ export default function Page() {
           className="object-cover"
           fill
           alt=""
-          src="/images/2021/0505.jpg"
+          src={getImageUrl("2021/0505.jpg")}
         />
       </div>
       <div className={styles.item}>
@@ -129,7 +130,7 @@ export default function Page() {
           className="object-cover"
           fill
           alt=""
-          src="/images/2021/0929.jpg"
+          src={getImageUrl("2021/0929.jpg")}
         />
       </div>
       <div className={styles.item}>
@@ -137,7 +138,7 @@ export default function Page() {
           className="object-cover"
           fill
           alt=""
-          src="/images/2021/1001.jpg"
+          src={getImageUrl("2021/1001.jpg")}
         />
       </div>
       <div className={styles.item}>
@@ -145,7 +146,7 @@ export default function Page() {
           className="object-cover"
           fill
           alt=""
-          src="/images/2021/1002.jpg"
+          src={getImageUrl("2021/1002.jpg")}
         />
       </div>
       <div className={`${styles.item} ${styles.unite}`}>
@@ -154,7 +155,7 @@ export default function Page() {
             className="object-cover"
             fill
             alt=""
-            src="/images/2021/1017.jpg"
+            src={getImageUrl("2021/1017.jpg")}
           />
         </div>
         <div className={styles.uniteItem}>
@@ -162,7 +163,7 @@ export default function Page() {
             className="object-cover"
             fill
             alt=""
-            src="/images/2021/1018.jpg"
+            src={getImageUrl("2021/1018.jpg")}
           />
         </div>
       </div>

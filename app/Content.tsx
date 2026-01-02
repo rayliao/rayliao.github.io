@@ -2,19 +2,21 @@
 import Svg from "./components/Svg";
 import lang from "./common/lang";
 import { LOCALE_STORAGE } from "./common/config";
+import { getImageUrl } from "./common/image";
 
 export default function Content() {
   const locale = localStorage.getItem(LOCALE_STORAGE.LOCALE) ?? "en";
   const content = lang[locale].content;
+  const bgImage = getImageUrl("bg.jpg");
   return (
     <>
       <div className="relative top-[-50px]">
         <div className="glitch">
-          <div className="glitch-img" />
-          <div className="glitch-img" />
-          <div className="glitch-img" />
-          <div className="glitch-img" />
-          <div className="glitch-img" />
+          <div className="glitch-img" style={{ backgroundImage: `url("${bgImage}")` }} />
+          <div className="glitch-img" style={{ backgroundImage: `url("${bgImage}")` }} />
+          <div className="glitch-img" style={{ backgroundImage: `url("${bgImage}")` }} />
+          <div className="glitch-img" style={{ backgroundImage: `url("${bgImage}")` }} />
+          <div className="glitch-img" style={{ backgroundImage: `url("${bgImage}")` }} />
         </div>
         <h1 className="font-extralight lg:font-light font-sans leading-none m-0 pt-2 tracking-[14px] lg:tracking-[30px] text-3xl lg:text-5xl uppercase relative text-grass-600">
           WingRay Liao

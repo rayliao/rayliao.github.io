@@ -3,6 +3,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import { EffectFade } from "swiper";
+import { getImageUrl } from "../../common/image";
 
 interface SlideProps {
   title: string[];
@@ -33,7 +34,7 @@ export default function Slide({ title }: SlideProps) {
               sizes="(max-width: 1200px) 100vw, 33vw"
               className="object-contain"
               alt={`lover-${index}`}
-              src={`/images/lover/${index}.jpg`}
+              src={getImageUrl(`lover/${index}.jpg`)}
             />
           </div>
           <div className="text-sm text-center">{title[index]}</div>

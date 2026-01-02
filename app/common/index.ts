@@ -13,3 +13,6 @@ export const useLangStore = create<LangState>()((set) => ({
 }));
 
 export const useLang = () => useLangStore((s) => s.lang);
+
+// Export image utility
+export { getImageUrl } from "./image";

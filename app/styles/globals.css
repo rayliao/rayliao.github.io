@@ -42,9 +42,7 @@
   background-blend-mode: var(--blend-mode-1);
 }
 
-.glitch-img {
-  background-image: url("/images/bg.jpg");
-}
+/* .glitch-img background-image will be set inline via getImageUrl() */
 
 .glitch-img:nth-child(2) {
   background-color: var(--blend-color-2);

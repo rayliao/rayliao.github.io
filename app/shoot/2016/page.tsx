@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Layout from "../../components/Layout";
 import styles from "../shoot.module.css";
 import Image from "next/image";
+import { getImageUrl } from "../../common/image";
 
 export const metadata: Metadata = {
   title: "2016 Shoot",
@@ -39,7 +40,7 @@ export default function Page() {
                 fill
                 className="object-cover"
                 alt=""
-                src={`/images/2016/${item}.jpg`}
+                src={getImageUrl(`2016/${item}.jpg`)}
               />
             ) : (
               (item as string[]).map((n, i) => (
@@ -48,7 +49,7 @@ export default function Page() {
                     fill
                     className="object-cover"
                     alt=""
-                    src={`/images/2016/${n}.jpg`}
+                    src={getImageUrl(`2016/${n}.jpg`)}
                   />
                 </div>
               ))

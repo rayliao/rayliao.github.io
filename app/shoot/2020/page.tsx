@@ -1,6 +1,7 @@
 import Layout from "../../components/Layout";
 import styles from "../shoot.module.css";
 import Image from "next/image";
+import { getImageUrl } from "../../common/image";
 
 export default function Page() {
   return (
@@ -10,7 +11,7 @@ export default function Page() {
           className="object-cover"
           fill
           alt=""
-          src="/images/2020/0113.jpg"
+          src={getImageUrl("2020/0113.jpg")}
         />
       </div>
       <div className={styles.item}>
@@ -18,7 +19,7 @@ export default function Page() {
           className="object-cover"
           fill
           alt=""
-          src="/images/2020/0112.jpg"
+          src={getImageUrl("2020/0112.jpg")}
         />
       </div>
       <div className={styles.item}>
@@ -26,7 +27,7 @@ export default function Page() {
           className="object-cover"
           fill
           alt=""
-          src="/images/2020/0129.jpg"
+          src={getImageUrl("2020/0129.jpg")}
         />
       </div>
       <div className={styles.item}>
@@ -36,7 +37,7 @@ export default function Page() {
           width={1024}
           height={1024}
           alt=""
-          src="/images/2020/0130.jpg"
+          src={getImageUrl("2020/0130.jpg")}
         />
       </div>
       <div className={styles.item}>
@@ -44,7 +45,7 @@ export default function Page() {
           className="object-cover"
           fill
           alt=""
-          src="/images/2020/0318.jpg"
+          src={getImageUrl("2020/0318.jpg")}
         />
       </div>
       <div className={styles.item}>
@@ -52,73 +53,7 @@ export default function Page() {
           className="object-cover"
           fill
           alt=""
-          src="/images/2020/0325.jpg"
-        />
-      </div>
-      <div className={`${styles.item} ${styles.unite}`}>
-        <div className={styles.uniteItem}>
-          <Image
-            className="object-cover"
-            fill
-            alt=""
-            src="/images/2020/0401.jpg"
-          />
-        </div>
-        <div className={styles.uniteItem}>
-          <Image
-            className="object-cover"
-            fill
-            alt=""
-            src="/images/2020/0625.jpg"
-          />
-        </div>
-      </div>
-      <div className={styles.item}>
-        <Image
-          className="object-cover"
-          fill
-          alt=""
-          src="/images/2020/0801.jpg"
-        />
-      </div>
-      <div className={styles.item}>
-        <Image
-          className="object-cover"
-          fill
-          alt=""
-          src="/images/2020/0901.jpg"
-        />
-      </div>
-      <div className={styles.item}>
-        <Image
-          className="object-cover"
-          fill
-          alt=""
-          src="/images/2020/0902.jpg"
-        />
-      </div>
-      <div className={styles.item}>
-        <Image
-          className="object-cover"
-          fill
-          alt=""
-          src="/images/2020/0903.jpg"
-        />
-      </div>
-      <div className={styles.item}>
-        <Image
-          className="object-cover"
-          fill
-          alt=""
-          src="/images/2020/1001.jpg"
-        />
-      </div>
-      <div className={styles.item}>
-        <Image
-          className="object-cover"
-          fill
-          alt=""
-          src="/images/2020/1002.jpg"
+          src={getImageUrl("2020/0325.jpg")}
         />
       </div>
       <div className={`${styles.item} ${styles.unite}`}>
@@ -127,7 +62,7 @@ export default function Page() {
             className="object-cover"
             fill
             alt=""
-            src="/images/2020/1101.jpg"
+            src={getImageUrl("2020/0401.jpg")}
           />
         </div>
         <div className={styles.uniteItem}>
@@ -135,7 +70,7 @@ export default function Page() {
             className="object-cover"
             fill
             alt=""
-            src="/images/2020/1102.jpg"
+            src={getImageUrl("2020/0625.jpg")}
           />
         </div>
       </div>
@@ -144,7 +79,73 @@ export default function Page() {
           className="object-cover"
           fill
           alt=""
-          src="/images/2020/1103.jpg"
+          src={getImageUrl("2020/0801.jpg")}
+        />
+      </div>
+      <div className={styles.item}>
+        <Image
+          className="object-cover"
+          fill
+          alt=""
+          src={getImageUrl("2020/0901.jpg")}
+        />
+      </div>
+      <div className={styles.item}>
+        <Image
+          className="object-cover"
+          fill
+          alt=""
+          src={getImageUrl("2020/0902.jpg")}
+        />
+      </div>
+      <div className={styles.item}>
+        <Image
+          className="object-cover"
+          fill
+          alt=""
+          src={getImageUrl("2020/0903.jpg")}
+        />
+      </div>
+      <div className={styles.item}>
+        <Image
+          className="object-cover"
+          fill
+          alt=""
+          src={getImageUrl("2020/1001.jpg")}
+        />
+      </div>
+      <div className={styles.item}>
+        <Image
+          className="object-cover"
+          fill
+          alt=""
+          src={getImageUrl("2020/1002.jpg")}
+        />
+      </div>
+      <div className={`${styles.item} ${styles.unite}`}>
+        <div className={styles.uniteItem}>
+          <Image
+            className="object-cover"
+            fill
+            alt=""
+            src={getImageUrl("2020/1101.jpg")}
+          />
+        </div>
+        <div className={styles.uniteItem}>
+          <Image
+            className="object-cover"
+            fill
+            alt=""
+            src={getImageUrl("2020/1102.jpg")}
+          />
+        </div>
+      </div>
+      <div className={styles.item}>
+        <Image
+          className="object-cover"
+          fill
+          alt=""
+          src={getImageUrl("2020/1103.jpg")}
         />
       </div>
       <p className={styles.tip}>*有些是他人所影，手机/爱人/不知道哦</p>

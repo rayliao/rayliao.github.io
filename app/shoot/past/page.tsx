@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from "./past.module.css";
 import Image from "next/image";
 import { Metadata } from "next";
+import { getImageUrl } from "../../common/image";
 
 export const metadata: Metadata = {
   title: "Past",
@@ -51,7 +52,7 @@ export default function Page() {
               <Image
                 className="object-contain"
                 fill
-                src="/images/albums/201510.jpeg"
+                src={getImageUrl("albums/201510.jpeg")}
                 alt="201510"
               />
             </div>
@@ -76,7 +77,7 @@ export default function Page() {
               <Image
                 className="object-contain"
                 fill
-                src="/images/albums/201507.jpeg"
+                src={getImageUrl("albums/201507.jpeg")}
                 alt="201507"
               />
             </div>
@@ -95,7 +96,7 @@ export default function Page() {
               <Image
                 className="object-contain"
                 fill
-                src="/images/albums/201506.jpeg"
+                src={getImageUrl("albums/201506.jpeg")}
                 alt="201506"
               />
             </div>
@@ -125,7 +126,7 @@ export default function Page() {
               <Image
                 className="object-contain"
                 fill
-                src="/images/albums/201503.jpeg"
+                src={getImageUrl("albums/201503.jpeg")}
                 alt="201503"
               />
             </div>
@@ -159,7 +160,7 @@ export default function Page() {
               <Image
                 className="object-contain"
                 fill
-                src="/images/albums/201411.jpeg"
+                src={getImageUrl("albums/201411.jpeg")}
                 alt="201411"
               />
             </div>
@@ -193,7 +194,7 @@ export default function Page() {
               <Image
                 className="object-contain"
                 fill
-                src="/images/albums/201410.jpeg"
+                src={getImageUrl("albums/201410.jpeg")}
                 alt="201410"
               />
             </div>
@@ -218,7 +219,7 @@ export default function Page() {
               <Image
                 className="object-contain"
                 fill
-                src="/images/albums/201408.jpeg"
+                src={getImageUrl("albums/201408.jpeg")}
                 alt="201408"
               />
             </div>
@@ -248,7 +249,7 @@ export default function Page() {
               <Image
                 className="object-contain"
                 fill
-                src="/images/albums/201407.jpeg"
+                src={getImageUrl("albums/201407.jpeg")}
                 alt="201407"
               />
             </div>
@@ -273,7 +274,7 @@ export default function Page() {
               <Image
                 className="object-contain"
                 fill
-                src="/images/albums/201405.jpeg"
+                src={getImageUrl("albums/201405.jpeg")}
                 alt="201405"
               />
             </div>
@@ -305,7 +306,7 @@ export default function Page() {
               <Image
                 className="object-contain"
                 fill
-                src="/images/albums/20140501.jpeg"
+                src={getImageUrl("albums/20140501.jpeg")}
                 alt="20140501"
               />
             </div>
@@ -339,7 +340,7 @@ export default function Page() {
               <Image
                 className="object-contain"
                 fill
-                src="/images/albums/201404.jpeg"
+                src={getImageUrl("albums/201404.jpeg")}
                 alt="201404"
               />
             </div>
@@ -371,7 +372,7 @@ export default function Page() {
               <Image
                 className="object-contain"
                 fill
-                src="/images/albums/201401.jpeg"
+                src={getImageUrl("albums/201401.jpeg")}
                 alt="201401"
               />
             </div>
@@ -405,7 +406,7 @@ export default function Page() {
               <Image
                 className="object-contain"
                 fill
-                src="/images/albums/201308.jpeg"
+                src={getImageUrl("albums/201308.jpeg")}
                 alt="201308"
               />
             </div>
@@ -439,7 +440,7 @@ export default function Page() {
               <Image
                 className="object-contain"
                 fill
-                src="/images/albums/201305.jpeg"
+                src={getImageUrl("albums/201305.jpeg")}
                 alt="201305"
               />
             </div>
@@ -462,7 +463,7 @@ export default function Page() {
               <Image
                 className="object-contain"
                 fill
-                src="/images/albums/201302.jpeg"
+                src={getImageUrl("albums/201302.jpeg")}
                 alt="201302"
               />
             </div>
@@ -490,7 +491,7 @@ export default function Page() {
               <Image
                 className="object-contain"
                 fill
-                src="/images/albums/201301.jpeg"
+                src={getImageUrl("albums/201301.jpeg")}
                 alt="201301"
               />
             </div>
@@ -513,7 +514,7 @@ export default function Page() {
               <Image
                 className="object-contain"
                 fill
-                src="/images/albums/201212.jpeg"
+                src={getImageUrl("albums/201212.jpeg")}
                 alt="201212"
               />
             </div>
@@ -545,7 +546,7 @@ export default function Page() {
               <Image
                 className="object-contain"
                 fill
-                src="/images/albums/201211.jpeg"
+                src={getImageUrl("albums/201211.jpeg")}
                 alt="201211"
               />
             </div>
@@ -570,7 +571,7 @@ export default function Page() {
               <Image
                 className="object-contain"
                 fill
-                src="/images/albums/201210.jpeg"
+                src={getImageUrl("albums/201210.jpeg")}
                 alt="201210"
               />
             </div>

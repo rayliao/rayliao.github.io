@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Layout from "../../components/Layout";
 import Image from "next/image";
+import { getImageUrl } from "../../common/image";
 
 export const metadata: Metadata = {
   title: "Undefined",
@@ -20,7 +21,7 @@ export default function Page() {
               fill
               className="object-cover"
               alt=""
-              src={`/images/undefined/${k + 1}.jpg`}
+              src={getImageUrl(`undefined/${k + 1}.jpg`)}
             />
           </div>
         ))}

@@ -6,6 +6,16 @@ const nextConfig = {
   //   locales: ["en", "zh-Hant", "zh-Hans", "jp", "fr", "ko"],
   //   defaultLocale: "en",
   // },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '*.public.blob.vercel-storage.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;

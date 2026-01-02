@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./index.module.css";
+import { getImageUrl } from "../../common/image";
 
 const Family = ({ data, path }) => {
   return (
@@ -13,7 +14,7 @@ const Family = ({ data, path }) => {
                 <Image
                   fill
                   className={styles.navImg}
-                  src={`/images/${path}/${item}.jpg`}
+                  src={getImageUrl(`${path}/${item}.jpg`)}
                   alt={`img${item}`}
                 />
               </div>
@@ -27,7 +28,7 @@ const Family = ({ data, path }) => {
                 fill
                 className="object-contain"
                 id={`image-${index}`}
-                src={`/images/${path}/${item}.jpg`}
+                src={getImageUrl(`${path}/${item}.jpg`)}
                 alt={`img${item}`}
               />
             </div>

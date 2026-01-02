@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { JonData } from "../common/config";
 import { Metadata } from "next";
+import { getImageUrl } from "../common/image";
 
 export const metadata: Metadata = {
   title: "Jon",
@@ -20,7 +21,7 @@ export default function Page() {
               priority={index < 2}
               alt={item.name}
               className="object-contain"
-              src={`/images/jon/${item.name}.JPG`}
+              src={getImageUrl(`jon/${item.name}.JPG`)}
             />
           </div>
           <p className="text-sm">{item.content}</p>
