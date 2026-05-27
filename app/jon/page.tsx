@@ -18,8 +18,9 @@ export default function Page() {
           <div className="relative w-full aspect-square">
             <Image
               fill
+              sizes="(max-width: 1024px) 100vw, 600px"
               priority={index < 2}
-              alt={item.name}
+              alt={`Jon - Age ${item.name}`}
               className="object-contain"
               src={getImageUrl(`jon/${item.name}.JPG`)}
             />

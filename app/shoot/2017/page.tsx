@@ -16,18 +16,20 @@ export default function Page() {
           >
             {single ? (
               <Image
-                objectFit="cover"
-                layout="fill"
-                alt=""
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                alt={`2017 photo ${item}`}
                 src={getImageUrl(`2017/${item}.jpg`)}
               />
             ) : (
               (item as string[]).map((n, i) => (
                 <div className={styles.uniteItem} key={i}>
                   <Image
-                    objectFit="cover"
-                    layout="fill"
-                    alt=""
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                    alt={`2017 photo ${n}`}
                     src={getImageUrl(`2017/${n}.jpg`)}
                   />
                 </div>

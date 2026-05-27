@@ -1,8 +1,6 @@
 import { Metadata } from "next";
 import type { Viewport } from "next";
 import "./styles/globals.css";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import Providers from "./components/Provider";
 
 export const viewport: Viewport = {
@@ -11,7 +9,6 @@ export const viewport: Viewport = {
   initialScale: 1,
   minimumScale: 1,
   maximumScale: 5,
-  userScalable: false,
 };
 
 export const metadata: Metadata = {
@@ -42,8 +39,6 @@ export default function RootLayout({
     <html suppressHydrationWarning>
       <body>
         <Providers>{children}</Providers>
-        <Analytics />
-        <SpeedInsights />
       </body>
     </html>
   );

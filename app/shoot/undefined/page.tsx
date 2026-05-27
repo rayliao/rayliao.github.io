@@ -20,7 +20,8 @@ export default function Page() {
             <Image
               fill
               className="object-cover"
-              alt=""
+              sizes="(max-width: 1024px) 100vw, 600px"
+              alt={`undefined photo ${k + 1}`}
               src={getImageUrl(`undefined/${k + 1}.jpg`)}
             />
           </div>

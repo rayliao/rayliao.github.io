@@ -6,7 +6,7 @@ import locales from "../common/lang";
 export default function LocaleSwitcher() {
   return (
     <>
-      {Object.keys(locales).map((key) => (
+      {(Object.keys(locales) as Array<keyof typeof locales>).map((key) => (
         <span
           key={key}
           className="cursor-pointer"

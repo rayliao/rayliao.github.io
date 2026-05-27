@@ -39,7 +39,8 @@ export default function Page() {
               <Image
                 fill
                 className="object-cover"
-                alt=""
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                alt={`2016 photo ${item}`}
                 src={getImageUrl(`2016/${item}.jpg`)}
               />
             ) : (
@@ -48,7 +49,8 @@ export default function Page() {
                   <Image
                     fill
                     className="object-cover"
-                    alt=""
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                    alt={`2016 photo ${n}`}
                     src={getImageUrl(`2016/${n}.jpg`)}
                   />
                 </div>

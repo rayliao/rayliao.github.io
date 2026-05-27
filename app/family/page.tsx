@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   const max = 25;
-  const list = Array.from(new Array(max + 1).keys());
+  const list = Array.from(new Array(max + 1).keys()).map(String);
   const shuffleList = list.reverse();
   return <Family data={shuffleList} path="family" />;
 }

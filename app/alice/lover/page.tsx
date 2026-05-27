@@ -1,8 +1,6 @@
 import "swiper/css";
 import "swiper/css/effect-fade";
-import dynamic from "next/dynamic";
-
-const Slide = dynamic(() => import("./Slide"), { ssr: false });
+import Slide from "./Slide";
 
 export default function Page() {
   const title = [

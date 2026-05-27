@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./index.module.css";
 import { getImageUrl } from "../../common/image";
 
-const Family = ({ data, path }) => {
+const Family = ({ data, path }: { data: string[]; path: string }) => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>

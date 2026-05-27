@@ -1,7 +1,7 @@
 import styles from "./index.module.css";
 import Link from "next/link";
 
-const Layout = ({ children }) => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
   const now = new Date();
   return (
     <>

@@ -51,6 +51,7 @@ export default function Page() {
             <div className={styles.pic}>
               <Image
                 className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 fill
                 src={getImageUrl("albums/201510.jpeg")}
                 alt="201510"
@@ -76,6 +77,7 @@ export default function Page() {
             <div className={styles.pic}>
               <Image
                 className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 fill
                 src={getImageUrl("albums/201507.jpeg")}
                 alt="201507"
@@ -95,6 +97,7 @@ export default function Page() {
             <div className={styles.pic}>
               <Image
                 className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 fill
                 src={getImageUrl("albums/201506.jpeg")}
                 alt="201506"
@@ -125,6 +128,7 @@ export default function Page() {
             <div className={styles.pic}>
               <Image
                 className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 fill
                 src={getImageUrl("albums/201503.jpeg")}
                 alt="201503"
@@ -159,6 +163,7 @@ export default function Page() {
             <div className={styles.pic}>
               <Image
                 className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 fill
                 src={getImageUrl("albums/201411.jpeg")}
                 alt="201411"
@@ -193,6 +198,7 @@ export default function Page() {
             <div className={styles.pic}>
               <Image
                 className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 fill
                 src={getImageUrl("albums/201410.jpeg")}
                 alt="201410"
@@ -218,6 +224,7 @@ export default function Page() {
             <div className={styles.pic}>
               <Image
                 className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 fill
                 src={getImageUrl("albums/201408.jpeg")}
                 alt="201408"
@@ -248,6 +255,7 @@ export default function Page() {
             <div className={styles.pic}>
               <Image
                 className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 fill
                 src={getImageUrl("albums/201407.jpeg")}
                 alt="201407"
@@ -273,6 +281,7 @@ export default function Page() {
             <div className={styles.pic}>
               <Image
                 className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 fill
                 src={getImageUrl("albums/201405.jpeg")}
                 alt="201405"
@@ -305,6 +314,7 @@ export default function Page() {
             <div className={styles.pic}>
               <Image
                 className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 fill
                 src={getImageUrl("albums/20140501.jpeg")}
                 alt="20140501"
@@ -339,6 +349,7 @@ export default function Page() {
             <div className={styles.pic}>
               <Image
                 className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 fill
                 src={getImageUrl("albums/201404.jpeg")}
                 alt="201404"
@@ -371,6 +382,7 @@ export default function Page() {
             <div className={styles.pic}>
               <Image
                 className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 fill
                 src={getImageUrl("albums/201401.jpeg")}
                 alt="201401"
@@ -405,6 +417,7 @@ export default function Page() {
             <div className={styles.pic}>
               <Image
                 className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 fill
                 src={getImageUrl("albums/201308.jpeg")}
                 alt="201308"
@@ -439,6 +452,7 @@ export default function Page() {
             <div className={styles.pic}>
               <Image
                 className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 fill
                 src={getImageUrl("albums/201305.jpeg")}
                 alt="201305"
@@ -462,6 +476,7 @@ export default function Page() {
             <div className={styles.pic}>
               <Image
                 className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 fill
                 src={getImageUrl("albums/201302.jpeg")}
                 alt="201302"
@@ -490,6 +505,7 @@ export default function Page() {
             <div className={styles.pic}>
               <Image
                 className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 fill
                 src={getImageUrl("albums/201301.jpeg")}
                 alt="201301"
@@ -513,6 +529,7 @@ export default function Page() {
             <div className={styles.pic}>
               <Image
                 className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 fill
                 src={getImageUrl("albums/201212.jpeg")}
                 alt="201212"
@@ -545,6 +562,7 @@ export default function Page() {
             <div className={styles.pic}>
               <Image
                 className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 fill
                 src={getImageUrl("albums/201211.jpeg")}
                 alt="201211"
@@ -570,6 +588,7 @@ export default function Page() {
             <div className={styles.pic}>
               <Image
                 className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 fill
                 src={getImageUrl("albums/201210.jpeg")}
                 alt="201210"
