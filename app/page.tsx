@@ -1,6 +1,31 @@
+import type { Metadata } from "next";
 import Header from "./Header";
 import Content from "./Content";
 import { Github, Instagram } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "RayLiao - 前端开发 / 摄影 / 客家文化",
+  description:
+    "Ray Liao，前端开发者、摄影爱好者、客家文化记录者。分享技术文章、摄影作品和客家文化故事。",
+  alternates: {
+    canonical: "https://rayliao.com",
+  },
+  openGraph: {
+    title: "RayLiao - 前端开发 / 摄影 / 客家文化",
+    description:
+      "Ray Liao，前端开发者、摄影爱好者、客家文化记录者。",
+    url: "https://rayliao.com",
+    siteName: "RayLiao",
+    locale: "zh_CN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "RayLiao - 前端开发 / 摄影 / 客家文化",
+    description:
+      "Ray Liao，前端开发者、摄影爱好者、客家文化记录者。",
+  },
+};
 
 export default function Page() {
   return (

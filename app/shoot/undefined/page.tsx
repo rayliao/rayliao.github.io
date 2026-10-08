@@ -5,6 +5,10 @@ import { getImageUrl } from "../../common/image";
 
 export const metadata: Metadata = {
   title: "Undefined",
+  description: "Undefined photography series",
+  alternates: {
+    canonical: "https://rayliao.com/shoot/undefined",
+  },
 };
 
 export default function Page() {

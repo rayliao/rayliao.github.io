@@ -28,7 +28,7 @@ export default function Content() {
           <div className="glitch-img" style={{ backgroundImage: `url("${bgImage}")` }} />
         </div>
         <h1 className="font-extralight lg:font-light font-sans leading-none m-0 pt-2 tracking-[14px] lg:tracking-[30px] text-3xl lg:text-5xl uppercase relative text-grass-600">
-          WingRay Liao
+          Ray Liao
         </h1>
         <p className="font-medium mt-[2em] text-grass-500 relative">
           {content.frontEnd}

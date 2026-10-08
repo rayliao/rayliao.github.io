@@ -1,0 +1,36 @@
+---
+title: 你好，Yar
+date: 2026-10-07
+description: 这是 yar 集合的第一篇示例文章，用来演示 MDX 能力。
+tags: [示例, mdx]
+---
+
+## 关于这个栏目
+
+这是 **yar** 集合下的一篇文章，文件是 `.mdx`，所以除了标准 Markdown，还能直接写 JSX：
+
+<strong className="text-grass-600 dark:text-grass-400">这段文字由内联 JSX 渲染。</strong>
+
+### 列表
+
+- 支持 `.mdx`
+- 也支持 `.md`
+- frontmatter 可写 title / date / description / tags / cover / draft
+
+### 代码
+
+```ts
+export function hello(name: string) {
+  return `Hello, ${name}`;
+}
+```
+
+### 图片
+
+图片用相对路径即可，会自动走 `getImageUrl()`（R2 / Vercel Blob / 本地 `/images`）：
+
+```md
+![替代文字](2026/example.jpg)
+```
+
+> 提示：frontmatter 里写 `draft: true` 的文章不会生成页面。

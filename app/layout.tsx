@@ -35,9 +35,41 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://rayliao.com/#website",
+        url: "https://rayliao.com",
+        name: "RayLiao",
+        description:
+          "Ray Liao - 前端开发者、摄影爱好者、客家文化记录者",
+        inLanguage: ["zh-CN", "en"],
+      },
+      {
+        "@type": "Person",
+        "@id": "https://rayliao.com/#person",
+        name: "Ray Liao",
+        jobTitle: "Front-end Developer",
+        url: "https://rayliao.com",
+        sameAs: [
+          "https://github.com/rayliao",
+          "https://instagram.com/ray__liao/",
+        ],
+        description:
+          "前端开发者、摄影爱好者、客家文化记录者",
+      },
+    ],
+  };
+
   return (
     <html suppressHydrationWarning>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Providers>{children}</Providers>
       </body>
     </html>

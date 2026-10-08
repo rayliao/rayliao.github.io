@@ -5,6 +5,10 @@ import Image from "next/image";
 import { getImageUrl } from "../../common/image";
 export const metadata: Metadata = {
   title: "2021 Shoot",
+  description: "Photography collection from 2021",
+  alternates: {
+    canonical: "https://rayliao.com/shoot/2021",
+  },
 };
 export default function Page() {
   return (

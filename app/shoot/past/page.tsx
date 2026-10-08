@@ -7,6 +7,10 @@ import { getImageUrl } from "../../common/image";
 
 export const metadata: Metadata = {
   title: "Past",
+  description: "Past photography works",
+  alternates: {
+    canonical: "https://rayliao.com/shoot/past",
+  },
 };
 
 export default function Page() {

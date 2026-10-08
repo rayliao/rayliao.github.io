@@ -1,7 +1,16 @@
+import type { Metadata } from "next";
 import Layout from "../../components/Layout";
 import styles from "../shoot.module.css";
 import Image from "next/image";
 import { getImageUrl } from "../../common/image";
+
+export const metadata: Metadata = {
+  title: "2020 Shoot",
+  description: "Photography collection from 2020",
+  alternates: {
+    canonical: "https://rayliao.com/shoot/2020",
+  },
+};
 
 export default function Page() {
   return (

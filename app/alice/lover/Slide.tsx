@@ -27,21 +27,20 @@ export default function Slide({ title }: SlideProps) {
       modules={[EffectFade]}
     >
       {shuffledIndices.map((index, i) => (
-        <SwiperSlide
-          className="h-full flex flex-col justify-center gap-2 box-border px-2"
-          key={index}
-        >
-          <div className="relative w-full h-[300px] lg:h-[400px]">
-            <Image
-              priority={i === 0}
-              fill
-              sizes="(max-width: 1200px) 100vw, 33vw"
-              className="object-contain"
-              alt={`lover-${index}`}
-              src={getImageUrl(`lover/${index}.jpg`)}
-            />
+        <SwiperSlide className="h-full box-border px-2" key={index}>
+          <div className="flex h-full flex-col justify-center gap-2">
+            <div className="relative w-full h-[300px] lg:h-[400px]">
+              <Image
+                priority={i === 0}
+                fill
+                sizes="(max-width: 1200px) 100vw, 33vw"
+                className="object-contain"
+                alt={`lover-${index}`}
+                src={getImageUrl(`lover/${index}.jpg`)}
+              />
+            </div>
+            <div className="text-sm text-center">{title[index]}</div>
           </div>
-          <div className="text-sm text-center">{title[index]}</div>
         </SwiperSlide>
       ))}
     </Swiper>

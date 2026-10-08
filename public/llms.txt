@@ -1,0 +1,49 @@
+# RayLiao
+
+> RayLiao is a front-end developer, photography enthusiast, and Hakka culture advocate based in Guangdong, China.
+
+## About
+
+- **Name**: Ray Liao
+- **Role**: Front-end Developer / Photography Enthusiast / Swimfan
+- **Location**: Hakka Canton, Guangdong, China
+- **Languages**: Chinese (Hakka, Cantonese), English
+
+## Sections
+
+- [Home](https://rayliao.com): Personal introduction and social links
+- [Jon](https://rayliao.com/jon): Photo series documenting Jon's growth (age 1-7)
+- [Family](https://rayliao.com/family): Family moments
+- [Li](https://rayliao.com/li): Li series
+- [Photography](https://rayliao.com/shoot/2021): Photography collections by year
+  - [2021](https://rayliao.com/shoot/2021)
+  - [2020](https://rayliao.com/shoot/2020)
+  - [2019](https://rayliao.com/shoot/2019)
+  - [2018](https://rayliao.com/shoot/2018)
+  - [2017](https://rayliao.com/shoot/2017)
+  - [2016](https://rayliao.com/shoot/2016)
+- [Yar Articles](https://rayliao.com/yar): Technical and personal articles (MDX/Markdown)
+- [Hakka Articles](https://rayliao.com/hakka): Hakka culture and language articles
+
+## Contact
+
+- **GitHub**: https://github.com/rayliao
+- **Instagram**: https://instagram.com/ray__liao/
+- **Website**: https://rayliao.com
+- **Email**: (via GitHub contact)
+
+## Content Focus
+
+1. **Front-end Development**: Modern web technologies, React, Next.js, TypeScript
+2. **Photography**: Documentary and family photography, annual collections since 2016
+3. **Hakka Culture**: Language preservation, cultural stories, community documentation
+4. **Personal**: Fatherhood journey, family life, swimming
+
+## Technical Stack
+
+- Next.js 16 (App Router)
+- React 19
+- TypeScript
+- Tailwind CSS
+- Deployed on Cloudflare Workers
+- Images hosted on Cloudflare R2
