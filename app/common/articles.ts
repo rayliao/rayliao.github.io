@@ -21,6 +21,14 @@ export type Article = {
   format: "md" | "mdx";
 };
 
+export type ArticleSummary = {
+  slug: string;
+  title: string;
+  date: Date | null;
+  description?: string;
+  tags?: string[];
+};
+
 const CONTENT_ROOT = path.join(process.cwd(), "content");
 // 同名文章同时存在时，.mdx 优先于 .md
 const EXTS = [".mdx", ".md"] as const;
@@ -80,4 +88,33 @@ export function getArticleSlugs(collection: Collection): string[] {
 export function getArticle(collection: Collection, slug: string): Article | null {
   const file = resolveFile(collection, slug);
   return file ? parse(file, collection, slug) : null;
+}
+
+function toDate(value?: string | Date): Date | null {
+  if (!value) return null;
+  const date = value instanceof Date ? value : new Date(value);
+  return Number.isNaN(date.getTime()) ? null : date;
+}
+
+/**
+ * 列出集合下所有非草稿文章的摘要，按日期倒序（无日期排最后）。
+ * 仅在构建期调用——依赖文件系统。
+ */
+export function listArticles(collection: Collection): ArticleSummary[] {
+  return getArticleSlugs(collection)
+    .map((slug) => getArticle(collection, slug))
+    .filter((article): article is Article => article !== null)
+    .map((article) => ({
+      slug: article.slug,
+      title: article.frontmatter.title,
+      date: toDate(article.frontmatter.date),
+      description: article.frontmatter.description,
+      tags: article.frontmatter.tags,
+    }))
+    .sort((a, b) => {
+      if (!a.date && !b.date) return a.title.localeCompare(b.title);
+      if (!a.date) return 1;
+      if (!b.date) return -1;
+      return b.date.getTime() - a.date.getTime();
+    });
 }

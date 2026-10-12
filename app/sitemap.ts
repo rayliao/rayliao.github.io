@@ -14,6 +14,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/jon`,
       lastModified: new Date(),
       changeFrequency: "yearly",
@@ -29,6 +35,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/li`,
       lastModified: new Date(),
       changeFrequency: "yearly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/yar`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/hakka`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
       priority: 0.8,
     },
   ];

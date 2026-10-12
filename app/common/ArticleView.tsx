@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import type { MDXRemoteProps } from "next-mdx-remote/rsc";
 import { getArticle, type Collection } from "./articles";
+import { COLLECTION_META } from "./collections";
 import { getImageUrl } from "./image";
 
 const isHttp = (value?: string) => !!value && /^https?:\/\//i.test(value);
@@ -69,10 +70,10 @@ export default function ArticleView({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
       <Link
-        href="/"
+        href={`/${collection}`}
         className="mb-10 inline-block text-sm text-gray-500 transition-colors hover:text-grass-600 dark:text-gray-400 dark:hover:text-grass-400"
       >
-        ← home
+        ← {COLLECTION_META[collection].title}
       </Link>
 
       <article>

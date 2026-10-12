@@ -27,13 +27,7 @@ export default function Header() {
     <div className="absolute top-0 z-[3] w-full p-[10px] h-[48px] box-border flex items-center justify-between">
       <nav className="flex gap-3">
         <Link href="/">{content.home}</Link>
-        <a
-          href="https://blog.rayliao.com"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          {content.blog}
-        </a>
+        <Link href="/blog">{content.blog}</Link>
         <Link href="/shoot/2021">{content.image}</Link>
         <Link href="/jon">Jon</Link>
       </nav>

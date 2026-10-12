@@ -12,6 +12,7 @@
 ## Sections
 
 - [Home](https://rayliao.com): Personal introduction and social links
+- [Blog](https://rayliao.com/blog): Writing hub linking to the external tech blog, Rayyar爱学习, and Hakka
 - [Jon](https://rayliao.com/jon): Photo series documenting Jon's growth (age 1-7)
 - [Family](https://rayliao.com/family): Family moments
 - [Li](https://rayliao.com/li): Li series
@@ -22,8 +23,8 @@
   - [2018](https://rayliao.com/shoot/2018)
   - [2017](https://rayliao.com/shoot/2017)
   - [2016](https://rayliao.com/shoot/2016)
-- [Yar Articles](https://rayliao.com/yar): Technical and personal articles (MDX/Markdown)
-- [Hakka Articles](https://rayliao.com/hakka): Hakka culture and language articles
+- [Rayyar爱学习](https://rayliao.com/yar): AI, e-commerce and creative tooling articles (Markdown/MDX)
+- [Hakka](https://rayliao.com/hakka): Hakka culture and language articles
 
 ## Contact
 
