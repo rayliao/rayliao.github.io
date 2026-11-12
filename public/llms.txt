@@ -12,7 +12,8 @@
 ## Sections
 
 - [Home](https://rayliao.com): Personal introduction and social links
-- [Blog](https://rayliao.com/blog): Writing hub linking to the external tech blog, Rayyar爱学习, and Hakka
+- [Blog](https://rayliao.com/blog): Writing hub linking to the tech blog, Rayyar爱学习, and Hakka
+- [Tech Blog](https://rayliao.com/posts): Life, reading and yearly recap posts (Chinese)
 - [Jon](https://rayliao.com/jon): Photo series documenting Jon's growth (age 1-7)
 - [Family](https://rayliao.com/family): Family moments
 - [Li](https://rayliao.com/li): Li series
@@ -23,7 +24,7 @@
   - [2018](https://rayliao.com/shoot/2018)
   - [2017](https://rayliao.com/shoot/2017)
   - [2016](https://rayliao.com/shoot/2016)
-- [Rayyar爱学习](https://rayliao.com/yar): AI, e-commerce and creative tooling articles (Markdown/MDX)
+- [Rayyar爱学习](https://rayliao.com/yar): AI, e-commerce and creative tooling articles
 - [Hakka](https://rayliao.com/hakka): Hakka culture and language articles
 
 ## Contact
@@ -35,16 +36,16 @@
 
 ## Content Focus
 
-1. **Front-end Development**: Modern web technologies, React, Next.js, TypeScript
+1. **Front-end Development**: Modern web technologies, React, Astro, TypeScript
 2. **Photography**: Documentary and family photography, annual collections since 2016
 3. **Hakka Culture**: Language preservation, cultural stories, community documentation
 4. **Personal**: Fatherhood journey, family life, swimming
 
 ## Technical Stack
 
-- Next.js 16 (App Router)
-- React 19
+- Astro 5 (static output, content collections)
+- React 19 islands
 - TypeScript
 - Tailwind CSS
-- Deployed on Cloudflare Workers
+- Deployed on Cloudflare Workers (static assets)
 - Images hosted on Cloudflare R2

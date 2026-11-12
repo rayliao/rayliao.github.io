@@ -1,0 +1,25 @@
+---
+import PersonalLayout from "@layouts/PersonalLayout.astro";
+import { JonData } from "@utils/personal";
+import { getImageUrl } from "@utils/image";
+---
+
+<PersonalLayout title="Jon" canonical="https://rayliao.com/jon">
+  <div class="p-2 flex flex-col items-center gap-10 lg:gap-40">
+    {
+      JonData.map((item, index) => (
+        <div class="w-full lg:w-[600px] flex flex-col gap-2">
+          <div class="relative w-full aspect-square">
+            <img
+              loading={index < 2 ? "eager" : "lazy"}
+              alt={`Jon - Age ${item.name}`}
+              class="absolute inset-0 h-full w-full object-contain"
+              src={getImageUrl(`jon/${item.name}.JPG`)}
+            />
+          </div>
+          <p class="text-sm">{item.content}</p>
+        </div>
+      ))
+    }
+  </div>
+</PersonalLayout>

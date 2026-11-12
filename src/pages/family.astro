@@ -1,0 +1,10 @@
+---
+import PersonalLayout from "@layouts/PersonalLayout.astro";
+import FamilyGallery from "@components/FamilyGallery.astro";
+
+const list = Array.from(new Array(26).keys()).map(String).reverse();
+---
+
+<PersonalLayout title="Family" canonical="https://rayliao.com/family">
+  <FamilyGallery data={list} path="family" />
+</PersonalLayout>

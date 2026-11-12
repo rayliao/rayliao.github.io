@@ -1,9 +1,24 @@
-import { defineConfig, globalIgnores } from "eslint/config";
-import nextVitals from "eslint-config-next/core-web-vitals";
-import nextTs from "eslint-config-next/typescript";
+import eslintPluginAstro from "eslint-plugin-astro";
+import tseslint from "typescript-eslint";
 
-export default defineConfig([
-  ...nextVitals,
-  ...nextTs,
-  globalIgnores([".open-next/**", ".wrangler/**", "cloudflare-env.d.ts"]),
-]);
+export default [
+  {
+    ignores: ["dist/**", ".astro/**", ".wrangler/**", "node_modules/**"],
+  },
+  ...tseslint.configs.recommended,
+  ...eslintPluginAstro.configs.recommended,
+  {
+    rules: {
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
+      ],
+    },
+  },
+  {
+    files: ["**/*.d.ts"],
+    rules: {
+      "@typescript-eslint/triple-slash-reference": "off",
+    },
+  },
+];

@@ -1,0 +1,25 @@
+---
+import "@styles/sidebar.css";
+
+const year = new Date().getFullYear();
+---
+
+<div class="shoot-sidebar">
+  <h1 class="shoot-sidebar-title">copyright© 2011-{year} RAYLIAO</h1>
+  <div class="menu">
+    <div><a href="/shoot/2021">2021</a></div>
+    <div><a href="/shoot/2020">2020</a></div>
+    <div><a href="/shoot/2019">2019</a></div>
+    <div><a href="/shoot/2018">2018</a></div>
+    <div><a href="/shoot/2017">2017</a></div>
+    <div><a href="/shoot/2016">2016</a></div>
+    <div><a href="/shoot/undefined">undefined</a></div>
+    <div><a href="/shoot/past">past</a></div>
+  </div>
+  <div class="nav">
+    <div><a href="/">home</a></div>
+  </div>
+</div>
+<div class="shoot-content">
+  <slot />
+</div>

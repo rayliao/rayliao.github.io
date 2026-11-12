@@ -1,0 +1,250 @@
+.past-main {
+  margin: 0;
+  padding: 0;
+  font-family: Gotham, Arial, sans-serif;
+  width: 995px;
+  margin: 0 auto;
+}
+
+.past-main a {
+  text-decoration: none;
+}
+
+.past-header {
+  padding: 100px 0;
+}
+
+.past-header h2 {
+  margin: 0;
+  font-family: "Adobe Hebrew", "Tahoma", serif;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: normal;
+  float: left;
+  height: 100px;
+  line-height: 100px;
+  padding-left: 147px;
+}
+
+.past-header h2 a {
+  color: #16161f;
+}
+
+.past-header .past-line {
+  font-style: normal;
+  font-family: "Segoe UI Light", sans-serif;
+  font-size: 80px;
+  font-weight: 100;
+  float: left;
+  height: 80px;
+  line-height: 80px;
+  padding: 0 25px;
+  color: #333;
+}
+
+.past-header .past-right {
+  float: left;
+  padding-top: 30px;
+  font-family: "papyrus", sans-serif;
+}
+
+.past-header .past-right h1 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.past-header .past-right h1 a {
+  color: #16161f;
+}
+
+.past-header .past-nav a {
+  color: #656575;
+}
+
+.past-header .past-nav span {
+  padding: 0 10px;
+}
+
+.past-entry {
+  position: relative;
+  padding-bottom: 120px;
+}
+
+.past-entry img {
+  object-position: left center;
+}
+
+.past-rev img {
+  object-position: right center;
+}
+
+.past-info {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 100px;
+  font-style: italic;
+}
+
+.past-info h3 {
+  margin: 8px 0;
+  font-size: 28px;
+  font-weight: normal;
+}
+
+.past-info p {
+  font-size: 12px;
+}
+
+.past-infoBlack {
+  color: #000;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.past-infoWhite {
+  color: #fff;
+}
+
+.past-infoWhite .past-infoClip {
+  margin-left: 195px;
+}
+
+.past-infoWhite .past-infoInr {
+  margin-left: -195px;
+}
+
+.past-infoClip {
+  overflow: hidden;
+}
+
+.past-pic {
+  position: relative;
+  margin-left: 195px;
+  max-width: 800px;
+  height: 500px;
+}
+
+.past-rev .past-pic {
+  margin-left: 0;
+  margin-right: 195px;
+  text-align: right;
+}
+
+.past-rev .past-info {
+  right: 0;
+  left: inherit;
+  text-align: right;
+}
+
+.past-rev .past-infoClip {
+  margin-left: inherit;
+  margin-right: 195px;
+}
+
+.past-rev .past-infoInr {
+  margin-left: inherit;
+  margin-right: -195px;
+}
+
+@media screen and (max-width: 995px) {
+  .past-main {
+    width: 100%;
+  }
+
+  .past-header {
+    padding: 0;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .past-header h2 {
+    font-size: 12px;
+    height: 20px;
+    float: inherit;
+    line-height: 20px;
+    padding-left: 22px;
+  }
+
+  .past-header .past-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 50px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+    float: inherit;
+  }
+
+  .past-header .past-right {
+    float: inherit;
+    padding-top: 2px;
+    margin-left: 18px;
+  }
+
+  .past-header .past-nav {
+    margin-left: -5px;
+    font-size: 14px;
+  }
+
+  .past-header .past-nav span {
+    padding: 0 5px;
+  }
+
+  .past-entry {
+    padding-bottom: 10px;
+  }
+
+  .past-info {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .past-info h3 {
+    margin: 4px 0;
+    font-size: 12px;
+  }
+
+  .past-info p {
+    margin: 0;
+    line-height: 20px;
+  }
+
+  .past-infoBlack {
+    white-space: normal;
+  }
+
+  .past-infoWhite .past-infoClip {
+    margin-left: 50px;
+  }
+
+  .past-infoWhite .past-infoInr {
+    margin-left: -50px;
+  }
+
+  .past-pic {
+    box-sizing: border-box;
+    width: 100%;
+    right: 0;
+    height: 300px;
+    margin-left: 0;
+  }
+
+  .past-rev .past-pic {
+    padding-left: 0;
+    margin-right: 0;
+    padding-right: 50px;
+  }
+
+  .past-rev .past-infoClip {
+    margin-left: inherit;
+    margin-right: 50px;
+  }
+
+  .past-rev .past-infoInr {
+    margin-left: inherit;
+    margin-right: -50px;
+  }
+}

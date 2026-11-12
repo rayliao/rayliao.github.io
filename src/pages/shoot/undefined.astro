@@ -1,0 +1,30 @@
+---
+import PersonalLayout from "@layouts/PersonalLayout.astro";
+import ShootLayout from "@components/ShootLayout.astro";
+import { getImageUrl } from "@utils/image";
+
+const list = Array.from(new Array(34).keys());
+---
+
+<PersonalLayout
+  title="Undefined"
+  description="Undefined photography series"
+  canonical="https://rayliao.com/shoot/undefined"
+>
+  <ShootLayout>
+    <div class="flex flex-col items-center gap-2">
+      {
+        list.map(k => (
+          <div class="relative w-full max-w-[600px] aspect-square lg:w-[600px] lg:h-[600px]">
+            <img
+              class="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+              alt={`undefined photo ${k + 1}`}
+              src={getImageUrl(`undefined/${k + 1}.jpg`)}
+            />
+          </div>
+        ))
+      }
+    </div>
+  </ShootLayout>
+</PersonalLayout>

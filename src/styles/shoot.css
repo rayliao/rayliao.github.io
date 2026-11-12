@@ -1,0 +1,28 @@
+.shoot-item {
+  position: relative;
+  width: 800px;
+  min-height: 530px;
+  margin-bottom: 5px;
+}
+
+.shoot-unite {
+  overflow: hidden;
+}
+
+.shoot-uniteItem {
+  position: relative;
+  width: 50%;
+  height: 530px;
+  display: block;
+  float: left;
+}
+
+@media screen and (max-width: 1024px) {
+  .shoot-item {
+    width: 100%;
+    min-height: 260px;
+  }
+  .shoot-uniteItem {
+    height: 300px;
+  }
+}

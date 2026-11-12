@@ -1,0 +1,98 @@
+---
+import { render, type CollectionEntry } from "astro:content";
+import { COLLECTION_META, type Collection } from "@utils/collections";
+import { getImageUrl } from "@utils/image";
+
+export interface Props {
+  collection: Collection;
+  entry: CollectionEntry<Collection>;
+}
+
+const { collection, entry } = Astro.props;
+const { data } = entry;
+const { Content } = await render(entry);
+
+const date = data.date ?? null;
+const articleUrl = `https://rayliao.com/${collection}/${entry.id}`;
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: data.title,
+  description: data.description ?? "",
+  datePublished: date?.toISOString(),
+  author: { "@id": "https://rayliao.com/#person" },
+  url: articleUrl,
+  ...(data.cover ? { image: getImageUrl(data.cover) } : {}),
+  keywords: data.tags?.join(", ") ?? "",
+};
+---
+
+<main
+  class="min-h-screen bg-[#f3f3f2] text-gray-800 dark:bg-[#272824] dark:text-gray-50"
+>
+  <div class="mx-auto w-full max-w-2xl px-4 py-16 sm:px-6">
+    <script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)}
+    ></script>
+    <a
+      href={`/${collection}`}
+      class="mb-10 inline-block text-sm text-gray-500 transition-colors hover:text-grass-600 dark:text-gray-400 dark:hover:text-grass-400"
+    >
+      ← {COLLECTION_META[collection].title}
+    </a>
+
+    <article>
+      <header class="mb-8">
+        <h1
+          class="text-3xl font-light tracking-wide text-grass-600 dark:text-grass-400 lg:text-4xl"
+        >
+          {data.title}
+        </h1>
+        {
+          date && (
+            <time
+              datetime={date.toISOString()}
+              class="mt-3 block text-sm text-gray-500 dark:text-gray-400"
+            >
+              {date.toISOString().slice(0, 10)}
+            </time>
+          )
+        }
+        {
+          data.description && (
+            <p class="mt-4 text-base text-gray-600 dark:text-gray-300">
+              {data.description}
+            </p>
+          )
+        }
+        {
+          data.tags && data.tags.length > 0 && (
+            <div class="mt-5 flex flex-wrap gap-2">
+              {data.tags.map(tag => (
+                <span class="rounded-full bg-grass-100 px-3 py-1 text-xs text-grass-800 dark:bg-grass-900 dark:text-grass-200">
+                  #{tag}
+                </span>
+              ))}
+            </div>
+          )
+        }
+      </header>
+
+      {
+        data.cover && (
+          <img
+            src={getImageUrl(data.cover)}
+            alt={data.title}
+            class="mb-10 w-full rounded-lg"
+          />
+        )
+      }
+
+      <div
+        class="prose prose-gray max-w-none dark:prose-invert prose-headings:font-light prose-a:text-grass-600 dark:prose-a:text-grass-400"
+      >
+        <Content />
+      </div>
+    </article>
+  </div>
+</main>

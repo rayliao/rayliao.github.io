@@ -1,0 +1,148 @@
+---
+import PersonalLayout from "@layouts/PersonalLayout.astro";
+import ShootLayout from "@components/ShootLayout.astro";
+import "@styles/shoot.css";
+import { getImageUrl } from "@utils/image";
+
+export function getStaticPaths() {
+  return [2016, 2017, 2018, 2019, 2020, 2021].map(year => ({
+    params: { year: String(year) },
+  }));
+}
+
+const { year } = Astro.params;
+
+const images: Record<string, (string | string[])[]> = {
+  "2016": [
+    "0401",
+    "0402",
+    "0403",
+    "0405",
+    "0406",
+    "0407",
+    "0801",
+    "0802",
+    ["0404", "0901"],
+    "1000",
+    "1001",
+    "1002",
+    "1004",
+    "1005",
+    "1006",
+  ],
+  "2017": ["0101", "0102", "0402", "0403", "1001", ["1002"]],
+  "2018": [
+    "0203",
+    "0204",
+    ["0619", "0620"],
+    "0621",
+    "0622",
+    "0623",
+    "0624",
+    "0625",
+    "0626",
+    "0627",
+    "0628",
+    "0629",
+    "0630",
+    "0802",
+    "1003",
+    "1101",
+    ["1201", "1203"],
+  ],
+  "2019": [
+    "0120",
+    "0206",
+    ["0210", "0225"],
+    ["0226", "0227"],
+    "0228",
+    "0301",
+    "0316",
+    "0629",
+    ["0630", "0910"],
+    "1002",
+    ["1003", "1110"],
+    "1122",
+    "1201",
+    "1202",
+    "1203",
+    "1204",
+    "1205",
+    "1206",
+  ],
+  "2020": [
+    "0113",
+    "0112",
+    "0129",
+    "0130",
+    "0318",
+    "0325",
+    ["0401", "0625"],
+    "0801",
+    "0901",
+    "0902",
+    "0903",
+    "1001",
+    "1002",
+    ["1101", "1102"],
+    "1103",
+  ],
+  "2021": [
+    ["0130", "0131"],
+    "0213",
+    "0214",
+    "0215",
+    "0318",
+    "0319",
+    "0328",
+    "0329",
+    "0411",
+    "0412",
+    ["0413", "0415"],
+    "0505",
+    "0929",
+    "1001",
+    "1002",
+    ["1017", "1018"],
+  ],
+};
+
+const items = images[year!];
+---
+
+<PersonalLayout
+  title={`${year} Shoot`}
+  description={`Photography collection from ${year}`}
+  canonical={`https://rayliao.com/shoot/${year}`}
+>
+  <ShootLayout>
+    {
+      items.map(item => {
+        const single = typeof item === "string";
+        return (
+          <div class={`shoot-item ${single ? "" : "shoot-unite"}`}>
+            {single ? (
+              <img
+                class="absolute inset-0 h-full w-full object-cover"
+                loading="lazy"
+                alt={`${year} photo ${item}`}
+                src={getImageUrl(`${year}/${item}.jpg`)}
+              />
+            ) : (
+              item.map(n => (
+                <div class="shoot-uniteItem">
+                  <img
+                    class="absolute inset-0 h-full w-full object-cover"
+                    loading="lazy"
+                    alt={`${year} photo ${n}`}
+                    src={getImageUrl(`${year}/${n}.jpg`)}
+                  />
+                </div>
+              ))
+            )}
+          </div>
+        );
+      })
+    }
+  </ShootLayout>
+</PersonalLayout>

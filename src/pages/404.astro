@@ -1,0 +1,18 @@
+---
+import PersonalLayout from "@layouts/PersonalLayout.astro";
+---
+
+<PersonalLayout title="404">
+  <div
+    class="h-screen flex flex-col gap-3 justify-center items-center font-mono bg-[#f3f3f2] dark:bg-[#272824]"
+  >
+    <div class="relative w-[200px] h-[200px]">
+      <img
+        alt="404 - Page not found"
+        src="/haha.gif"
+        class="absolute inset-0 h-full w-full object-contain"
+      />
+    </div>
+    <a href="/">click me, go home</a>
+  </div>
+</PersonalLayout>

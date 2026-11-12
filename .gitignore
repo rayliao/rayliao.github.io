@@ -8,8 +8,8 @@
 # testing
 /coverage
 
-# next.js
-/.next/
+# astro
+/.astro/
 /out/
 
 # production
@@ -30,13 +30,9 @@ yarn-error.log*
 .env*.local
 .env
 
-# vercel
-.vercel
-
 # typescript
 *.tsbuildinfo
-next-env.d.ts
-.open-next/
+
+# cloudflare
 dist/
-cloudflare-env.d.ts
 .wrangler/

@@ -1,0 +1,98 @@
+---
+import "@styles/personal.css";
+
+export interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description = "RayLiao - Hakka Canton - Father & Husband - Front-end developer / Photography enthusiasts / Swimfan",
+  canonical,
+  noindex = false,
+} = Astro.props;
+
+const pageTitle = title ? `${title} | RayLiao` : "RayLiao";
+const canonicalURL = canonical ?? new URL(Astro.url.pathname, Astro.site).href;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://rayliao.com/#website",
+      url: "https://rayliao.com",
+      name: "RayLiao",
+      description: "Ray Liao - 前端开发者、摄影爱好者、客家文化记录者",
+      inLanguage: ["zh-CN", "en"],
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rayliao.com/#person",
+      name: "Ray Liao",
+      jobTitle: "Front-end Developer",
+      url: "https://rayliao.com",
+      sameAs: ["https://github.com/rayliao", "https://instagram.com/ray__liao/"],
+      description: "前端开发者、摄影爱好者、客家文化记录者",
+    },
+  ],
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5"
+    />
+    <meta name="theme-color" content="#000" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="canonical" href={canonicalURL} />
+    <meta name="generator" content={Astro.generator} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+
+    <meta property="og:title" content={title ?? "RayLiao"} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content="RayLiao" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title ?? "RayLiao"} />
+    <meta name="twitter:description" content={description} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <script is:inline src="/toggle-theme.js"></script>
+  </head>
+  <body>
+    <slot />
+    <script>
+      import lang from "@utils/lang";
+      import { LOCALE_STORAGE } from "@utils/personal";
+
+      const locale = localStorage.getItem(LOCALE_STORAGE.LOCALE) ?? "en";
+      const content =
+        lang[locale as keyof typeof lang]?.content ?? lang.en.content;
+
+      document.querySelectorAll<HTMLElement>("[data-i18n]").forEach(el => {
+        const key = el.dataset.i18n as keyof typeof content;
+        if (content[key]) el.textContent = content[key];
+      });
+
+      document.querySelectorAll<HTMLElement>("[data-locale]").forEach(el => {
+        el.addEventListener("click", () => {
+          localStorage.setItem(LOCALE_STORAGE.LOCALE, el.dataset.locale!);
+          location.reload();
+        });
+      });
+    </script>
+  </body>
+</html>

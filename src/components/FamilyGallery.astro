@@ -1,0 +1,47 @@
+---
+import "@styles/family.css";
+import { getImageUrl } from "@utils/image";
+
+export interface Props {
+  data: string[];
+  path: string;
+}
+
+const { data, path } = Astro.props;
+---
+
+<div class="family-container">
+  <div class="family-wrapper">
+    <nav class="family-nav">
+      {
+        data.map((item, index) => (
+          <a href={`/${path}#image-${index}`}>
+            <div class="family-navItem">
+              <img
+                class="family-navImg absolute inset-0 h-full w-full"
+                loading="lazy"
+                src={getImageUrl(`${path}/${item}.jpg`)}
+                alt={`img${item}`}
+              />
+            </div>
+          </a>
+        ))
+      }
+    </nav>
+    <div class="family-gallery">
+      {
+        data.map((item, index) => (
+          <div class="family-galleryImg">
+            <img
+              class="absolute inset-0 h-full w-full object-contain"
+              loading="lazy"
+              id={`image-${index}`}
+              src={getImageUrl(`${path}/${item}.jpg`)}
+              alt={`img${item}`}
+            />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>

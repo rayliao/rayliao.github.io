@@ -1,0 +1,23 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import PersonalLayout from "@layouts/PersonalLayout.astro";
+import ArticleView from "@components/ArticleView.astro";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("yar", ({ data }) => !data.draft);
+  return entries.map(entry => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+export interface Props {
+  entry: CollectionEntry<"yar">;
+}
+
+const { entry } = Astro.props;
+---
+
+<PersonalLayout title={entry.data.title} description={entry.data.description}>
+  <ArticleView collection="yar" entry={entry} />
+</PersonalLayout>

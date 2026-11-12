@@ -1,0 +1,76 @@
+---
+import lang from "@utils/lang";
+---
+
+<div
+  class="absolute top-0 z-[3] w-full p-[10px] h-[48px] box-border flex items-center justify-between"
+>
+  <nav class="flex gap-3">
+    <a href="/" data-i18n="home">Home</a>
+    <a href="/blog" data-i18n="blog">Blog</a>
+    <a href="/shoot/2021" data-i18n="image">Image</a>
+    <a href="/jon">Jon</a>
+  </nav>
+  <div class="flex items-center gap-3">
+    <button
+      id="theme-btn"
+      aria-label="Toggle theme"
+      class="text-gray-800 dark:text-gray-50 w-5 h-5 cursor-pointer hover:opacity-70 transition-opacity"
+    >
+      <svg
+        id="moon-svg"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="w-5 h-5"
+        ><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg
+      >
+      <svg
+        id="sun-svg"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="w-5 h-5"
+        ><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path
+          d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path
+          d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path
+          d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path
+          d="m19.07 4.93-1.41 1.41"></path></svg
+      >
+    </button>
+    <div class="group relative">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="text-gray-800 dark:text-gray-50 w-5 h-5 cursor-pointer"
+        ><circle cx="12" cy="12" r="10"></circle><path
+          d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path
+          d="M2 12h20"></path></svg
+      >
+      <div
+        class="hidden group-hover:flex flex-col gap-2 pr-1 pt-1 text-right absolute z-50 right-0 border-t border-t-gray-500 border-dotted bg-gray-50/[0.4] dark:bg-gray-800/[0.3] lg:bg-transparent dark:lg:bg-transparent backdrop-blur"
+      >
+        {
+          Object.entries(lang).map(([key, l]) => (
+            <span data-locale={key} class="cursor-pointer">
+              {l.name}
+            </span>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</div>

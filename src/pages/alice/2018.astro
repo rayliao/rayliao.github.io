@@ -1,0 +1,32 @@
+---
+import PersonalLayout from "@layouts/PersonalLayout.astro";
+import bg from "@assets/alice/bg.jpg";
+import apple from "@assets/alice/apple.png";
+---
+
+<PersonalLayout title="2018 alice" noindex>
+  <div class="relative h-screen">
+    <img
+      alt="bg"
+      src={bg.src}
+      class="absolute inset-0 h-full w-full object-cover"
+    />
+    <div
+      class="relative z-10 text-center text-white h-full flex flex-col box-border pt-2 items-center justify-start bg-black/70"
+    >
+      <h1 class="m-0 text-2xl">Happy Birthday My Dear</h1>
+      <h3 class="mt-2 mb-12 text-xl">This is for you lah!</h3>
+      <div class="relative p-3 w-[320px] h-[201px]">
+        <img
+          src={apple.src}
+          alt="apple"
+          class="absolute inset-0 h-full w-full object-contain"
+        />
+        <div class="relative h-full flex justify-between flex-col text-gray-500">
+          <p class="text-right font-bold text-base">iPhone XS</p>
+          <p class="text-left text-xs italic">* This is just for Alice</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</PersonalLayout>
