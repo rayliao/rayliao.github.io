@@ -13,6 +13,7 @@ interface SlideProps {
 export default function Slide({ title }: SlideProps) {
   const shuffledIndices = useMemo(() => {
     const list = Array.from(new Array(title.length).keys());
+    // eslint-disable-next-line react-hooks/purity -- 故意每次挂载随机排序，useMemo 保证重渲染稳定
     return list.sort(() => 0.5 - Math.random());
   }, [title.length]);
 

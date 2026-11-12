@@ -1,84 +1,55 @@
 # RayLiao's Personal Site
 
-A personal website built with [Next.js](https://nextjs.org/) App Router, featuring photography portfolios and multilingual support.
+Personal website: photography portfolios, family albums, and two MDX article collections (`/yar`, `/hakka`), with client-side multilingual support.
 
 ## Tech Stack
 
-- **Framework**: Next.js 14 (App Router)
-- **Styling**: Tailwind CSS
-- **Deployment**: Vercel
-- **Analytics**: Vercel Analytics & Speed Insights
-- **Image Storage**: Vercel Blob (optional) or local `/public/images`
+- **Framework**: Next.js 16 (App Router) + React 19
+- **Styling**: Tailwind CSS 3
+- **Deployment**: Cloudflare Workers via `@opennextjs/cloudflare`
+- **Image storage**: Cloudflare R2 (`NEXT_PUBLIC_R2_URL`), falls back to local `/public/images`
+- **Articles**: MD/MDX in `content/`, rendered with `next-mdx-remote` + `gray-matter`
 
 ## Project Structure
 
 ```
 app/
-├── page.tsx              # Homepage
-├── layout.tsx            # Root layout with theme provider
-├── not-found.tsx         # 404 page
-├── common/               # Utilities & data
-│   ├── config.ts
-│   ├── image.ts          # Image URL helper (Vercel Blob / local)
-│   └── lang.ts           # Client-side i18n
-├── components/
-│   ├── Layout/           # Photography page layout
-│   ├── LocaleSwitcher.tsx
-│   ├── Provider.tsx      # Theme provider
-│   └── Svg.tsx
-├── shoot/                # Photography galleries by year
-│   ├── 2021/
-│   ├── 2020/
-│   └── ...
-├── jon/                  # Jon gallery
-├── alice/lover/          # Alice lover gallery
-└── styles/
-    └── globals.css
+├── page.tsx            # Homepage
+├── layout.tsx          # Root layout with theme provider
+├── blog/               # Writing hub
+├── yar/ hakka/         # Article collections: list + [slug] detail
+├── shoot/              # Photography galleries by year
+├── jon/ family/ li/    # Family albums
+├── alice/              # Private pages (password gate)
+├── common/             # Utilities & data (client i18n, image URL, article loading)
+├── components/         # Layout, LocaleSwitcher, PasswordGate, Provider
+└── styles/globals.css
 
-dictionaries/             # Server-side i18n dictionaries
-├── en.json
-├── zh-Hans.json
-├── zh-Hant.json
-├── jp.json
-├── fr.json
-└── ko.json
+content/                # yar / hakka articles (.md / .mdx)
+public/                 # Static assets (llms.txt)
 ```
 
 ## Getting Started
 
-Install dependencies:
-
 ```bash
 pnpm install
-```
-
-Run the development server:
-
-```bash
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser.
+## Deployment
 
-## Image Storage
+Manual deploy to Cloudflare Workers (no CI):
 
-Images can be served from:
+```bash
+pnpm run deploy
+```
 
-1. **Local** (default): Place images in `public/images/`
-2. **Vercel Blob**: Set `NEXT_PUBLIC_BLOB_URL` in `.env.local`
-
-See `VERCEL_BLOB_SETUP.md` for detailed instructions.
+Pages that read `content/` at build time rely on `staticAssetsIncrementalCache` in `open-next.config.ts` — do not replace it with the default cache, or article lists/details will 404 on the Worker.
 
 ## Internationalization
 
-The site supports 6 languages via client-side `localStorage` locale switching:
-- English
-- 繁體中文 (zh-Hant)
-- 简体中文 (zh-Hans)
-- 日本語 (jp)
-- français (fr)
-- 한국어 (ko)
+Client-side `localStorage` locale switching, 6 languages: English, 繁體中文, 简体中文, 日本語, français, 한국어.
 
 ## License
 
-Copyright © 2011-2024 WingRay Liao. All rights reserved.
+Copyright © 2011-2026 WingRay Liao. All rights reserved.

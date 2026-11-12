@@ -1,19 +1,16 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import { MapPin } from "lucide-react";
 import lang from "./common/lang";
 import { LOCALE_STORAGE } from "./common/config";
 import { getImageUrl } from "./common/image";
 
-export default function Content() {
-  const [locale, setLocale] = useState("en");
+const subscribe = () => () => {};
+const getLocale = () => localStorage.getItem(LOCALE_STORAGE.LOCALE) ?? "en";
+const getServerLocale = () => "en";
 
-  useEffect(() => {
-    const stored = localStorage.getItem(LOCALE_STORAGE.LOCALE);
-    if (stored) {
-      setLocale(stored);
-    }
-  }, []);
+export default function Content() {
+  const locale = useSyncExternalStore(subscribe, getLocale, getServerLocale);
 
   const content = lang[locale as keyof typeof lang]?.content ?? lang["en"].content;
   const bgImage = getImageUrl("bg.jpg");

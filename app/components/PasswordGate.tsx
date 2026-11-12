@@ -1,26 +1,26 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 
 const STORAGE_KEY = "alice_lover_auth";
 const PASSWORD = "qwe123";
 
+const subscribe = () => () => {};
+const getStoredAuth = () => localStorage.getItem(STORAGE_KEY) === "true";
+const getServerAuth = () => false;
+
 export default function PasswordGate({ children }: { children: React.ReactNode }) {
-  const [authed, setAuthed] = useState(false);
+  const storedAuth = useSyncExternalStore(subscribe, getStoredAuth, getServerAuth);
+  const [justAuthed, setJustAuthed] = useState(false);
   const [input, setInput] = useState("");
   const [error, setError] = useState(false);
-
-  useEffect(() => {
-    if (typeof window !== "undefined" && localStorage.getItem(STORAGE_KEY) === "true") {
-      setAuthed(true);
-    }
-  }, []);
+  const authed = storedAuth || justAuthed;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (input === PASSWORD) {
       localStorage.setItem(STORAGE_KEY, "true");
-      setAuthed(true);
+      setJustAuthed(true);
       setError(false);
     } else {
       setError(true);

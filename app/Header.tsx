@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import { useTheme } from "next-themes";
 import { Globe, Sun, Moon } from "lucide-react";
 import LocaleSwitcher from "./components/LocaleSwitcher";
@@ -8,18 +8,16 @@ import Link from "next/link";
 import lang from "./common/lang";
 import { LOCALE_STORAGE } from "./common/config";
 
-export default function Header() {
-  const [locale, setLocale] = useState("en");
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+const subscribe = () => () => {};
+const getLocale = () => localStorage.getItem(LOCALE_STORAGE.LOCALE) ?? "en";
+const getServerLocale = () => "en";
+const getMounted = () => true;
+const getServerMounted = () => false;
 
-  useEffect(() => {
-    setMounted(true);
-    const stored = localStorage.getItem(LOCALE_STORAGE.LOCALE);
-    if (stored) {
-      setLocale(stored);
-    }
-  }, []);
+export default function Header() {
+  const locale = useSyncExternalStore(subscribe, getLocale, getServerLocale);
+  const mounted = useSyncExternalStore(subscribe, getMounted, getServerMounted);
+  const { theme, setTheme } = useTheme();
 
   const content = lang[locale as keyof typeof lang]?.content ?? lang["en"].content;
 

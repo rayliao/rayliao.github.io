@@ -1,7 +1,9 @@
+import colors from "tailwindcss/colors";
+import plugin from "tailwindcss/plugin";
+import typography from "@tailwindcss/typography";
+
 /** @type {import('tailwindcss').Config} */
-const colors = require("tailwindcss/colors");
-const plugin = require("tailwindcss/plugin");
-module.exports = {
+const config = {
   darkMode: "class",
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -32,9 +34,11 @@ module.exports = {
     },
   },
   plugins: [
-    require("@tailwindcss/typography"),
+    typography,
     plugin(({ addVariant }) => {
       addVariant("selected", [".selected &", ".selected&"]);
     }),
   ],
 };
+
+export default config;
