@@ -1,18 +1,18 @@
 ---
-import { SITE } from "@config";
-import Posts from "@layouts/Posts.astro";
-import getSortedPosts from "@utils/getSortedPosts";
-import getPageNumbers from "@utils/getPageNumbers";
+import PersonalLayout from "@layouts/PersonalLayout.astro";
+import ArchiveShell from "@components/ArchiveShell.astro";
+import Archive from "@components/Archive";
+import getArchiveItems from "@utils/getArchiveItems";
 
-import { getCollection } from "astro:content";
-
-const posts = await getCollection("blog");
-
-const sortedPosts = getSortedPosts(posts);
-
-const totalPages = getPageNumbers(sortedPosts.length);
-
-const paginatedPosts = sortedPosts.slice(0, SITE.postPerPage);
+const items = await getArchiveItems();
 ---
 
-<Posts posts={paginatedPosts} pageNum={1} totalPages={totalPages.length} />
+<PersonalLayout
+  title="Blog - 技术博客"
+  description="Ray Liao 的技术博客：生活、阅读与年度回顾。"
+  canonical="https://rayliao.com/posts"
+>
+  <ArchiveShell>
+    <Archive items={items} initialCollection="blog" client:load />
+  </ArchiveShell>
+</PersonalLayout>

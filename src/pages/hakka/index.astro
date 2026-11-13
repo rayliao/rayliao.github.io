@@ -1,6 +1,10 @@
 ---
 import PersonalLayout from "@layouts/PersonalLayout.astro";
-import ArticleList from "@components/ArticleList.astro";
+import ArchiveShell from "@components/ArchiveShell.astro";
+import Archive from "@components/Archive";
+import getArchiveItems from "@utils/getArchiveItems";
+
+const items = await getArchiveItems();
 ---
 
 <PersonalLayout
@@ -8,5 +12,7 @@ import ArticleList from "@components/ArticleList.astro";
   description="Ray Liao 的客家文化记录：语言、迁徙、土楼与身份认同的观察与辨析。"
   canonical="https://rayliao.com/hakka"
 >
-  <ArticleList collection="hakka" />
+  <ArchiveShell>
+    <Archive items={items} initialCollection="hakka" client:load />
+  </ArchiveShell>
 </PersonalLayout>

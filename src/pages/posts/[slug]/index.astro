@@ -1,58 +1,70 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
-import Posts from "@layouts/Posts.astro";
-import PostDetails from "@layouts/PostDetails.astro";
-import getSortedPosts from "@utils/getSortedPosts";
+import ArticleView from "@components/ArticleView.astro";
+import PersonalLayout from "@layouts/PersonalLayout.astro";
+import ArchiveShell from "@components/ArchiveShell.astro";
+import Archive from "@components/Archive";
+import getArchiveItems from "@utils/getArchiveItems";
 import getPageNumbers from "@utils/getPageNumbers";
 import slugify from "@utils/slugify";
-import { SITE } from "@config";
 
 export interface Props {
-  post: CollectionEntry<"blog">;
+  post?: CollectionEntry<"blog">;
 }
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog", ({ data }) => !data.draft);
 
-  const postResult = posts.map(post => ({
-    params: { slug: slugify(post.data) },
-    props: { post },
-  }));
-
-  const pagePaths = getPageNumbers(posts.length).map(pageNum => ({
-    params: { slug: String(pageNum) },
-  }));
-
-  return [...postResult, ...pagePaths];
+  return [
+    ...posts.map(post => ({
+      params: { slug: slugify(post.data) },
+      props: { post },
+    })),
+    ...getPageNumbers(posts.length).map(pageNum => ({
+      params: { slug: String(pageNum) },
+    })),
+  ];
 }
 
 const { slug } = Astro.params;
 const { post } = Astro.props;
+const pageNum = Number(slug);
+const items = post ? [] : await getArchiveItems();
 
-const posts = await getCollection("blog");
-
-const sortedPosts = getSortedPosts(posts);
-
-const totalPages = getPageNumbers(sortedPosts.length);
-
-const currentPage =
-  slug && !isNaN(Number(slug)) && totalPages.includes(Number(slug))
-    ? Number(slug)
-    : 0;
-const lastPost = currentPage * SITE.postPerPage;
-const startPost = lastPost - SITE.postPerPage;
-
-const paginatedPosts = sortedPosts.slice(startPost, lastPost);
+const postOgImage = post
+  ? new URL(
+      (typeof post.data.ogImage === "string"
+        ? post.data.ogImage
+        : post.data.ogImage?.src) ?? `/posts/${slugify(post.data)}.png`,
+      Astro.url.origin
+    ).href
+  : undefined;
 ---
 
 {
   post ? (
-    <PostDetails post={post} />
+    <PersonalLayout
+      title={post.data.title}
+      description={post.data.description}
+      canonical={post.data.canonicalURL}
+      ogImage={postOgImage}
+    >
+      <ArticleView collection="blog" entry={post} />
+    </PersonalLayout>
   ) : (
-    <Posts
-      posts={paginatedPosts}
-      pageNum={currentPage}
-      totalPages={totalPages.length}
-    />
+    <PersonalLayout
+      title={`Blog - 技术博客 第${pageNum}页`}
+      description="Ray Liao 的技术博客：生活、阅读与年度回顾。"
+      canonical={`https://rayliao.com/posts/${pageNum}`}
+    >
+      <ArchiveShell>
+        <Archive
+          items={items}
+          initialCollection="blog"
+          initialPage={pageNum}
+          client:load
+        />
+      </ArchiveShell>
+    </PersonalLayout>
   )
 }

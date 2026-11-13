@@ -1,52 +1,83 @@
 ---
 import { render, type CollectionEntry } from "astro:content";
-import { COLLECTION_META, type Collection } from "@utils/collections";
 import { getImageUrl } from "@utils/image";
+import slugify from "@utils/slugify";
+import SiteHeader from "@components/SiteHeader.astro";
+import CornerSocials from "@components/CornerSocials.astro";
 
-export interface Props {
-  collection: Collection;
-  entry: CollectionEntry<Collection>;
+interface BlogArticleProps {
+  collection: "blog";
+  entry: CollectionEntry<"blog">;
 }
 
+interface YarArticleProps {
+  collection: "yar";
+  entry: CollectionEntry<"yar">;
+}
+
+interface HakkaArticleProps {
+  collection: "hakka";
+  entry: CollectionEntry<"hakka">;
+}
+
+export type Props = BlogArticleProps | YarArticleProps | HakkaArticleProps;
+
 const { collection, entry } = Astro.props;
-const { data } = entry;
 const { Content } = await render(entry);
 
-const date = data.date ?? null;
-const articleUrl = `https://rayliao.com/${collection}/${entry.id}`;
+const title = entry.data.title;
+const description = entry.data.description ?? null;
+const tags = entry.data.tags ?? [];
+
+let date: Date | null;
+let cover: string | null;
+let articleUrl: string;
+let jsonLdImage: string | undefined;
+
+if (collection === "blog") {
+  date = entry.data.pubDatetime;
+  cover = null;
+  articleUrl = `https://rayliao.com/posts/${slugify(entry.data)}`;
+  const og = entry.data.ogImage;
+  const ogPath = typeof og === "string" ? og : og?.src;
+  jsonLdImage = new URL(
+    ogPath ?? `/posts/${slugify(entry.data)}.png`,
+    Astro.url.origin
+  ).href;
+} else {
+  date = entry.data.date ?? null;
+  cover = entry.data.cover ?? null;
+  articleUrl = `https://rayliao.com/${collection}/${entry.id}`;
+  jsonLdImage = cover ? getImageUrl(cover) : undefined;
+}
 
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: data.title,
-  description: data.description ?? "",
+  headline: title,
+  description: description ?? "",
   datePublished: date?.toISOString(),
   author: { "@id": "https://rayliao.com/#person" },
   url: articleUrl,
-  ...(data.cover ? { image: getImageUrl(data.cover) } : {}),
-  keywords: data.tags?.join(", ") ?? "",
+  ...(jsonLdImage ? { image: jsonLdImage } : {}),
+  keywords: tags.join(", "),
 };
 ---
 
 <main
-  class="min-h-screen bg-[#f3f3f2] text-gray-800 dark:bg-[#272824] dark:text-gray-50"
+  class="relative min-h-screen bg-[#f3f3f2] text-gray-800 dark:bg-[#272824] dark:text-gray-50"
 >
+  <SiteHeader />
   <div class="mx-auto w-full max-w-2xl px-4 py-16 sm:px-6">
     <script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)}
     ></script>
-    <a
-      href={`/${collection}`}
-      class="mb-10 inline-block text-sm text-gray-500 transition-colors hover:text-grass-600 dark:text-gray-400 dark:hover:text-grass-400"
-    >
-      ← {COLLECTION_META[collection].title}
-    </a>
 
     <article>
       <header class="mb-8">
         <h1
           class="text-3xl font-light tracking-wide text-grass-600 dark:text-grass-400 lg:text-4xl"
         >
-          {data.title}
+          {title}
         </h1>
         {
           date && (
@@ -59,16 +90,16 @@ const articleJsonLd = {
           )
         }
         {
-          data.description && (
+          description && (
             <p class="mt-4 text-base text-gray-600 dark:text-gray-300">
-              {data.description}
+              {description}
             </p>
           )
         }
         {
-          data.tags && data.tags.length > 0 && (
+          tags.length > 0 && (
             <div class="mt-5 flex flex-wrap gap-2">
-              {data.tags.map(tag => (
+              {tags.map(tag => (
                 <span class="rounded-full bg-grass-100 px-3 py-1 text-xs text-grass-800 dark:bg-grass-900 dark:text-grass-200">
                   #{tag}
                 </span>
@@ -79,10 +110,10 @@ const articleJsonLd = {
       </header>
 
       {
-        data.cover && (
+        cover && (
           <img
-            src={getImageUrl(data.cover)}
-            alt={data.title}
+            src={getImageUrl(cover)}
+            alt={title}
             class="mb-10 w-full rounded-lg"
           />
         )
@@ -95,4 +126,5 @@ const articleJsonLd = {
       </div>
     </article>
   </div>
+  <CornerSocials />
 </main>

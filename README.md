@@ -17,7 +17,7 @@ portfolios, family albums, a tech blog, and two article collections
 ```
 src/
 ├── pages/              # Routes (home, shoot, family, blog, yar, hakka, alice, …)
-├── layouts/            # PersonalLayout + blog layouts (Layout/Main/Posts/PostDetails)
+├── layouts/            # PersonalLayout + blog layouts (Layout/Main)
 ├── components/         # Astro + React island components
 ├── content.config.ts   # Content collection schemas (blog/yar/hakka)
 ├── config.ts           # SITE metadata & social links
