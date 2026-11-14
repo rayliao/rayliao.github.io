@@ -1,0 +1,8 @@
+---
+import getArchiveItems from "@utils/getArchiveItems";
+import CommandPalette from "@components/CommandPalette";
+
+const items = await getArchiveItems();
+---
+
+<CommandPalette items={items} client:load />

@@ -2,9 +2,11 @@
 import PersonalLayout from "@layouts/PersonalLayout.astro";
 import SiteHeader from "@components/SiteHeader.astro";
 import CornerSocials from "@components/CornerSocials.astro";
-import { getImageUrl } from "@utils/image";
+import DecayCard from "@components/DecayCard";
+import CircularText from "@components/CircularText";
 
-const bgImage = getImageUrl("bg.jpg");
+// 同源图片：DecayCard 用 WebGL 纹理读取，跨域 R2 图无 CORS 头会回退静态图
+const bgImage = "/images/bg.jpg";
 const title = "RayLiao - 前端开发 / 摄影 / 客家文化";
 const description =
   "Ray Liao，前端开发者、摄影爱好者、客家文化记录者。分享技术文章、摄影作品和客家文化故事。";
@@ -16,23 +18,27 @@ const description =
   canonical="https://rayliao.com"
 >
   <div
-    class="font-mono bg-[#f3f3f2] dark:bg-[#272824] h-screen relative text-center overflow-hidden text-gray-800 dark:text-gray-50 text-sm flex flex-col justify-center"
+    class="font-mono bg-[#fafafa] dark:bg-[#1d1f21] h-screen relative text-center overflow-hidden text-gray-800 dark:text-[#c9cacc] text-sm flex flex-col justify-center"
   >
     <SiteHeader />
     <div class="relative top-[-50px]">
-      <div class="glitch">
-        <div class="glitch-img" style={`background-image: url("${bgImage}")`}></div>
-        <div class="glitch-img" style={`background-image: url("${bgImage}")`}></div>
-        <div class="glitch-img" style={`background-image: url("${bgImage}")`}></div>
-        <div class="glitch-img" style={`background-image: url("${bgImage}")`}></div>
-        <div class="glitch-img" style={`background-image: url("${bgImage}")`}></div>
+      <div class="absolute top-[-100px] left-0 right-0 mx-auto h-[437px] w-[300px]">
+        <DecayCard
+          image={bgImage}
+          width={300}
+          height={437}
+          scope="card"
+          travel={30}
+          tilt={6}
+          client:load
+        />
       </div>
       <h1
-        class="font-extralight lg:font-light font-sans leading-none m-0 pt-2 tracking-[14px] lg:tracking-[30px] text-3xl lg:text-5xl uppercase relative text-grass-600"
+        class="font-normal lg:font-medium font-sans leading-none m-0 pt-2 [--ts:28px] max-[389px]:[--ts:24px] max-[359px]:[--ts:10px] lg:[--ts:22px] tracking-[length:var(--ts)] -mr-[var(--ts)] text-4xl lg:text-6xl uppercase relative whitespace-nowrap text-[#a7c121]"
       >
         Ray Liao
       </h1>
-      <p class="font-medium mt-[2em] text-grass-500 relative">
+      <p class="font-medium mt-[2em] text-[#a7c121] relative">
         <span data-i18n="frontEnd">Front-end developer</span>
         &nbsp;/&nbsp;
         <span data-i18n="photography">Photography enthusiasts</span>
@@ -40,7 +46,21 @@ const description =
         <span data-i18n="swimfan">Swimfan</span>
       </p>
     </div>
-    <div class="absolute left-[-130px] bottom-[-130px] scale-[0.8]">
+    <div
+      class="absolute left-[-130px] bottom-[-130px] scale-[0.8] w-[300px] h-[300px] flex items-center justify-center"
+    >
+      <CircularText
+        text={`24°01'50.4"N  116°28'40.6"E`}
+        spinDuration={15}
+        direction="clockwise"
+        onHover="speedUp"
+        draggable
+        size={200}
+        fontSize={20}
+        fontWeight={300}
+        className="font-sans"
+        client:load
+      />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -49,21 +69,11 @@ const description =
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="text-gray-800 dark:text-gray-50 absolute top-1/2 left-1/2 mt-[-10px] ml-[-10px] w-6 h-6"
+        class="text-gray-800 dark:text-[#c9cacc] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 pointer-events-none"
         ><path
           d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
         ></path><circle cx="12" cy="10" r="3"></circle></svg
       >
-      <svg class="animate-[spin_15s_linear_infinite] w-[300px] h-[300px]">
-        <defs>
-          <path id="textPath" d="m61,149.99998a89,89 0 1 1 0,0.00004"></path>
-        </defs>
-        <text
-          class="font-sans font-light text-[20px] fill-gray-800 dark:fill-gray-50 tracking-[11px]"
-        >
-          <textPath href="#textPath">24°01'50.4"N  116°28'40.6"E</textPath>
-        </text>
-      </svg>
     </div>
     <CornerSocials />
   </div>

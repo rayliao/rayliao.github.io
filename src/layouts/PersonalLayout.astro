@@ -1,5 +1,7 @@
 ---
+import "@ui-sdk/core/web.css";
 import "@styles/personal.css";
+import CommandPalette from "@components/CommandPalette.astro";
 
 export interface Props {
   title?: string;
@@ -81,6 +83,7 @@ const jsonLd = {
   </head>
   <body>
     <slot />
+    <CommandPalette />
     <script>
       import lang from "@utils/lang";
       import { LOCALE_STORAGE } from "@utils/personal";

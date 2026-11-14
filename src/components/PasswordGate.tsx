@@ -31,12 +31,12 @@ export default function PasswordGate({ children }: { children: ReactNode }) {
   }
 
   return (
-    <div className="flex h-screen items-center justify-center bg-[#f3f3f2] dark:bg-[#272824]">
+    <div className="flex h-screen items-center justify-center bg-[#fafafa] dark:bg-[#1d1f21]">
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col items-center gap-4 rounded-lg bg-white p-8 shadow-lg dark:bg-gray-800"
+        className="flex flex-col items-center gap-4 rounded-lg border border-dotted border-gray-400/60 p-8 dark:border-gray-400/50"
       >
-        <h1 className="text-lg font-medium text-gray-800 dark:text-gray-50">
+        <h1 className="text-lg font-medium text-gray-800 dark:text-[#c9cacc]">
           此页面需要密码
         </h1>
         <input
@@ -47,7 +47,7 @@ export default function PasswordGate({ children }: { children: ReactNode }) {
             setError(false);
           }}
           placeholder="输入密码"
-          className="rounded border border-gray-300 px-4 py-2 text-gray-800 focus:border-grass-500 focus:outline-none dark:border-gray-600 dark:bg-gray-700 dark:text-gray-50"
+          className="rounded-lg border border-dotted border-gray-400/60 bg-transparent px-4 py-2 text-gray-800 focus:border-grass-500 focus:outline-none dark:border-gray-400/50 dark:text-[#c9cacc]"
           autoFocus
         />
         {error && <p className="text-sm text-red-500">密码错误</p>}

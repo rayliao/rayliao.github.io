@@ -20,17 +20,31 @@ const config = {
   theme: {
     extend: {
       colors: {
+        // cactus 主色 #2bbc8a（深浅两套共用同一色相，色阶供徽章/悬停使用）
         grass: {
-          50: "#fbfde8",
-          100: "#f5f9ce",
-          200: "#eaf4a2",
-          300: "#daea6c",
-          400: "#c5dc3f",
-          500: "#a7c121",
-          600: "#849c16",
-          700: "#637615",
-          800: "#4e5d17",
-          900: "#434f18",
+          50: "#eafaf4",
+          100: "#d3f4e8",
+          200: "#a7e9d1",
+          300: "#7bddba",
+          400: "#53d1a3",
+          500: "#2bbc8a",
+          600: "#23976e",
+          700: "#1b7253",
+          800: "#144d38",
+          900: "#0d3325",
+        },
+        // cactus 暖灰：浅色正文 #22272a / 深色正文 #c9cacc，meta #666 / #908d8d
+        gray: {
+          50: "#f5f5f5",
+          100: "#eeeeee",
+          200: "#e0e0e0",
+          300: "#cccccc",
+          400: "#908d8d",
+          500: "#666666",
+          600: "#555555",
+          700: "#3a3f42",
+          800: "#22272a",
+          900: "#1d1f21",
         },
       },
       textColor: {
@@ -69,12 +83,26 @@ const config = {
         transparent: "transparent",
       },
       fontFamily: {
-        // 博客专用等宽字体；个人站的 font-mono 保持系统默认
-        plex: ["IBM Plex Mono", "monospace"],
+        // cactus 等宽字体栈；plex 保留别名，全站统一
+        mono: ["Menlo", "Meslo LG", "monospace"],
+        plex: ["Menlo", "Meslo LG", "monospace"],
+      },
+      fontSize: {
+        // cactus 正文 14px / 行高 1.725
+        sm: ["14px", "1.725"],
+      },
+      borderRadius: {
+        // cactus 圆角：行内代码 2px / 代码块 4px / 按钮与卡片 5px
+        sm: "2px",
+        DEFAULT: "4px",
+        md: "4px",
+        lg: "5px",
+        xl: "5px",
       },
       typography: {
         DEFAULT: {
           css: {
+            lineHeight: "1.725",
             pre: {
               color: false,
             },

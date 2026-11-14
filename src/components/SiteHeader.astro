@@ -5,7 +5,7 @@ import lang from "@utils/lang";
 <div
   class="absolute top-0 z-[3] w-full p-[10px] h-[48px] box-border flex items-center justify-between font-mono text-sm"
 >
-  <nav class="flex gap-3">
+  <nav class="flex gap-3 text-grass-600 dark:text-grass-400">
     <a href="/" data-i18n="home">Home</a>
     <a href="/blog" data-i18n="blog">Blog</a>
     <a href="/shoot/2021" data-i18n="image">Image</a>
@@ -13,9 +13,28 @@ import lang from "@utils/lang";
   </nav>
   <div class="flex items-center gap-3">
     <button
+      id="command-palette-btn"
+      type="button"
+      aria-label="搜索文章与导航"
+      class="text-gray-800 dark:text-[#c9cacc] w-5 h-5 cursor-pointer hover:opacity-70 transition-opacity"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="w-5 h-5"
+        ><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path
+        ></svg
+      >
+    </button>
+    <button
       id="theme-btn"
       aria-label="Toggle theme"
-      class="text-gray-800 dark:text-gray-50 w-5 h-5 cursor-pointer hover:opacity-70 transition-opacity"
+      class="text-gray-800 dark:text-[#c9cacc] w-5 h-5 cursor-pointer hover:opacity-70 transition-opacity"
     >
       <svg
         id="moon-svg"
@@ -55,13 +74,13 @@ import lang from "@utils/lang";
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="text-gray-800 dark:text-gray-50 w-5 h-5 cursor-pointer"
+        class="text-gray-800 dark:text-[#c9cacc] w-5 h-5 cursor-pointer"
         ><circle cx="12" cy="12" r="10"></circle><path
           d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path
           d="M2 12h20"></path></svg
       >
       <div
-        class="hidden group-hover:flex flex-col gap-2 pr-1 pt-1 text-right absolute z-50 right-0 border-t border-t-gray-500 border-dotted bg-gray-50/[0.4] dark:bg-gray-800/[0.3] lg:bg-transparent dark:lg:bg-transparent backdrop-blur"
+        class="hidden group-hover:flex flex-col gap-2 pr-1 pt-1 text-right absolute z-50 right-0 border-t border-t-gray-500 border-dotted bg-[#fafafa]/80 dark:bg-[#1d1f21]/80 lg:bg-transparent dark:lg:bg-transparent backdrop-blur"
       >
         {
           Object.entries(lang).map(([key, l]) => (
@@ -74,3 +93,14 @@ import lang from "@utils/lang";
     </div>
   </div>
 </div>
+
+<script>
+  const btn = document.getElementById("command-palette-btn");
+  if (btn) {
+    const isApple = /Mac|iPhone|iPad/.test(navigator.userAgent);
+    btn.title = `搜索 (${isApple ? "⌘K" : "Ctrl+K"})`;
+    btn.addEventListener("click", () => {
+      window.dispatchEvent(new CustomEvent("command-palette:open"));
+    });
+  }
+</script>

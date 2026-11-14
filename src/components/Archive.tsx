@@ -36,12 +36,13 @@ const BADGE: Record<ArchiveCollection, { label: string; className: string }> = {
   },
   yar: {
     label: "Rayyar",
-    className: "bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-200",
+    className:
+      "bg-[#e3e8f1] text-[#3b5b8c] dark:bg-[#2a3040] dark:text-[#a8c0e8]",
   },
   hakka: {
     label: "Hakka",
     className:
-      "bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200",
+      "bg-[#f1e8da] text-[#8c5b3b] dark:bg-[#332c22] dark:text-[#e8c8a8]",
   },
 };
 
@@ -268,7 +269,7 @@ export default function Archive({
           placeholder="搜索标题、描述或标签…"
           autoComplete="off"
           aria-label="搜索文章"
-          className="block w-full rounded-lg border border-gray-200/70 bg-white/50 py-2.5 pl-9 pr-3 text-sm text-gray-800 transition-colors placeholder:text-gray-400 focus:border-grass-400 focus:outline-none focus:ring-1 focus:ring-grass-400 dark:border-gray-700/70 dark:bg-gray-800/30 dark:text-gray-50 dark:placeholder:text-gray-500 dark:focus:border-grass-500 dark:focus:ring-grass-500"
+          className="block w-full rounded-lg border border-dotted border-gray-400/60 bg-transparent py-2.5 pl-9 pr-3 text-sm text-gray-800 transition-colors placeholder:text-gray-500 focus:border-grass-500 focus:outline-none focus:ring-1 focus:ring-grass-500 dark:border-gray-400/50 dark:text-gray-100 dark:placeholder:text-gray-400"
         />
       </label>
 
@@ -285,10 +286,10 @@ export default function Archive({
               type="button"
               aria-pressed={selected}
               onClick={() => selectCollection(key)}
-              className={`rounded-full border px-3.5 py-1.5 text-sm transition-colors ${
+              className={`rounded-lg border border-dotted px-3.5 py-1.5 text-sm transition-colors ${
                 selected
-                  ? "border-grass-400 bg-grass-100 font-medium text-grass-800 dark:border-grass-500 dark:bg-grass-900 dark:text-grass-200"
-                  : "border-gray-300/70 text-gray-600 hover:border-grass-400 hover:text-grass-700 dark:border-gray-600/70 dark:text-gray-300 dark:hover:border-grass-500 dark:hover:text-grass-300"
+                  ? "border-grass-500 bg-grass-100 font-medium text-grass-800 dark:bg-grass-900 dark:text-grass-200"
+                  : "border-gray-400/60 text-gray-600 hover:border-grass-500 hover:text-grass-700 dark:border-gray-400/50 dark:text-gray-300 dark:hover:text-grass-300"
               }`}
             >
               {label}
@@ -336,7 +337,7 @@ export default function Archive({
                     aria-hidden={clipped || undefined}
                     tabIndex={clipped ? -1 : undefined}
                     onClick={() => toggleTag(tag)}
-                    className={`rounded-full px-2.5 py-0.5 text-xs transition-colors ${
+                    className={`rounded-sm px-2.5 py-0.5 text-xs transition-colors ${
                       selected
                         ? "bg-grass-800 text-grass-50 dark:bg-grass-300 dark:text-grass-900"
                         : "bg-grass-100 text-grass-800 hover:bg-grass-200 dark:bg-grass-900 dark:text-grass-200 dark:hover:bg-grass-800"
@@ -408,13 +409,13 @@ export default function Archive({
             >
               <a
                 href={item.href}
-                className="group block rounded-lg border border-gray-200/70 bg-white/50 p-5 transition-colors hover:border-grass-400 dark:border-gray-700/70 dark:bg-gray-800/30 dark:hover:border-grass-500"
+                className="group block rounded-lg border border-dotted border-gray-400/60 p-5 transition-colors hover:border-grass-500 dark:border-gray-400/50"
               >
                 {(collection === "all" || item.date) && (
                   <div className="flex items-center gap-4">
                     {collection === "all" && (
                       <span
-                        className={`rounded-full px-2.5 py-0.5 text-xs ${BADGE[item.collection].className}`}
+                        className={`rounded-sm px-2.5 py-0.5 text-xs ${BADGE[item.collection].className}`}
                       >
                         {BADGE[item.collection].label}
                       </span>
@@ -429,7 +430,7 @@ export default function Archive({
                     )}
                   </div>
                 )}
-                <h2 className="mt-2.5 text-lg font-medium leading-snug text-gray-800 transition-colors group-hover:text-grass-600 dark:text-gray-50 dark:group-hover:text-grass-400">
+                <h2 className="mt-2.5 text-lg font-medium leading-snug text-gray-800 transition-colors group-hover:text-grass-600 dark:text-[#c9cacc] dark:group-hover:text-grass-400">
                   {item.title}
                 </h2>
                 {item.description && (
@@ -442,7 +443,7 @@ export default function Archive({
                     {item.tags.map(tag => (
                       <span
                         key={tag}
-                        className="rounded-full bg-grass-100 px-2.5 py-0.5 text-xs text-grass-800 dark:bg-grass-900 dark:text-grass-200"
+                        className="rounded-sm bg-grass-100 px-2.5 py-0.5 text-xs text-grass-800 dark:bg-grass-900 dark:text-grass-200"
                       >
                         #{tag}
                       </span>
@@ -495,7 +496,7 @@ export default function Archive({
                 type="button"
                 aria-current={n === currentPage ? "page" : undefined}
                 onClick={() => gotoPage(n)}
-                className={`h-8 min-w-8 rounded-md px-2 text-sm transition-colors ${
+                className={`h-8 min-w-8 rounded-lg px-2 text-sm transition-colors ${
                   n === currentPage
                     ? "bg-grass-800 font-medium text-grass-50 dark:bg-grass-300 dark:text-grass-900"
                     : "text-gray-600 hover:bg-grass-100 hover:text-grass-800 dark:text-gray-300 dark:hover:bg-grass-900 dark:hover:text-grass-200"
