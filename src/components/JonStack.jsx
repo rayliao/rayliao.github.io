@@ -1,15 +1,28 @@
-import { useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import Stack from "./Stack.jsx";
 import { JonData } from "@utils/personal";
 import { getImageUrl } from "@utils/image";
 
 const SIZER = JonData.reduce((a, b) => (b.content.length > a.content.length ? b : a));
 
-export default function JonStack() {
-  const [top, setTop] = useState(0);
-  const current = JonData[top];
+function shuffled(list) {
+  const a = [...list];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
 
-  const cards = JonData.map((item, index) => (
+export default function JonStack() {
+  const [items, setItems] = useState(JonData);
+  useLayoutEffect(() => {
+    setItems(shuffled(JonData));
+  }, []);
+  const [top, setTop] = useState(0);
+  const current = items[top];
+
+  const cards = items.map((item, index) => (
     <img
       key={index}
       src={getImageUrl(item.image ?? `jon/${item.name}.JPG`)}
