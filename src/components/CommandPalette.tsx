@@ -47,7 +47,7 @@ const NAV: { href: string; label: string; keywords: string[] }[] = [
   { href: "/yar", label: "Rayyar爱学习", keywords: ["yar", "rayyar", "ai", "工具"] },
   { href: "/hakka", label: "Hakka", keywords: ["hakka", "客家", "文化"] },
   { href: "/shoot/2021", label: "摄影", keywords: ["image", "shoot", "photo", "照片"] },
-  { href: "/jon", label: "Jon", keywords: ["jon"] },
+  { href: "/jon", label: "Jonas", keywords: ["jonas", "jon"] },
 ];
 
 const THEME_VALUE = "action:theme";
@@ -365,8 +365,8 @@ export default function CommandPalette({ items }: Props) {
               />
               <kbd className={KBD_CLASS}>esc</kbd>
             </div>
-            <CommandEmpty className="px-4 py-10 text-center text-sm text-gray-500 dark:text-gray-400">
-              没有匹配的结果。
+            <CommandEmpty className="text-center text-sm text-gray-500 dark:text-gray-400">
+              <div className="px-4 py-10">没有匹配的结果。</div>
             </CommandEmpty>
             <CommandList className="palette-scroll max-h-[min(24rem,55vh)] overflow-y-auto p-2">
               {state => renderEntries(state.items)}

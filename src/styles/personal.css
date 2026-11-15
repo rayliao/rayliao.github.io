@@ -30,6 +30,10 @@
   html {
     border-top: 2px solid rgb(var(--color-text-base));
   }
+  /* 深色下正文色反转为浅灰会刺眼，顶部线改用表面色 */
+  html[data-theme="dark"] {
+    border-top-color: rgb(var(--color-card));
+  }
 
   body {
     font-size: 14px;
